@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <div class="top-bar-info">
+            <span><i class="fa-solid fa-phone"></i> Hotline: (84) 0904 200 220</span>
+            <span><i class="fa-solid fa-envelope"></i> Email: info@tttgroup.com.vn</span>
+        </div>
+        <div class="top-bar-social">
+            <span><i class="fa-solid fa-certificate"></i> ISO 9001:2015 Certified</span>
+        </div>
+    </div>
+</div>
+
+<!-- Header & Navbar -->
+<header>
+    <div class="navbar-container">
+        <a href="/home" class="brand-logo">
+            <div class="logo-hexagon">TTT</div>
+            <div class="brand-text">
+                <h1>Hạ Tầng & Môi Trường TTT</h1>
+                <p>Infrastructure & Environment</p>
+            </div>
+        </a>
+
+        <!-- Nút Menu Toggle (Dành cho Mobile) -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <ul class="nav-menu">
+            <li><a class="nav-item active" href="/home">Trang Chủ</a></li>
+            
+            <!-- Submenu Dịch Vụ -->
+            <li class="dropdown">
+                <a class="nav-item" href="/#">Dịch Vụ <i class="fa-solid fa-angle-down" style="font-size: 11px; margin-left: 4px;"></i></a>
+                <ul class="dropdown-menu">
+                    <% if (locals.services && services.length > 0) { %>
+                        <% services.forEach(service => { %>
+                            <li><a href="dich-vu/<%= service.slug %>"><%= service.title %></a></li>
+                        <% }) %>
+                    <% } else { %>
+                        <li><a href="#">Đang cập nhật dịch vụ...</a></li>
+                    <% } %>
+                </ul>
+            </li>
+            <li><a class="nav-item" href="/project">Dự Án</a></li>
+            <li><a class="nav-item" href="/about-us">Về Chúng Tôi</a></li>
+            <li><a class="nav-item" href="/careers">Tuyển Dụng</a></li>
+            <li><a class="nav-item" href="/contact">Liên Hệ</a></li>
+        </ul>
+    </div>
+</header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuBtn = document.getElementById("mobile-menu");
+        const navMenu = document.querySelector(".nav-menu");
+        const dropdownToggles = document.querySelectorAll(".dropdown > a");
+        const allNavItems = document.querySelectorAll(".nav-item");
+
+        // 1. Mở/đóng menu tổng khi bấm nút 3 gạch / dấu X trên mobile
+        if (mobileMenuBtn && navMenu) {
+            mobileMenuBtn.addEventListener("click", function (e) {
+                e.stopPropagation();
+                navMenu.classList.toggle("active");
+                
+                if (navMenu.classList.contains("active")) {
+                    mobileMenuBtn.classList.remove("fa-bars");
+                    mobileMenuBtn.classList.add("fa-xmark");
+                } else {
+                    mobileMenuBtn.classList.remove("fa-xmark");
+                    mobileMenuBtn.classList.add("fa-bars");
+                }
+            });
+        }
+
+        // 2. Xử lý mở/đóng menu con (Dịch Vụ) trên mobile
+        dropdownToggles.forEach(function (toggle) {
+            toggle.addEventListener("click", function (e) {
+                if (window.innerWidth <= 992) {
+                    // Nếu bấm vào chữ Dịch Vụ mà có link thực tế thì cho phép chuyển trang, 
+                    // còn nếu chỉ là /# thì ta mở menu con:
+                    if (this.getAttribute("href") === "/#") {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        const parentDropdown = this.parentElement;
+                        parentDropdown.classList.toggle("active");
+                    }
+                }
+            });
+        });
+
+        // 3. Tự động Active menu dựa theo đường dẫn URL hiện tại của trình duyệt
+        const currentPath = window.location.pathname;
+
+        allNavItems.forEach(function (item) {
+            const itemHref = item.getAttribute("href");
+            
+            // Xóa hết class active mặc định trước
+            item.classList.remove("active");
+
+            // So sánh đường dẫn hiện tại với href của menu
+            if (currentPath === itemHref || (currentPath.startsWith("/services") && itemHref.includes("/#"))) {
+                item.classList.add("active");
+            }
+        });
+
+        // Trường hợp đặc biệt nếu đang ở trang chủ (/ hoặc /home)
+        if (currentPath === "/" || currentPath === "") {
+            const homeItem = document.querySelector('a.nav-item[href="/home"]');
+            if (homeItem) homeItem.classList.add("active");
+        }
+    });
+</script>

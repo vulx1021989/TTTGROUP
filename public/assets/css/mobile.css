@@ -1,0 +1,110 @@
+/* --- RESPONSIVE CHO MOBILE (Dưới 992px) --- */
+@media screen and (max-width: 992px) {
+    .top-bar {
+        display: none !important; /* Ẩn hoàn toàn top bar */
+    }
+
+    /* Ép header và navbar container dàn hàng ngang tuyệt đối */
+    header {
+        width: 100%;
+    }
+
+    .navbar-container {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 10px 15px !important;
+        box-sizing: border-box;
+    }
+
+    /* Thu nhỏ kích thước logo một chút để vừa vặn trên điện thoại */
+    .brand-logo {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        flex-shrink: 1;
+        overflow: hidden;
+    }
+
+    .logo-hexagon {
+        width: 32px !important;
+        height: 30px !important;
+        font-size: 11px !important;
+        flex-shrink: 0;
+    }
+
+    .brand-text h1 {
+        font-size: 11px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .brand-text p {
+        font-size: 7px !important;
+    }
+
+    /* Đảm bảo nút hamburger nằm gọn bên phải và không bị đẩy dòng */
+    .menu-toggle {
+        display: block !important;
+        font-size: 20px !important;
+        color: var(--dark-blue);
+        cursor: pointer;
+        flex-shrink: 0;
+        padding: 5px;
+    }
+
+    /* Biến menu thành dạng trượt dọc toàn màn hình khi mở */
+    .nav-menu {
+        position: fixed;
+        top: 60px;
+        left: -100%;
+        flex-direction: column !important;
+        background-color: #ffffff;
+        width: 100%;
+        height: calc(100vh - 60px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        transition: 0.3s ease-in-out;
+        align-items: flex-start !important;
+        padding: 20px 30px;
+        overflow-y: auto;
+        gap: 15px;
+        z-index: 999;
+    }
+
+    /* Khi kích hoạt class active, menu trượt ra */
+    .nav-menu.active {
+        left: 0 !important;
+    }
+
+    .nav-item {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    /* Xử lý dropdown trên mobile: Mặc định ẩn, khi có class active mới hiện */
+    .dropdown-menu {
+        position: static !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding-left: 15px !important;
+        display: none !important; /* Mặc định ẩn menu con */
+        background: var(--light-bg);
+        margin-top: 5px;
+        border-radius: 6px;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block !important; /* Hiện ra khi thẻ cha có class active */
+    }
+
+    /* Hiệu ứng active cho các item menu trên mobile */
+    .nav-item.active, 
+    .nav-menu .nav-item:hover {
+        background: var(--primary-teal) !important;
+        color: #ffffff !important;
+    }
+
+}

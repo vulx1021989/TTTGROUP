@@ -1,0 +1,37 @@
+<!-- Modal Chỉnh Sửa Dịch Vụ -->
+<div id="editServiceModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center;">
+    <div style="background: #fff; width: 100%; max-width: 500px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); overflow: hidden; animation: fadeIn 0.3s ease;">
+        
+        <!-- Header của Modal -->
+        <div style="padding: 20px 24px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="font-size: 18px; font-weight: 700; color: #111; margin: 0;">Chỉnh Sửa Dịch Vụ</h3>
+            <button type="button" onclick="closeEditModal()" style="background: none; border: none; font-size: 18px; color: #666; cursor: pointer;">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        
+        <!-- Form cập nhật dịch vụ -->
+        <form id="editServiceForm" action="" method="POST" style="padding: 24px;">
+            <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 13px; font-weight: 600; color: #333; margin-bottom: 6px;">Tên Dịch Vụ</label>
+                <input type="text" id="edit-title" name="title" required style="width: 100%; padding: 10px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none;">
+            </div>
+            
+            <div style="margin-bottom: 16px;">
+                <label style="display: block; font-size: 13px; font-weight: 600; color: #333; margin-bottom: 6px;">Đường dẫn (Slug)</label>
+                <input type="text" id="edit-slug" name="slug" required style="width: 100%; padding: 10px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none;">
+            </div>
+
+            <div style="margin-bottom: 24px;">
+                <label style="display: block; font-size: 13px; font-weight: 600; color: #333; margin-bottom: 6px;">Mô tả / Chi tiết</label>
+                <textarea id="edit-description" name="description" rows="3" style="width: 100%; padding: 10px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none; resize: vertical;"></textarea>
+            </div>
+
+            <!-- Nút hành động -->
+            <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                <button type="button" onclick="closeEditModal()" style="padding: 10px 18px; background: #e0e0e0; color: #333; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">Hủy</button>
+                <button type="submit" style="padding: 10px 18px; background: #0066cc; color: #fff; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">Lưu Thay Đổi</button>
+            </div>
+        </form>
+    </div>
+</div>

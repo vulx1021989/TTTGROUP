@@ -1,0 +1,54 @@
+<%- include('components/header', { title: 'Tin Tức & Sự Kiện - TTT Infrastructure' }) %>
+
+<!-- MAIN CONTENT - TRANG TIN TỨC -->
+<main class="main-wrapper" style="padding: 40px 0; background-color: #f9f9f9;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+        
+        <!-- Tiêu đề trang -->
+        <div class="page-header-title" style="margin-bottom: 40px; text-align: center;">
+            <h2 style="font-size: 32px; color: #111; font-weight: 800; margin-bottom: 10px;">Tin Tức & Sự Kiện</h2>
+            <p style="color: #666; font-size: 16px;">Cập nhật các hoạt động doanh nghiệp, dự án mới và thông tin công nghệ hạ tầng - môi trường.</p>
+        </div>
+
+        <!-- Lưới bài viết tin tức (News Grid) -->
+        <div class="news-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+            
+            <!-- Bài viết 1 -->
+            <article class="news-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                <div class="news-img" style="height: 200px; background-color: #ddd; background-image: url('/assets/images/news-1.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="news-content" style="padding: 20px;">
+                    <span class="news-date" style="font-size: 13px; color: #0066cc; font-weight: 600;"><i class="fa-regular fa-calendar"></i> 24/09/2026</span>
+                    <h3 style="font-size: 20px; margin: 10px 0; color: #222; font-weight: 700;">TTT ký kết hợp đồng vận hành hệ thống xử lý nước thải khu công nghiệp lớn</h3>
+                    <p style="color: #555; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">Dự án trọng điểm đánh dấu bước tiến mới của TTT trong việc ứng dụng công nghệ xử lý nước thải thông minh đạt chuẩn ISO...</p>
+                    <a href="#" style="color: #0066cc; font-weight: 600; text-decoration: none; font-size: 14px;">Xem chi tiết <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i></a>
+                </div>
+            </article>
+
+            <!-- Bài viết 2 -->
+            <article class="news-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                <div class="news-img" style="height: 200px; background-color: #ddd; background-image: url('/assets/images/news-2.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="news-content" style="padding: 20px;">
+                    <span class="news-date" style="font-size: 13px; color: #0066cc; font-weight: 600;"><i class="fa-regular fa-calendar"></i> 18/09/2026</span>
+                    <h3 style="font-size: 20px; margin: 10px 0; color: #222; font-weight: 700;">Giải pháp chiếu sáng đô thị tiết kiệm năng lượng thời đại số</h3>
+                    <p style="color: #555; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">Hệ thống đèn LED chiếu sáng thông minh tích hợp cảm biến IoT đang là giải pháp tối ưu được TTT triển khai rộng rãi tại các đô thị...</p>
+                    <a href="#" style="color: #0066cc; font-weight: 600; text-decoration: none; font-size: 14px;">Xem chi tiết <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i></a>
+                </div>
+            </article>
+
+            <!-- Bài viết 3 -->
+            <article class="news-card" style="background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s;">
+                <div class="news-img" style="height: 200px; background-color: #ddd; background-image: url('/assets/images/news-3.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="news-content" style="padding: 20px;">
+                    <span class="news-date" style="font-size: 13px; color: #0066cc; font-weight: 600;"><i class="fa-regular fa-calendar"></i> 10/09/2026</span>
+                    <h3 style="font-size: 20px; margin: 10px 0; color: #222; font-weight: 700;">Hành trình xanh: Duy trì cảnh quan và bảo vệ môi trường đô thị</h3>
+                    <p style="color: #555; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">Đội ngũ chuyên gia chăm sóc cây xanh của TTT liên tục ứng dụng các kỹ thuật sinh học mới giúp mảng xanh luôn phát triển bền vững...</p>
+                    <a href="#" style="color: #0066cc; font-weight: 600; text-decoration: none; font-size: 14px;">Xem chi tiết <i class="fa-solid fa-arrow-right" style="font-size: 12px;"></i></a>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</main>
+
+<%- include('components/footer') %>

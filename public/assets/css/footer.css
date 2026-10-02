@@ -1,0 +1,207 @@
+/* --- FOOTER CSS (3 CỘT, TRỤ SỞ CHIẾM 40%) --- */
+.site-footer {
+    background-color: #12264e;
+    color: #cbd5e1;
+    padding: 50px 5% 20px 5%;
+    margin-top: 60px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.33fr; /* Tỷ lệ 30% - 30% - 40% cho phần Trụ sở */
+    gap: 30px;
+    align-items: start;
+    margin-bottom: 30px;
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.footer-col h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary-teal);
+    border-radius: 2px;
+}
+
+/* Danh sách liên hệ trong footer */
+.contact-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+.contact-info-list li i {
+    margin-top: 3px;
+    font-size: 15px;
+    min-width: 18px;
+    text-align: center;
+    color: var(--primary-teal);
+}
+
+/* Danh sách dịch vụ trong footer */
+.service-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-links-list li {
+    margin-bottom: 10px;
+}
+
+.service-links-list li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 13px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.service-links-list li a i {
+    font-size: 10px;
+    margin-right: 6px;
+    color: var(--primary-teal);
+}
+
+.service-links-list li a:hover {
+    color: var(--primary-teal);
+    transform: translateX(5px);
+}
+
+/* Khối Bản đồ Trụ sở chính (Chiếm 40%) */
+.footer-right-col {
+    width: 100%;
+}
+
+.headquarter-image-box {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.headquarter-image-box .hq-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--dark-blue);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.headquarter-image-box .hq-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-teal);
+}
+
+.hq-map-container {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 210px;
+    width: 100%;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+/* --- RESPONSIVE CHO ĐIỆN THOẠI & TABLET --- */
+@media (max-width: 768px) {
+    .top-bar { 
+        display: none; 
+    }
+    
+    .navbar-container {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-menu { 
+        gap: 2px; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-item { 
+        padding: 6px 10px; 
+        font-size: 12px; 
+    }
+
+    .hero-banner { 
+        padding: 40px 20px; 
+    }
+
+    .hero-banner h2 { 
+        font-size: 20px; 
+    }
+
+    .dropdown-menu { 
+        position: static; 
+        box-shadow: none; 
+        display: block; 
+        border: none; 
+        padding-left: 15px; 
+    }
+
+    .contact-grid { 
+        grid-template-columns: 1fr; 
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: left;
+    }
+
+    .footer-right-col {
+        justify-content: flex-start;
+    }
+
+    .headquarter-image-box {
+        max-width: 100%;
+    }
+}

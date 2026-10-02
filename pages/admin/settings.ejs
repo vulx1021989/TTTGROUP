@@ -1,0 +1,113 @@
+<%- include('header') %>
+<%- include('sidebar') %>
+
+<!-- MAIN CONTENT AREA -->
+<main class="admin-main-content" style="flex-grow: 1; padding: 30px; overflow-x: auto;">
+    
+    <!-- Form gửi dữ liệu cài đặt -->
+    <form action="/admin/settings/update" method="POST">
+        
+        <!-- Top Bar trong Dashboard -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+            <div>
+                <h1 style="font-size: 26px; font-weight: 800; color: #111; margin-bottom: 5px;">Cài Đặt Chung Hệ Thống</h1>
+                <p style="color: #666; font-size: 14px;">Quản lý thông tin cấu hình website, thông tin liên hệ tập đoàn và các thiết lập hệ thống.</p>
+            </div>
+            <div>
+                <button type="submit" style="background-color: #28a745; color: #fff; border: none; padding: 10px 20px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 2px 5px rgba(40,167,69,0.3);">
+                    <i class="fa-solid fa-floppy-disk"></i> Lưu Thay Đổi
+                </button>
+            </div>
+        </div>
+
+        <!-- Form Cài Đặt -->
+        <div style="display: flex; flex-direction: column; gap: 25px; max-width: 900px;">
+            
+            <!-- Box 1: Thông tin cấu hình chung website -->
+            <div style="background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); overflow: hidden;">
+                <div style="padding: 18px 24px; border-bottom: 1px solid #eee; background-color: #f8f9fa;">
+                    <h3 style="font-size: 16px; font-weight: 700; color: #111; margin: 0; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-globe" style="color: #0066cc;"></i> Thông Tin Cấu Hình Website
+                    </h3>
+                </div>
+                <div style="padding: 24px; display: flex; flex-direction: column; gap: 20px;">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <label style="font-size: 14px; font-weight: 600; color: #333;">Tên Website / Tập Đoàn</label>
+                        <input type="text" name="site_name" value="<%= (typeof settings !== 'undefined' && settings.site_name) ? settings.site_name : '' %>" style="padding: 10px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none;" onfocus="this.style.borderColor='#0066cc'" onblur="this.style.borderColor='#ddd'">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <label style="font-size: 14px; font-weight: 600; color: #333;">Khẩu hiệu (Slogan)</label>
+                        <input type="text" name="site_slogan" value="<%= (typeof settings !== 'undefined' && settings.site_slogan) ? settings.site_slogan : '' %>" style="padding: 10px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none;" onfocus="this.style.borderColor='#0066cc'" onblur="this.style.borderColor='#ddd'">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <label style="font-size: 14px; font-weight: 600; color: #333;">Mô tả Meta (SEO Description)</label>
+                        <textarea rows="3" name="site_description" style="padding: 10px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none; resize: vertical;" onfocus="this.style.borderColor='#0066cc'" onblur="this.style.borderColor='#ddd'"><%= (typeof settings !== 'undefined' && settings.site_description) ? settings.site_description : '' %></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 2: Thông tin liên hệ nhận thông báo -->
+            <div style="background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); overflow: hidden;">
+                <div style="padding: 18px 24px; border-bottom: 1px solid #eee; background-color: #f8f9fa;">
+                    <h3 style="font-size: 16px; font-weight: 700; color: #111; margin: 0; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-address-card" style="color: #28a745;"></i> Thông Tin Nhận Yêu Cầu Tư Vấn & Liên Hệ
+                    </h3>
+                </div>
+                <div style="padding: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <label style="font-size: 14px; font-weight: 600; color: #333;">Email Nhận Thông Báo Khách Hàng</label>
+                        <input type="email" name="contact_email" value="<%= (typeof settings !== 'undefined' && settings.contact_email) ? settings.contact_email : '' %>" style="padding: 10px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none;" onfocus="this.style.borderColor='#0066cc'" onblur="this.style.borderColor='#ddd'">
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <label style="font-size: 14px; font-weight: 600; color: #333;">Hotline Hỗ Trợ</label>
+                        <input type="text" name="contact_hotline" value="<%= (typeof settings !== 'undefined' && settings.contact_hotline) ? settings.contact_hotline : '' %>" style="padding: 10px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none;" onfocus="this.style.borderColor='#0066cc'" onblur="this.style.borderColor='#ddd'">
+                    </div>
+                    <div style="grid-column: span 2; display: flex; flex-direction: column; gap: 8px;">
+                        <label style="font-size: 14px; font-weight: 600; color: #333;">Địa chỉ Trụ sở chính</label>
+                        <input type="text" name="contact_address" value="<%= (typeof settings !== 'undefined' && settings.contact_address) ? settings.contact_address : '' %>" style="padding: 10px 14px; border: 1px solid #ddd; border-radius: 6px; font-size: 14px; outline: none;" onfocus="this.style.borderColor='#0066cc'" onblur="this.style.borderColor='#ddd'">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Box 3: Bảo mật & Chế độ bảo trì -->
+            <div style="background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); overflow: hidden;">
+                <div style="padding: 18px 24px; border-bottom: 1px solid #eee; background-color: #f8f9fa;">
+                    <h3 style="font-size: 16px; font-weight: 700; color: #111; margin: 0; display: flex; align-items: center; gap: 10px;">
+                        <i class="fa-solid fa-shield-halved" style="color: #6f42c1;"></i> Thiết Lập Nâng Cao & Bảo Mật
+                    </h3>
+                </div>
+                <div style="padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+                    
+                    <!-- Chế độ bảo trì (Toggle Switch) -->
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f1f1f1;">
+                        <div>
+                            <h4 style="font-size: 14px; font-weight: 600; color: #111; margin-bottom: 3px;">Chế độ bảo trì website (Maintenance Mode)</h4>
+                            <p style="font-size: 13px; color: #666; margin: 0;">Tạm khóa trang chủ để nâng cấp hệ thống, chỉ cho phép Quản trị viên truy cập.</p>
+                        </div>
+                        <label style="position: relative; display: inline-block; width: 48px; height: 24px; cursor: pointer;">
+                            <input type="checkbox" name="maintenance_mode" value="1" <%= (typeof settings !== 'undefined' && Number(settings.maintenance_mode) === 1) ? 'checked' : '' %> style="opacity: 0; width: 0; height: 0;" onchange="this.nextElementSibling.style.backgroundColor = this.checked ? '#28a745' : '#ccc'; this.nextElementSibling.children[0].style.transform = this.checked ? 'translateX(24px)' : 'translateX(0)'">
+                            <span style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: <%= (typeof settings !== 'undefined' && Number(settings.maintenance_mode) === 1) ? '#28a745' : '#ccc' %>; transition: .4s; border-radius: 24px;">
+                                <span style="position: absolute; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .4s; border-radius: 50%; transform: <%= (typeof settings !== 'undefined' && Number(settings.maintenance_mode) === 1) ? 'translateX(24px)' : 'translateX(0)' %>;"></span>
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Cho phép gửi yêu cầu ẩn danh -->
+                    <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 0;">
+                        <div>
+                            <h4 style="font-size: 14px; font-weight: 600; color: #111; margin-bottom: 3px;">Cho phép gửi yêu cầu tư vấn ẩn danh</h4>
+                            <p style="font-size: 13px; color: #666; margin: 0;">Khách hàng có thể gửi biểu mẫu liên hệ mà không bắt buộc đăng nhập tài khoản.</p>
+                        </div>
+                        <input type="checkbox" name="allow_guest_inquiry" value="1" <%= (typeof settings !== 'undefined' && Number(settings.allow_guest_inquiry) === 1) ? 'checked' : '' %> style="width: 18px; height: 18px; accent-color: #0066cc; cursor: pointer;">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+
+</main>
+
+<%- include('footer') %>

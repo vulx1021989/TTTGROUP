@@ -1,0 +1,146 @@
+<%- include('header') %>
+<%- include('sidebar') %>
+
+<!-- MAIN CONTENT AREA -->
+<main class="admin-main-content" style="flex-grow: 1; padding: 30px; overflow-x: auto;">
+    
+    <!-- Top Bar trong Dashboard -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+        <div>
+            <h1 style="font-size: 26px; font-weight: 800; color: #111; margin-bottom: 5px;">Quản Lý Danh Mục Dịch Vụ</h1>
+            <p style="color: #666; font-size: 14px;">Thêm mới, chỉnh sửa hoặc quản lý các dịch vụ đang cung cấp của tập đoàn.</p>
+        </div>
+        <div>
+            <button onclick="openAddServiceModal()" style="background-color: #0066cc; color: #fff; border: none; padding: 10px 18px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: 0 2px 5px rgba(0,102,204,0.3);">
+                <i class="fa-solid fa-plus"></i> Thêm Dịch Vụ Mới
+            </button>
+        </div>
+    </div>
+
+    <!-- Thống kê nhanh danh mục -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 35px;">
+        <div style="background: #fff; padding: 22px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); border-left: 4px solid #28a745;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <span style="font-size: 13px; color: #666; font-weight: 600; text-transform: uppercase;">Tổng Số Dịch Vụ</span>
+                    <h3 style="font-size: 28px; font-weight: 800; color: #111; margin-top: 8px;">5</h3>
+                </div>
+                <div style="background: #e8f5e9; color: #28a745; width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+            </div>
+            <span style="font-size: 12px; color: #28a745; font-weight: 600; display: inline-block; margin-top: 10px;">Đang hiển thị trên website</span>
+        </div>
+
+        <div style="background: #fff; padding: 22px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); border-left: 4px solid #0066cc;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <span style="font-size: 13px; color: #666; font-weight: 600; text-transform: uppercase;">Lượt Quan Tâm Cao Nhất</span>
+                    <h3 style="font-size: 28px; font-weight: 800; color: #111; margin-top: 8px;">Hạ Tầng</h3>
+                </div>
+                <div style="background: #e6f0ff; color: #0066cc; width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+            </div>
+            <span style="font-size: 12px; color: #666; display: inline-block; margin-top: 10px;">Dẫn đầu lượng tư vấn</span>
+        </div>
+    </div>
+
+    <!-- Bảng Danh Sách Dịch Vụ -->
+    <div style="background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); overflow: hidden;">
+        <div style="padding: 20px 24px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="font-size: 18px; font-weight: 700; color: #111; margin: 0;">Danh Sách Dịch Vụ Hiện Tại</h3>
+            <span style="font-size: 13px; color: #666;">Hiển thị 5 dịch vụ chính</span>
+        </div>
+
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+                <thead>
+                    <tr style="background-color: #f8f9fa; color: #333; border-bottom: 2px solid #dee2e6;">
+                        <th style="padding: 14px 20px; font-weight: 600;">STT</th>
+                        <th style="padding: 14px 20px; font-weight: 600;">Tên dịch vụ</th>
+                        <th style="padding: 14px 20px; font-weight: 600;">Đường dẫn (Slug)</th>
+                        <th style="padding: 14px 20px; font-weight: 600;">Trạng thái</th>
+                        <th style="padding: 14px 20px; font-weight: 600; text-align: center;">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody style="color: #444;">
+                    <% if (services && services.length > 0) { %>
+                        <% services.forEach((service, index) => { %>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 14px 20px; font-weight: 600; color: #111;"><%= index + 1 %></td>
+                                <td style="padding: 14px 20px; font-weight: 600; color: #111;"><%= service.title %></td>
+                                <td style="padding: 14px 20px; color: #0066cc;"><%= service.slug || ('/services/' + service.id) %></td>
+                                <td style="padding: 14px 20px;">
+                                    <span style="background-color: #d4edda; color: #155724; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Hoạt động</span>
+                                </td>
+                                <td style="padding: 14px 20px; text-align: center;">
+                                    <!-- Nút Mở Modal Sửa -->
+                                    <button type="button" onclick="openEditModal('<%= service.id %>', '<%= service.title %>', '<%= service.slug %>', '<%= service.description || "" %>')" style="background: #e6f0ff; color: #0066cc; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: 600; margin-right: 4px;" title="Chỉnh sửa">
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </button>
+                                    <!-- Nút Xóa -->
+                                    <a href="/admin/services/delete/<%= service.id %>" onclick="return confirm('Bạn có chắc chắn muốn xóa dịch vụ này không?');" style="background: #f8d7da; color: #dc3545; padding: 6px 10px; border-radius: 4px; text-decoration: none; display: inline-block; font-size: 13px; font-weight: 600;" title="Xóa">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    <% } else { %>
+                        <tr>
+                            <td colspan="5" style="text-align: center; padding: 25px; color: #666;">Chưa có dịch vụ nào trong hệ thống.</td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</main>
+
+<script>
+    function openAddServiceModal() {
+        alert("Chức năng thêm dịch vụ mới sẽ được mở form popup hoặc chuyển hướng đến trang tạo mới!");
+    }
+</script>
+
+<script>
+    function openAddServiceModal() {
+        // Code mở modal thêm mới của bạn ở đây
+        alert("Mở modal thêm mới dịch vụ");
+    }
+
+    // Hàm mở Modal chỉnh sửa và điền sẵn dữ liệu cũ vào các ô input
+    function openEditModal(id, title, slug, description) {
+        document.getElementById('edit-title').value = title;
+        document.getElementById('edit-slug').value = slug;
+        document.getElementById('edit-description').value = description;
+        
+        // Cập nhật đường dẫn action của form trỏ đúng ID cần sửa
+        document.getElementById('editServiceForm').action = '/admin/services/edit/' + id;
+        
+        // Hiển thị modal lên màn hình
+        document.getElementById('editServiceModal').style.display = 'flex';
+    }
+
+    // Hàm đóng Modal chỉnh sửa
+    function closeEditModal() {
+        document.getElementById('editServiceModal').style.display = 'none';
+    }
+</script>
+
+<script>
+    // Mở Modal Thêm mới
+    function openAddServiceModal() {
+        document.getElementById('addServiceModal').style.display = 'flex';
+    }
+
+    // Đóng Modal Thêm mới
+    function closeAddServiceModal() {
+        document.getElementById('addServiceModal').style.display = 'none';
+    }
+</script>
+
+<%- include('modals/addServiceModal') %>
+<%- include('modals/editServiceModal') %>
+<%- include('footer') %>

@@ -1,0 +1,144 @@
+<%- include('header') %>
+<%- include('sidebar') %>
+
+<!-- MAIN CONTENT AREA -->
+<main class="admin-main-content" style="flex-grow: 1; padding: 30px; overflow-x: auto;">
+    
+    <!-- Top Bar trong Dashboard -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+        <div>
+            <h1 style="font-size: 26px; font-weight: 800; color: #111; margin-bottom: 5px;">Xin chào, Quản Trị Viên</h1>
+            <p style="color: #666; font-size: 14px;">Dưới đây là tổng quan hoạt động hệ thống và các yêu cầu tư vấn mới nhất.</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <span style="background: #fff; padding: 8px 15px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); font-size: 14px; color: #333; font-weight: 500;">
+                <i class="fa-solid fa-calendar-days" style="color: #0066cc; margin-right: 6px;"></i> Hôm nay
+            </span>
+        </div>
+    </div>
+
+    <!-- Widgets Thống Kê Tổng Quan -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 35px;">
+        
+        <!-- Widget 1 -->
+        <div style="background: #fff; padding: 22px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); border-left: 4px solid #0066cc;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <span style="font-size: 13px; color: #666; font-weight: 600; text-transform: uppercase;">Tổng Yêu Cầu Tư Vấn</span>
+                    <h3 style="font-size: 28px; font-weight: 800; color: #111; margin-top: 8px;">128</h3>
+                </div>
+                <div style="background: #e6f0ff; color: #0066cc; width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                </div>
+            </div>
+            <span style="font-size: 12px; color: #28a745; font-weight: 600; display: inline-block; margin-top: 10px;">
+                <i class="fa-solid fa-arrow-trend-up"></i> +12% so với tháng trước
+            </span>
+        </div>
+
+        <!-- Widget 2 -->
+        <div style="background: #fff; padding: 22px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); border-left: 4px solid #28a745;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <span style="font-size: 13px; color: #666; font-weight: 600; text-transform: uppercase;">Dịch Vụ Đang Cung Cấp</span>
+                    <h3 style="font-size: 28px; font-weight: 800; color: #111; margin-top: 8px;">5</h3>
+                </div>
+                <div style="background: #e8f5e9; color: #28a745; width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+            </div>
+            <span style="font-size: 12px; color: #666; display: inline-block; margin-top: 10px;">Hoạt động ổn định</span>
+        </div>
+
+        <!-- Widget 3 -->
+        <div style="background: #fff; padding: 22px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); border-left: 4px solid #ffc107;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <span style="font-size: 13px; color: #666; font-weight: 600; text-transform: uppercase;">Chờ Xử Lý</span>
+                    <h3 style="font-size: 28px; font-weight: 800; color: #111; margin-top: 8px;">14</h3>
+                </div>
+                <div style="background: #fff8e1; color: #ffc107; width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+            </div>
+            <span style="font-size: 12px; color: #d97706; font-weight: 600; display: inline-block; margin-top: 10px;">Cần phản hồi sớm</span>
+        </div>
+
+        <!-- Widget 4 -->
+        <div style="background: #fff; padding: 22px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); border-left: 4px solid #6f42c1;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <span style="font-size: 13px; color: #666; font-weight: 600; text-transform: uppercase;">Tài Khoản Quản Trị</span>
+                    <h3 style="font-size: 28px; font-weight: 800; color: #111; margin-top: 8px;">3</h3>
+                </div>
+                <div style="background: #f3e8ff; color: #6f42c1; width: 42px; height: 42px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+            </div>
+            <span style="font-size: 12px; color: #666; display: inline-block; margin-top: 10px;">Bảo mật an toàn</span>
+        </div>
+
+    </div>
+
+    <!-- Bảng Dữ Liệu: Yêu Cầu Tư Vấn Gần Nhất -->
+    <div style="background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.04); overflow: hidden;">
+        <div style="padding: 20px 24px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="font-size: 18px; font-weight: 700; color: #111; margin: 0;">Yêu Cầu Tư Vấn Khách Hàng Gần Nhất</h3>
+            <a href="/admin/contacts" style="font-size: 14px; color: #0066cc; text-decoration: none; font-weight: 650;">Xem tất cả &rarr;</a>
+        </div>
+
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 14px;">
+                <thead>
+                    <tr style="background-color: #f8f9fa; color: #333; border-bottom: 2px solid #dee2e6;">
+                        <th style="padding: 14px 20px; font-weight: 600;">Họ tên khách hàng</th>
+                        <th style="padding: 14px 20px; font-weight: 600;">Công ty / Đơn vị</th>
+                        <th style="padding: 14px 20px; font-weight: 600;">Dịch vụ quan tâm</th>
+                        <th style="padding: 14px 20px; font-weight: 600;">Điện thoại / Email</th>
+                        <th style="padding: 14px 20px; font-weight: 600;">Trạng thái</th>
+                        <th style="padding: 14px 20px; font-weight: 600; text-align: center;">Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody style="color: #444;">
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 14px 20px; font-weight: 600; color: #111;">Nguyễn Văn An</td>
+                        <td style="padding: 14px 20px;">Công ty Cổ phần Xây dựng ABC</td>
+                        <td style="padding: 14px 20px;">Hạ Tầng Kỹ Thuật & Xây Dựng</td>
+                        <td style="padding: 14px 20px;">0901234567<br><span style="font-size: 12px; color: #777;">an.nv@abc.vn</span></td>
+                        <td style="padding: 14px 20px;">
+                            <span style="background-color: #fff3cd; color: #856404; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Chờ xử lý</span>
+                        </td>
+                        <td style="padding: 14px 20px; text-align: center;">
+                            <button style="background: #e6f0ff; color: #0066cc; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: 600; margin-right: 4px;" title="Xem chi tiết">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <button style="background: #f8d7da; color: #dc3545; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: 600;" title="Xóa">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 14px 20px; font-weight: 600; color: #111;">Trần Thị Mai</td>
+                        <td style="padding: 14px 20px;">Tập đoàn Môi trường Xanh</td>
+                        <td style="padding: 14px 20px;">Giải Pháp & Quan Trắc Môi Trường</td>
+                        <td style="padding: 14px 20px;">0918888999<br><span style="font-size: 12px; color: #777;">mai.tt@green.vn</span></td>
+                        <td style="padding: 14px 20px;">
+                            <span style="background-color: #d4edda; color: #155724; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600;">Đã liên hệ</span>
+                        </td>
+                        <td style="padding: 14px 20px; text-align: center;">
+                            <button style="background: #e6f0ff; color: #0066cc; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: 600; margin-right: 4px;" title="Xem chi tiết">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <button style="background: #f8d7da; color: #dc3545; border: none; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 13px; font-weight: 600;" title="Xóa">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</main>
+
+<%- include('footer') %>
