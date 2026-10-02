@@ -1,6 +1,7 @@
 // controllers/contactController.js
 const ServiceModel = require('../models/serviceModel');
 const ContactModel = require('../models/contactModel');
+const db = require('../config/db'); // Đường dẫn kết nối database để query tổng số lượng
 
 const getContactPage = async (req, res) => {
     try {
@@ -77,6 +78,23 @@ const submitContact = async (req, res) => {
             status: 'pending' // Trạng thái mặc định khi khách vừa gửi
         });
 
+        // --- BỔ SUNG PHẦN SOCKET.IO REAL-TIME ---
+        try {
+            // 1. Lấy tổng số lượng contacts mới nhất từ database
+            const [rows] = await db.execute("SELECT COUNT(*) as total FROM contacts");
+            const newTotal = rows[0].total;
+
+            // 2. Lấy io instance đã được set ở server.js và phát tín hiệu cho toàn bộ Admin đang mở trang
+            const io = req.app.get('socketio');
+            if (io) {
+                io.emit('updateContactTotal', newTotal);
+            }
+        } catch (socketError) {
+            console.error("Lỗi phát Socket.io khi có contact mới:", socketError);
+            // Không làm ảnh hưởng đến luồng chính nếu socket lỗi
+        }
+        // ----------------------------------------
+
         // Sau khi lưu thành công, thông báo cho khách hoặc chuyển hướng
         return res.redirect('/contact?success=true');
     } catch (error) {
@@ -84,6 +102,8 @@ const submitContact = async (req, res) => {
         return res.status(500).send("Có lỗi xảy ra, vui lòng thử lại sau.");
     }
 };
+
+module.exports = submitContact;
 
 module.exports = {
     getContactPage,

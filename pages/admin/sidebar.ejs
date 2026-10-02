@@ -1,53 +1,81 @@
 <!-- SIDEBAR NAVIGATION -->
-<aside class="admin-sidebar" style="width: 260px; background-color: #0a192f; color: #fff; display: flex; flex-direction: column; flex-shrink: 0; min-height: 100vh;">
+<aside class="admin-sidebar" style="width: 260px; background-color: #0a192f; color: #fff; display: flex; flex-direction: column; flex-shrink: 0; min-height: 100vh; box-shadow: 4px 0 15px rgba(0,0,0,0.2);">
     <!-- Logo / Tiêu đề Sidebar -->
     <div style="padding: 24px 20px; border-bottom: 1px solid rgba(255,255,255,0.1);">
-        <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin: 0;">TTT Admin Panel</h3>
+        <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin: 0; letter-spacing: 0.5px;">TTT Admin Panel</h3>
         <span style="font-size: 12px; color: #8892b0;">Hệ thống quản lý nội bộ</span>
     </div>
 
     <!-- Menu Links -->
-    <ul style="list-style: none; padding: 20px 0; margin: 0; display: flex; flex-direction: column; gap: 5px; flex-grow: 1;">
+    <ul style="list-style: none; padding: 20px 0; margin: 0; display: flex; flex-direction: column; gap: 6px; flex-grow: 1;">
         <!-- Tổng quan -->
         <li>
-            <a href="/admin" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>" onmouseover="if('<%= currentRoute %>' !== '/admin') { this.style.color='#fff'; this.style.backgroundColor='rgba(255,255,255,0.05)'; }" onmouseout="if('<%= currentRoute %>' !== '/admin') { this.style.color='#a8b2d1'; this.style.backgroundColor='transparent'; }">
-                <i class="fa-solid fa-chart-pie" style="width: 18px;"></i> Tổng quan
+            <a href="/admin" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>">
+                <i class="fa-solid fa-chart-pie" style="width: 18px; color: <%= currentRoute === '/admin' ? '#64ffda' : 'inherit' %>;"></i> Tổng quan
             </a>
         </li>
 
-        <!-- Quản lý Liên hệ -->
+        <!-- Quản lý Liên hệ (Có badge màu đỏ nổi bật) -->
         <li>
-            <a href="/admin/contacts" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin/contacts' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>" onmouseover="if('<%= currentRoute %>' !== '/admin/contacts') { this.style.color='#fff'; this.style.backgroundColor='rgba(255,255,255,0.05)'; }" onmouseout="if('<%= currentRoute %>' !== '/admin/contacts') { this.style.color='#a8b2d1'; this.style.backgroundColor='transparent'; }">
-                <i class="fa-solid fa-address-book" style="width: 18px;"></i> Quản lý Liên hệ
+            <a href="/admin/contacts" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin/contacts' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>">
+                <span style="display: flex; align-items: center; gap: 12px;">
+                    <i class="fa-solid fa-address-book" style="width: 18px; color: <%= currentRoute === '/admin/contacts' ? '#64ffda' : 'inherit' %>;"></i> Quản lý Liên hệ
+                </span>
+                <!-- Badge hiển thị số lượng với tông màu đỏ bắt mắt -->
+                <span class="contact-badge-count" style="background: linear-gradient(135deg, #ff416c, #ff4b2b); color: #ffffff; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 12px; box-shadow: 0 2px 6px rgba(255, 65, 108, 0.4); min-width: 20px; text-align: center;">
+                    <%= typeof contactTotal !== 'undefined' ? contactTotal : 0 %>
+                </span>
             </a>
         </li>
 
         <!-- Danh mục Dịch vụ -->
         <li>
-            <a href="/admin/services" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin/services' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>" onmouseover="if('<%= currentRoute %>' !== '/admin/services') { this.style.color='#fff'; this.style.backgroundColor='rgba(255,255,255,0.05)'; }" onmouseout="if('<%= currentRoute %>' !== '/admin/services') { this.style.color='#a8b2d1'; this.style.backgroundColor='transparent'; }">
-                <i class="fa-solid fa-briefcase" style="width: 18px;"></i> Danh mục Dịch vụ
+            <a href="/admin/services" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin/services' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>">
+                <i class="fa-solid fa-briefcase" style="width: 18px; color: <%= currentRoute === '/admin/services' ? '#64ffda' : 'inherit' %>;"></i> Danh mục Dịch vụ
             </a>
         </li>
 
         <!-- Tài khoản Quản trị -->
         <li>
-            <a href="/admin/users" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin/users' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>" onmouseover="if('<%= currentRoute %>' !== '/admin/users') { this.style.color='#fff'; this.style.backgroundColor='rgba(255,255,255,0.05)'; }" onmouseout="if('<%= currentRoute %>' !== '/admin/users') { this.style.color='#a8b2d1'; this.style.backgroundColor='transparent'; }">
-                <i class="fa-solid fa-users-gear" style="width: 18px;"></i> Tài khoản Quản trị
+            <a href="/admin/users" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin/users' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>">
+                <i class="fa-solid fa-users-gear" style="width: 18px; color: <%= currentRoute === '/admin/users' ? '#64ffda' : 'inherit' %>;"></i> Tài khoản Quản trị
             </a>
         </li>
 
         <!-- Cài đặt chung -->
         <li>
-            <a href="/admin/settings" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin/settings' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>" onmouseover="if('<%= currentRoute %>' !== '/admin/settings') { this.style.color='#fff'; this.style.backgroundColor='rgba(255,255,255,0.05)'; }" onmouseout="if('<%= currentRoute %>' !== '/admin/settings') { this.style.color='#a8b2d1'; this.style.backgroundColor='transparent'; }">
-                <i class="fa-solid fa-gear" style="width: 18px;"></i> Cài đặt chung
+            <a href="/admin/settings" style="display: flex; align-items: center; gap: 12px; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin/settings' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>">
+                <i class="fa-solid fa-gear" style="width: 18px; color: <%= currentRoute === '/admin/settings' ? '#64ffda' : 'inherit' %>;"></i> Cài đặt chung
             </a>
         </li>
     </ul>
 
     <!-- Đăng xuất -->
     <div style="padding: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
-        <a href="/logout" style="display: flex; align-items: center; gap: 10px; color: #ff6b6b; text-decoration: none; font-size: 14px; font-weight: 600;">
+        <a href="/logout" style="display: flex; align-items: center; gap: 10px; color: #ff6b6b; text-decoration: none; font-size: 14px; font-weight: 600; transition: 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
             <i class="fa-solid fa-right-from-bracket"></i> Đăng xuất hệ thống
         </a>
     </div>
 </aside>
+
+<!-- Nhúng thư viện Socket.io client -->
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const socket = io();
+
+    // Lắng nghe sự kiện từ server gửi xuống
+    socket.on('updateContactTotal', function(newTotal) {
+        console.log("Đã nhận số lượng mới từ Socket:", newTotal); // Kiểm tra F12 Console xem có log này không
+        
+        const badges = document.querySelectorAll('.contact-badge-count');
+        badges.forEach(badge => {
+            badge.textContent = newTotal;
+            
+            // Hiệu ứng nhấp nháy phóng to nhẹ khi đổi số
+            badge.style.transform = 'scale(1.25)';
+            setTimeout(() => {
+                badge.style.transform = 'scale(1)';
+            }, 200);
+        });
+    });
+</script>

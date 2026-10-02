@@ -38,6 +38,16 @@ const ServiceModel = {
         }
     },
 
+    getServiceBySlug: async (slug) => {
+        try {
+            const [rows] = await db.execute("SELECT * FROM services WHERE slug = ?", [slug]);
+            return rows[0]; // Trả về một object dịch vụ duy nhất
+        } catch (error) {
+            console.error("Lỗi lấy dịch vụ theo slug:", error);
+            return null;
+        }
+    },
+
     // Xóa dịch vụ
     deleteService: async (id) => {
         const [result] = await db.execute("DELETE FROM services WHERE id = ?", [id]);

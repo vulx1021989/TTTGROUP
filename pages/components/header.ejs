@@ -57,7 +57,7 @@
                 <ul class="dropdown-menu">
                     <% if (locals.services && services.length > 0) { %>
                         <% services.forEach(service => { %>
-                            <li><a href="dich-vu/<%= service.slug %>"><%= service.title %></a></li>
+                            <li><a href="/dich-vu/<%= service.slug %>"><%= service.title %></a></li>
                         <% }) %>
                     <% } else { %>
                         <li><a href="#">Đang cập nhật dịch vụ...</a></li>

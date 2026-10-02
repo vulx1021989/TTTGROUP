@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+const serviceModel = require('../models/serviceModel');
+
 // 1. Import các router con và controller
 const adminRouter = require('./admin');
 const authController = require('../controllers/authController'); // Đảm bảo đường dẫn đúng tới thư mục controllers
@@ -26,25 +28,28 @@ router.get('/logout', (req, res) => {
 });
 
 // 5. Route cho các dịch vụ con
+// Route xử lý động cho tất cả các dịch vụ
 router.get('/dich-vu/:slug', async (req, res) => {
     try {
-        const fullSlug = '/dich-vu/' + req.params.slug;
-        const service = await serviceModel.getServiceBySlug(fullSlug);
+        // Lấy trực tiếp slug ngắn gọn từ URL (ví dụ: cho-thue-bao-tri-he-thong-may-lanh)
+        const serviceSlug = req.params.slug;
+        
+        // Truy vấn database theo slug ngắn gọn
+        const service = await serviceModel.getServiceBySlug(serviceSlug);
         
         if (!service) {
             return res.status(404).send("Không tìm thấy dịch vụ!");
         }
 
-        // service.file_path trong CSDL sẽ lưu tên file (ví dụ: aircon, lighting, road, ...)
-        // Hoặc nếu bạn lưu đầy đủ, có thể dùng trực tiếp biến đó.
-        const viewName = service.file_path || req.params.slug;
+        // service.file_path trong CSDL sẽ lưu tên file view (ví dụ: aircon, lighting,...)
+        const viewName = service.file_path || serviceSlug;
 
         res.render(`pages/services/${viewName}`, {
             title: service.title,
-            service: service // Truyền thêm object service sang để trang EJS dùng nếu cần
+            service: service // Truyền dữ liệu dịch vụ sang trang EJS
         });
     } catch (error) {
-        console.error("Lỗi render dịch vụ:", error);
+        console.error("Lỗi hiển thị chi tiết dịch vụ:", error);
         res.status(500).send("Lỗi Server");
     }
 });
