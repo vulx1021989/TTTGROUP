@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://tttgroup.com/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://tttgroup.com/ve-chung-toi</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://tttgroup.com/tuyen-dung</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://tttgroup.com/lien-he</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <!-- Các trang dịch vụ EPC / Hạ tầng / O&M -->
+    <url>
+        <loc>https://tttgroup.com/dich-vu/van-hanh-bao-tri-he-thong-ky-thuat-benh-vien</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://tttgroup.com/dich-vu/duy-tu-thoat-nuoc-va-duong-giao-thong</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://tttgroup.com/dich-vu/thiet-ke-thi-cong-van-hanh-xu-ly-nuoc-thai</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>

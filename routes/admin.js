@@ -7,6 +7,7 @@ const contactController = require('../controllers/contactController');
 const serviceController = require('../controllers/serviceController');
 const careerController = require('../controllers/careerController'); // Import controller tuyển dụng (nếu có)
 const RequestController = require('../controllers/requestController');
+const dashboardController = require('../controllers/dashboardController');
 
 const verifyToken = require('../middlewares/authMiddleware');
 router.use(verifyToken);
@@ -51,5 +52,8 @@ router.get('/careers/applications/delete/:id', careerController.deleteApplicatio
 router.get('/requests', RequestController.renderRequestsList);
 router.post('/requests/:id/status', RequestController.updateStatus);
 router.delete('/requests/:id', RequestController.deleteRequest);
+
+// Route trang Quản trị Dashboard
+router.get('/dashboard', dashboardController.getDashboard);
 
 module.exports = router;

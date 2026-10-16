@@ -1,24 +1,27 @@
 <%- include('../components/header', { title: 'Thiết Kế - Thi Công - Vận Hành Hệ Thống Xử Lý Nước Thải Trọn Gói - TTT Group' }) %>
 
-<main class="main-wrapper" style="background-color: #f8fafc; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #334155; line-height: 1.6;">
+<!-- NHÚNG FILE CSS RIÊNG -->
+<link rel="stylesheet" href="/css/thiet-ke-thi-cong-xlnt.css">
 
-    <!-- 1. HERO BANNER CÓ BACKGROUND THỰC TẾ DỰ ÁN -->
-    <section style="position: relative; background: linear-gradient(135deg, rgba(6, 78, 59, 0.65) 0%, rgba(15, 23, 42, 0.75) 100%), url('/images/banner-thiet-ke-thi-cong-van-hanh-XLNT.png') center/cover no-repeat; color: #fff; padding: 90px 5% 80px 5%; text-align: center;">
-        <div style="max-width: 900px; margin: 0 auto; position: relative; z-index: 2;">
-            <span style="background: rgba(52, 211, 153, 0.25); color: #34d399; padding: 6px 18px; border-radius: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(52,211,153,0.4);">
+<main class="main-wrapper-epc">
+
+    <!-- 1. HERO BANNER -->
+    <section class="epc-hero">
+        <div class="epc-hero-container">
+            <span class="epc-hero-badge">
                 Tổng Thầu EPC Công Nghệ Môi Trường
             </span>
-            <h1 style="font-size: 38px; font-weight: 800; margin: 20px 0 15px 0; line-height: 1.3; color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.5);">
+            <h1 class="epc-hero-title">
                 Thiết Kế - Thi Công - Vận Hành Hệ Thống Xử Lý Nước Thải Trọn Gói
             </h1>
-            <p style="font-size: 16px; color: #f1f5f9; line-height: 1.7; margin: 0 auto 30px auto; max-width: 780px; text-shadow: 0 1px 4px rgba(0,0,0,0.5);">
+            <p class="epc-hero-desc">
                 TTT Group cung cấp giải pháp tổng thể từ tư vấn giải pháp, thiết kế bản vẽ kỹ thuật, thi công xây dựng trạm xử lý, cung cấp thiết bị đến vận hành chuyển giao công nghệ cho Bệnh viện, Khu dân cư và Trường học.
             </p>
-            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="#bao-gia-form" style="background-color: #10b981; color: #fff; padding: 13px 28px; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);">
+            <div class="epc-hero-buttons">
+                <a href="#bao-gia-form" class="btn-epc-primary">
                     <i class="fa-solid fa-calculator"></i> Nhận Báo Giá Trọn Gói
                 </a>
-                <a href="tel:0946117878" style="background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.4); padding: 13px 28px; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; backdrop-filter: blur(4px);">
+                <a href="tel:0946117878" class="btn-epc-outline">
                     <i class="fa-solid fa-phone-volume"></i> Hotline Kỹ Thuật: 0946 117 878
                 </a>
             </div>
@@ -26,48 +29,48 @@
     </section>
 
     <!-- 2. CAM KẾT NĂNG LỰC CỦA TTT GROUP -->
-    <section style="background: #fff; border-bottom: 1px solid #e2e8f0; padding: 35px 5%;">
-        <div style="max-width: 1150px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; text-align: center;">
+    <section class="epc-stats-section">
+        <div class="epc-stats-container">
             <div>
-                <div style="font-size: 32px; font-weight: 800; color: #059669;">100%</div>
-                <div style="font-size: 13px; color: #64748b; font-weight: 600; margin-top: 5px;">Đạt Chuẩn Xả Thải QCVN</div>
+                <div class="epc-stat-num-green">100%</div>
+                <div class="epc-stat-label">Đạt Chuẩn Xả Thải QCVN</div>
             </div>
             <div>
-                <div style="font-size: 32px; font-weight: 800; color: #0284c7;">Tiết Kiệm 25%</div>
-                <div style="font-size: 13px; color: #64748b; font-weight: 600; margin-top: 5px;">Chi Phí Đầu Tư & Điện Năng</div>
+                <div class="epc-stat-num-blue">Tiết Kiệm 25%</div>
+                <div class="epc-stat-label">Chi Phí Đầu Tư & Điện Năng</div>
             </div>
             <div>
-                <div style="font-size: 32px; font-weight: 800; color: #d97706;">Bảo Hành 24M</div>
-                <div style="font-size: 13px; color: #64748b; font-weight: 600; margin-top: 5px;">Hỗ Trợ Kỹ Thuật Tận Nơi</div>
+                <div class="epc-stat-num-amber">Bảo Hành 24M</div>
+                <div class="epc-stat-label">Hỗ Trợ Kỹ Thuật Tận Nơi</div>
             </div>
             <div>
-                <div style="font-size: 32px; font-weight: 800; color: #9333ea;">15+ Năm</div>
-                <div style="font-size: 13px; color: #64748b; font-weight: 600; margin-top: 5px;">Kinh Nghiệm Tổng Thầu EPC</div>
+                <div class="epc-stat-num-purple">15+ Năm</div>
+                <div class="epc-stat-label">Kinh Nghiệm Tổng Thầu EPC</div>
             </div>
         </div>
     </section>
 
-    <!-- 3. QUY TRÌNH DỊCH VỤ TRỌN GÓI 3 GIAI ĐOẠN (DESIGN - BUILD - OPERATE) -->
-    <section style="padding: 70px 5%; background-color: #f8fafc;">
-        <div style="max-width: 1150px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 50px;">
-                <span style="color: #059669; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Quy Trình Chuyên Nghiệp</span>
-                <h2 style="color: #0f172a; font-size: 30px; font-weight: 800; margin-top: 8px;">Dịch Vụ Trọn Gói Khép Kín (EPC + O&M)</h2>
-                <p style="color: #64748b; font-size: 15px; max-width: 700px; margin: 10px auto 0 auto;">
+    <!-- 3. QUY TRÌNH DỊCH VỤ TRỌN GÓI 3 GIAI ĐOẠN -->
+    <section class="epc-process-section">
+        <div class="epc-container">
+            <div class="epc-section-header">
+                <span class="epc-section-tag">Quy Trình Chuyên Nghiệp</span>
+                <h2 class="epc-section-title">Dịch Vụ Trọn Gói Khép Kín (EPC + O&M)</h2>
+                <p class="epc-section-desc">
                     TTT Group đồng hành cùng chủ đầu tư xuyên suốt từ ý tưởng ban đầu cho đến khi trạm xử lý đi vào vận hành ổn định lâu dài.
                 </p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px;">
+            <div class="epc-grid-3cols">
                 
                 <!-- Giai đoạn 1: Tư vấn & Thiết kế -->
-                <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);">
-                    <div style="width: 55px; height: 55px; background: #e0f2fe; color: #0284c7; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;">
+                <div class="epc-process-card">
+                    <div class="epc-process-icon bg-blue-soft">
                         <i class="fa-solid fa-compass-drafting"></i>
                     </div>
                     <span style="color: #0284c7; font-size: 12px; font-weight: 800; text-transform: uppercase;">Giai Đoạn 1</span>
-                    <h3 style="font-size: 19px; font-weight: 700; color: #0f172a; margin: 5px 0 12px 0;">Tư Vấn & Thiết Kế Giải Pháp</h3>
-                    <ul style="padding-left: 18px; color: #475569; font-size: 14px; margin: 0; line-height: 1.8;">
+                    <h3 class="epc-process-title">Tư Vấn & Thiết Kế Giải Pháp</h3>
+                    <ul class="epc-process-list">
                         <li>Khảo sát đặc tính nước thải thô, lấy mẫu phân tích các chỉ tiêu BOD, COD, TSS, Coliforms.</li>
                         <li>Lựa chọn công nghệ xử lý tiên tiến (MBR, MBBR, AAO, SBR, SBR cải tiến).</li>
                         <li>Lập bản vẽ thiết kế công nghệ, bản vẽ thi công 3D, dự toán chi phí tối ưu.</li>
@@ -75,13 +78,13 @@
                 </div>
 
                 <!-- Giai đoạn 2: Thi công & Lắp đặt -->
-                <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);">
-                    <div style="width: 55px; height: 55px; background: #fef3c7; color: #d97706; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;">
+                <div class="epc-process-card">
+                    <div class="epc-process-icon bg-amber-soft">
                         <i class="fa-solid fa-helmet-safety"></i>
                     </div>
                     <span style="color: #d97706; font-size: 12px; font-weight: 800; text-transform: uppercase;">Giai Đoạn 2</span>
-                    <h3 style="font-size: 19px; font-weight: 700; color: #0f172a; margin: 5px 0 12px 0;">Thi Công & Lắp Đặt Thiết Bị</h3>
-                    <ul style="padding-left: 18px; color: #475569; font-size: 14px; margin: 0; line-height: 1.8;">
+                    <h3 class="epc-process-title">Thi Công & Lắp Đặt Thiết Bị</h3>
+                    <ul class="epc-process-list">
                         <li>Thi công xây dựng bể bê tông cốt thép / bể thép / bồn Composite gọn nhẹ.</li>
                         <li>Cung cấp và lắp đặt hệ thống máy bơm chìm, máy thổi khí, đĩa phân phối khí, hệ thống khử trùng.</li>
                         <li>Lập trình tủ điện điều khiển tự động PLC/HMI, kết nối trạm quan trắc tự động.</li>
@@ -89,13 +92,13 @@
                 </div>
 
                 <!-- Giai đoạn 3: Vận hành & Chuyển giao -->
-                <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);">
-                    <div style="width: 55px; height: 55px; background: #ecfdf5; color: #059669; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;">
+                <div class="epc-process-card">
+                    <div class="epc-process-icon bg-green-soft">
                         <i class="fa-solid fa-list-check"></i>
                     </div>
                     <span style="color: #059669; font-size: 12px; font-weight: 800; text-transform: uppercase;">Giai Đoạn 3</span>
-                    <h3 style="font-size: 19px; font-weight: 700; color: #0f172a; margin: 5px 0 12px 0;">Vận Hành & Chuyển Giao Công Nghệ</h3>
-                    <ul style="padding-left: 18px; color: #475569; font-size: 14px; margin: 0; line-height: 1.8;">
+                    <h3 class="epc-process-title">Vận Hành & Chuyển Giao Công Nghệ</h3>
+                    <ul class="epc-process-list">
                         <li>Nuôi cấy bùn vi sinh, chạy thử nghiệm (Commissioning) và căn chỉnh thông số vận hành.</li>
                         <li>Lấy mẫu nước xả thải nghiệm thu đạt chuẩn QCVN của Bộ Tài nguyên & Môi trường.</li>
                         <li>Đào tạo nhân sự vận hành, chuyển giao tài liệu hướng dẫn và thực hiện bảo trì định kỳ.</li>
@@ -106,18 +109,18 @@
         </div>
     </section>
 
-    <!-- 4. LĨNH VỰC TRỌNG TÂM (BỆNH VIỆN - TRƯỜNG HỌC - KHU DÂN CƯ) -->
-    <section style="padding: 70px 5%; background-color: #fff; border-top: 1px solid #e2e8f0;">
-        <div style="max-width: 1150px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 50px;">
-                <span style="color: #0284c7; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Lĩnh Vực Ứng Dụng</span>
-                <h2 style="color: #0f172a; font-size: 30px; font-weight: 800; margin-top: 8px;">Giải Pháp Chuyên Biệt Cho Từng Công Trình</h2>
+    <!-- 4. LĨNH VỰC TRỌNG TÂM -->
+    <section class="epc-segments-section">
+        <div class="epc-container">
+            <div class="epc-section-header">
+                <span class="epc-section-tag" style="color: #0284c7;">Lĩnh Vực Ứng Dụng</span>
+                <h2 class="epc-section-title">Giải Pháp Chuyên Biệt Cho Từng Công Trình</h2>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px;">
+            <div class="epc-grid-3cols">
                 
                 <!-- Bệnh viện & Y tế -->
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px;">
+                <div class="epc-segment-box">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <i class="fa-solid fa-hospital" style="font-size: 32px; color: #0284c7;"></i>
                         <h3 style="font-size: 19px; font-weight: 700; color: #0f172a; margin: 0;">Bệnh Viện & Cơ Sở Y Tế</h3>
@@ -128,7 +131,7 @@
                 </div>
 
                 <!-- Khu dân cư & Đô thị -->
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px;">
+                <div class="epc-segment-box">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <i class="fa-solid fa-city" style="font-size: 32px; color: #059669;"></i>
                         <h3 style="font-size: 19px; font-weight: 700; color: #0f172a; margin: 0;">Khu Dân Cư & Khu Đô Thị</h3>
@@ -139,7 +142,7 @@
                 </div>
 
                 <!-- Trường học & Viện nghiên cứu -->
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px;">
+                <div class="epc-segment-box">
                     <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
                         <i class="fa-solid fa-graduation-cap" style="font-size: 32px; color: #d97706;"></i>
                         <h3 style="font-size: 19px; font-weight: 700; color: #0f172a; margin: 0;">Trường Học & Cơ Sở Đào Tạo</h3>
@@ -154,28 +157,28 @@
     </section>
 
     <!-- 5. DỰ ÁN TIÊU BIỂU -->
-    <section style="padding: 70px 5%; background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
-        <div style="max-width: 1150px; margin: 0 auto;">
-            <div style="text-align: center; margin-bottom: 50px;">
-                <span style="color: #059669; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Dấu Ấn Thực Tế</span>
-                <h2 style="color: #0f172a; font-size: 30px; font-weight: 800; margin-top: 8px;">Dự Án EPC Tiêu Biểu</h2>
+    <section class="epc-projects-section">
+        <div class="epc-container">
+            <div class="epc-section-header">
+                <span class="epc-section-tag">Dấu Ấn Thực Tế</span>
+                <h2 class="epc-section-title">Dự Án EPC Tiêu Biểu</h2>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px;">
+            <div class="epc-grid-3cols" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
                 
                 <!-- Dự án Phú Yên -->
-                <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
-                    <div style="height: 200px; background: url('/images/xlnt-7.jpg') center/cover no-repeat; position: relative;">
-                        <span style="position: absolute; bottom: 12px; left: 12px; background: rgba(15, 23, 42, 0.8); color: #34d399; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;">Phú Yên</span>
+                <div class="epc-project-card">
+                    <div class="epc-project-img-1">
+                        <span class="epc-project-tag">Phú Yên</span>
                     </div>
-                    <div style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="epc-project-body">
                         <div>
-                            <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 10px;">Trạm Xử Lý Nước Thải Tập Trung Đô Thị</h3>
-                            <p style="font-size: 14px; color: #64748b; line-height: 1.6; margin-bottom: 20px;">
+                            <h3 class="epc-project-title">Trạm Xử Lý Nước Thải Tập Trung Đô Thị</h3>
+                            <p class="epc-project-desc">
                                 Thi công xây dựng và lắp đặt trạm xử lý nước thải sinh hoạt công suất lớn, áp dụng công nghệ sinh học hiếu khí cải tiến.
                             </p>
                         </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 15px; font-size: 13px; color: #475569;">
+                        <div class="epc-project-footer">
                             <span><i class="fa-solid fa-droplet" style="color: #059669; margin-right: 5px;"></i> Công suất: 2,500 m³/ngày</span>
                             <span style="font-weight: 700; color: #0284c7;">Hoàn thành & Chuyển giao</span>
                         </div>
@@ -183,20 +186,20 @@
                 </div>
 
                 <!-- Dự án Bệnh viện -->
-                <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
-                    <div style="height: 200px; background: url('/images/xlnt-6.jpg') center/cover no-repeat; position: relative;">
+                <div class="epc-project-card">
+                    <div class="epc-project-img-2">
                         <i class="fa-solid fa-hospital" style="font-size: 50px; opacity: 0.3; position: absolute;"></i>
-                        <span style="position: absolute; bottom: 12px; left: 12px; background: rgba(15, 23, 42, 0.8); color: #34d399; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;">TP. Hồ Chí Minh</span>
+                        <span class="epc-project-tag">TP. Hồ Chí Minh</span>
                         <h4 style="font-size: 20px; font-weight: 700; z-index: 2; text-align: center; padding: 0 20px;">Thiết Kế & Thi Công XLNT Bệnh Viện Đa Khoa</h4>
                     </div>
-                    <div style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="epc-project-body">
                         <div>
-                            <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 10px;">Hệ Thống Màng Lọc MBR Y Tế</h3>
-                            <p style="font-size: 14px; color: #64748b; line-height: 1.6; margin-bottom: 20px;">
+                            <h3 class="epc-project-title">Hệ Thống Màng Lọc MBR Y Tế</h3>
+                            <p class="epc-project-desc">
                                 Tổng thầu EPC hệ thống xử lý nước thải y tế đạt chuẩn Cột A, tự động hóa 100% quy trình khử trùng.
                             </p>
                         </div>
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 15px; font-size: 13px; color: #475569;">
+                        <div class="epc-project-footer">
                             <span><i class="fa-solid fa-droplet" style="color: #059669; margin-right: 5px;"></i> Công suất: 800 m³/ngày</span>
                             <span style="font-weight: 700; color: #0284c7;">Đang vận hành</span>
                         </div>
@@ -208,8 +211,8 @@
     </section>
 
     <!-- 6. FORM ĐĂNG KÝ TƯ VẤN & BÁO GIÁ TRỌN GÓI -->
-    <section id="bao-gia-form" style="padding: 70px 5%; background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%); color: #fff;">
-        <div style="max-width: 800px; margin: 0 auto; background: #fff; padding: 45px; border-radius: 16px; color: #334155; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);">
+    <section id="bao-gia-form" class="epc-form-section">
+        <div class="epc-form-wrapper">
             <div style="text-align: center; margin-bottom: 30px;">
                 <span style="color: #059669; font-size: 13px; font-weight: 700; text-transform: uppercase;">Tư Vấn Giải Pháp Trực Tuyến</span>
                 <h2 style="color: #0f172a; font-size: 26px; font-weight: 800; margin-top: 5px; margin-bottom: 8px;">Yêu Cầu Khảo Sát & Báo Giá EPC Trọn Gói</h2>
@@ -219,25 +222,25 @@
             <form action="/contact/send" method="POST" id="epc-wastewater-form">
                 <input type="hidden" name="service_name" value="Thiết Kế - Thi Công - Vận Hành Xử Lý Nước Thải">
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 15px;">
-                    <div>
-                        <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #1e293b;">Tên Đơn Vị / Chủ Đầu Tư *</label>
-                        <input type="text" name="company" required placeholder="Ví dụ: Bệnh viện ABC / Công ty XYZ" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; box-sizing: border-box;">
+                <div class="epc-form-grid">
+                    <div class="epc-form-group">
+                        <label class="epc-form-label">Tên Đơn Vị / Chủ Đầu Tư *</label>
+                        <input type="text" name="company" required placeholder="Ví dụ: Bệnh viện ABC / Công ty XYZ" class="epc-form-input">
                     </div>
-                    <div>
-                        <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #1e293b;">Họ và Tên Người Đại Diện *</label>
-                        <input type="text" name="name" required placeholder="Ví dụ: Nguyễn Văn A" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; box-sizing: border-box;">
+                    <div class="epc-form-group">
+                        <label class="epc-form-label">Họ và Tên Người Đại Diện *</label>
+                        <input type="text" name="name" required placeholder="Ví dụ: Nguyễn Văn A" class="epc-form-input">
                     </div>
                 </div>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 15px;">
-                    <div>
-                        <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #1e293b;">Số Điện Thoại Liên Hệ *</label>
-                        <input type="tel" name="phone" required placeholder="Ví dụ: 0946117878" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; box-sizing: border-box;">
+                <div class="epc-form-grid">
+                    <div class="epc-form-group">
+                        <label class="epc-form-label">Số Điện Thoại Liên Hệ *</label>
+                        <input type="tel" name="phone" required placeholder="Ví dụ: 0946117878" class="epc-form-input">
                     </div>
-                    <div>
-                        <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #1e293b;">Loại Hình Cơ Sở *</label>
-                        <select name="facility_type" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; box-sizing: border-box; background: #fff;">
+                    <div class="epc-form-group">
+                        <label class="epc-form-label">Loại Hình Cơ Sở *</label>
+                        <select name="facility_type" required class="epc-form-select">
                             <option value="Benh vien / Y te">Bệnh viện / Phòng khám / Y tế</option>
                             <option value="Khu dan cu / Do thi">Khu dân cư / Chung cư / Khu đô thị</option>
                             <option value="Truong hoc">Trường học / Viện nghiên cứu</option>
@@ -247,12 +250,12 @@
                     </div>
                 </div>
 
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #1e293b;">Mô Tả Nhu Cầu / Công Suất Dự Kiến (m³/ngày)</label>
-                    <textarea name="message" rows="4" placeholder="Ví dụ: Cần thiết kế thi công trọn gói trạm xử lý nước thải 500m3/ngày đêm cho dự án khu dân cư mới..." style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
+                <div class="epc-form-group" style="margin-bottom: 20px;">
+                    <label class="epc-form-label">Mô Tả Nhu Cầu / Công Suất Dự Kiến (m³/ngày)</label>
+                    <textarea name="message" rows="4" placeholder="Ví dụ: Cần thiết kế thi công trọn gói trạm xử lý nước thải 500m3/ngày đêm cho dự án khu dân cư mới..." class="epc-form-textarea"></textarea>
                 </div>
 
-                <button type="submit" style="width: 100%; background: #10b981; color: #fff; border: none; padding: 14px; border-radius: 8px; font-weight: 700; font-size: 15px; cursor: pointer; transition: background 0.2s;">
+                <button type="submit" class="btn-submit-epc">
                     Gửi Yêu Cầu Khảo Sát & Nhận Phương Án Tư Vấn
                 </button>
             </form>

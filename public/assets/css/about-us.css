@@ -1,0 +1,520 @@
+/* ==================== VỀ CHÚNG TÔI - TTT TECHNOLOGY STYLES ==================== */
+
+/* 1. Container chung căn giữa */
+.container, 
+.container-custom, 
+.about-banner-container, 
+.career-container, 
+.ww-container, 
+.infra-container, 
+.epc-container, 
+.contact-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.main-wrapper {
+    background-color: #f8fafc;
+    min-height: 70vh;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #334155;
+}
+
+/* 2. Banner / Header trang */
+.about-banner {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgba(18, 38, 78, 0.75), rgba(27, 94, 32, 0.75)), url('/images/slide/banner-nhan-su-TTT.png') center/cover no-repeat;
+    color: #fff;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.about-banner-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.about-banner-badge {
+    display: inline-block;
+    background: rgba(0, 203, 160, 0.25);
+    color: #00cba0;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0,203,160,0.4);
+}
+
+.about-banner-title {
+    font-size: 38px;
+    font-weight: 900;
+    margin: 0 0 15px 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.about-banner-desc {
+    font-size: 16px;
+    color: #f1f5f9;
+    line-height: 1.6;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+}
+
+/* 3. Thông điệp ban lãnh đạo */
+.leadership-section {
+    padding: 60px 5% 30px 5%;
+    background-color: #fff;
+}
+
+.container-custom {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+.ceo-box {
+    position: relative;
+    width: 100%;
+    background: #f1f5f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border: 1px solid #e2e8f0;
+}
+
+.ceo-img {
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+} /* Đã đóng ngoặc nhọn đúng cú pháp */
+
+.brand-overlay {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px 14px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #cbd5e1;
+}
+
+.brand-text {
+    font-weight: 800;
+    font-size: 13px;
+    color: #1b5e20;
+    letter-spacing: 0.5px;
+}
+
+.leadership-content-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-heading-title {
+    font-size: 28px;
+    font-weight: 900;
+    color: #1b5e20;
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+.leadership-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+/* 4. Lời ngỏ */
+.opening-words-section {
+    padding: 30px 5% 60px 5%;
+    background-color: #fff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.opening-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-top: 5px solid #1b5e20;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+/* 5. Tầm nhìn & Sứ mệnh */
+.vision-mission-section {
+    padding: 60px 5%;
+    background-color: #f8fafc;
+}
+
+.vm-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    margin-bottom: 40px;
+}
+
+.vm-divider {
+    width: 50px;
+    height: 3px;
+    background-color: #1b5e20;
+    margin-top: 4px;
+}
+
+.vm-grid-2cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+.vm-text-card {
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid #1b5e20;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+    justify-content: center;
+}
+
+.vm-img-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+}
+
+.vm-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mission-pillars-box {
+    background-color: #1b5e20;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.pillar-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.pillar-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.pillar-title {
+    font-weight: 800;
+    color: #6ee7b7;
+    font-size: 15px;
+}
+
+.pillar-desc {
+    line-height: 1.6;
+    color: #f3f4f6;
+    margin: 0;
+    font-size: 13.5px;
+}
+
+/* 6. Giá trị cốt lõi (Đã khôi phục đúng cấu trúc gốc) */
+.core-values-section {
+    padding: 70px 5%;
+    background-color: #ffffff;
+}
+
+.cv-header-center {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+}
+
+.cv-tag {
+    color: #1b5e20;
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.cv-title {
+    font-size: 32px;
+    color: #1e3d7b;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.cv-divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #1b5e20, #0092ca);
+    margin: 15px auto 0 auto;
+    border-radius: 2px;
+}
+
+.cv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+}
+
+.value-card {
+    position: relative;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #1b5e20;
+    border-radius: 14px;
+    padding: 35px 30px 30px 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.value-card.border-blue {
+    border-top-color: #0092ca;
+}
+
+.value-card.border-navy {
+    border-top-color: #1e3d7b;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+}
+
+.value-number {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 42px;
+    font-weight: 900;
+    color: rgba(27, 94, 32, 0.08);
+    user-select: none;
+}
+
+.value-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.bg-green-gradient {
+    background: linear-gradient(135deg, #1b5e20, #2e7d32);
+    box-shadow: 0 4px 12px rgba(27, 94, 32, 0.25);
+}
+
+.bg-blue-gradient {
+    background: linear-gradient(135deg, #0092ca, #0284c7);
+    box-shadow: 0 4px 12px rgba(0, 146, 202, 0.25);
+}
+
+.bg-navy-gradient {
+    background: linear-gradient(135deg, #1e3d7b, #1e40af);
+    box-shadow: 0 4px 12px rgba(30, 61, 123, 0.25);
+}
+
+.value-check-text {
+    margin: 0;
+    padding-top: 10px;
+    border-top: 1px dashed #cbd5e1;
+    color: #334155;
+    font-weight: 500;
+}
+
+/* ==================== RESPONSIVE MOBILE TỐI ƯU ==================== */
+@media (max-width: 768px) {
+
+    /* 2. Ép tất cả các container không vượt quá 100% chiều rộng màn hình */
+    .container, 
+    .container-custom, 
+    .about-banner-container, 
+    .leadership-section,
+    .opening-words-section,
+    .vision-mission-section,
+    .core-values-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 3. Fix khối Banner đầu trang */
+    .about-banner {
+        padding: 50px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .about-banner-title {
+        font-size: 24px !important;
+        word-break: break-word !important;
+    }
+
+    /* 4. Fix phần Ảnh & Khung Ban Lãnh Đạo */
+    .leadership-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 20px !important;
+    }
+
+    .ceo-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .ceo-img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        max-height: 350px !important;
+        object-fit: cover !important;
+    }
+
+    /* 5. Ép tất cả hình ảnh trong trang không bao giờ tràn khung */
+    img, iframe {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 1. Ép toàn bộ khối Tầm nhìn / Sứ mệnh giãn full 100% chiều rộng màn hình */
+    .vm-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 15px !important;
+        margin-bottom: 25px !important;
+        box-sizing: border-box !important;
+    }
+
+    .vm-grid-2cols {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 20px !important;
+    }
+
+    .vm-text-card, 
+    .vm-img-card, 
+    .mission-pillars-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. Căn lề chữ tự nhiên, tránh bị giãn khoảng trắng quá đà */
+    .vm-text-card p, 
+    .vm-box p {
+        text-align: left !important; /* Đưa về căn lề trái tự nhiên thay vì justify */
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+    }
+
+    /* 3. Đảm bảo ảnh minh họa đi kèm giãn đều */
+    .vm-img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 250px !important;
+        object-fit: cover !important;
+    }
+
+    .core-values-section {
+        padding: 40px 15px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .cv-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 20px !important;
+    }
+
+    /* 2. Ép từng thẻ card cốt lõi trải dài 100% màn hình, không bị bóp méo */
+    .value-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+        padding: 25px 20px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 3. Đảm bảo chữ bên trong thẻ card dàn đều dễ nhìn */
+    .value-card p, 
+    .value-card span, 
+    .value-card li {
+        text-align: left !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+    }
+}

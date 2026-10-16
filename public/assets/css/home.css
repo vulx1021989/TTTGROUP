@@ -1,0 +1,237 @@
+/* ==================== TRANG CHỦ - TTT TECHNOLOGY STYLES ==================== */
+
+.main-wrapper {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #334155;
+    background-color: #f8fafc;
+    overflow-x: hidden;
+}
+
+/* --- 1. HERO SLIDER SECTION --- */
+.hero-slider-section {
+    position: relative;
+    overflow: hidden;
+    background: #12264e;
+    color: #fff;
+}
+
+.hero-slider-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-item {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.7s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 8%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slider-item.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Hình nền cho từng slide */
+.slide-bg-1 {
+    background-image: linear-gradient(rgba(18, 38, 78, 0.6), rgba(30, 61, 123, 0.6)), url('/images/slide/banner-slide-1.png');
+}
+.slide-bg-2 {
+    background-image: linear-gradient(rgba(15, 56, 30, 0.65), rgba(22, 101, 52, 0.65)), url('/images/slide/banner-slide-2.png');
+}
+.slide-bg-3 {
+    background-image: linear-gradient(rgba(10, 25, 47, 0.7), rgba(30, 41, 59, 0.7)), url('/images/slide/banner-slide-3.png');
+}
+
+.slide-content {
+    max-width: 700px;
+    margin: 0;
+    text-align: left;
+}
+
+.slide-badge {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    border: 1px solid;
+}
+.badge-green { background: rgba(0, 203, 160, 0.25); color: #00cba0; border-color: rgba(0,203,160,0.4); }
+.badge-lime { background: rgba(34, 197, 94, 0.25); color: #4ade80; border-color: rgba(34,197,94,0.4); }
+.badge-blue { background: rgba(0, 146, 202, 0.25); color: #0092ca; border-color: rgba(0,146,202,0.4); }
+
+.slide-title {
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    color: #fff;
+}
+.slide-title span { color: #00cba0; }
+
+.slide-desc {
+    font-size: 15px;
+    color: #f1f5f9;
+    margin-bottom: 25px;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.slide-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-slide {
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.btn-green { background: #00cba0; color: #fff; box-shadow: 0 4px 10px rgba(0,203,160,0.3); }
+.btn-lime-solid { background: #22c55e; color: #fff; box-shadow: 0 4px 10px rgba(34,197,94,0.3); }
+.btn-blue-solid { background: #0092ca; color: #fff; box-shadow: 0 4px 10px rgba(0,146,202,0.3); }
+.btn-outline {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(4px);
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+/* Nút điều hướng slider */
+.slider-btn {
+    position: absolute;
+    z-index: 10;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    border: none;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.slider-btn:hover { background: rgba(0,0,0,0.7); }
+.slider-btn.prev { left: 20px; }
+.slider-btn.next { right: 20px; }
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    gap: 8px;
+}
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+.dot.active { background: #00cba0; }
+
+/* --- 2. LAYOUT CHUNG & CÁC SECTION --- */
+.section-padding { padding: 60px 5%; }
+.container-max { max-width: 1200px; margin: 0 auto; }
+.section-white { background: #fff; }
+.section-light { background: #f8fafc; }
+.section-green-light { background: #f0fdf4; }
+.border-bottom { border-bottom: 1px solid #e2e8f0; }
+
+.section-header-center { text-align: center; max-width: 800px; margin: 0 auto 40px auto; }
+.section-header-left { max-width: 800px; margin-bottom: 30px; }
+
+.section-tag { font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; }
+.section-title { font-size: 30px; color: #1e3d7b; font-weight: 800; margin: 10px 0 15px 0; line-height: 1.3; }
+.section-desc { color: #475569; font-size: 15px; line-height: 1.6; }
+.section-subtitle { font-size: 18px; font-weight: 700; }
+
+.text-green { color: #1b5e20; }
+.text-teal { color: #00cba0; }
+.text-blue { color: #0092ca; }
+.text-navy { color: #1e3d7b; }
+.text-red { color: #dc2626; }
+.font-bold { font-weight: 700; }
+
+/* Grids */
+.grid-2cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center; }
+.grid-3cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.grid-4cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 25px; }
+.grid-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+.stat-box { background: #f8fafc; padding: 20px; border-radius: 10px; border: 1px solid #e2e8f0; text-align: center; }
+.stat-num { font-size: 32px; font-weight: 900; }
+.stat-label { font-size: 13px; color: #64748b; font-weight: 600; }
+
+/* Card lĩnh vực */
+.card-item { background: #fff; border: 1px solid #e2e8f0; border-top: 4px solid #1b5e20; border-radius: 10px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+.card-header { border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 12px; }
+.card-header h3 { font-weight: 800; font-size: 14px; color: #1b5e20; text-transform: uppercase; margin: 0; }
+.card-list { padding-left: 18px; color: #475569; font-size: 13px; line-height: 1.6; margin: 0; }
+
+/* Dự án */
+.grid-projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.project-box { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; display: flex; flex-direction: column; }
+.project-img { height: 200px; position: relative; background-size: cover; background-position: center; }
+.project-img-1 { background-image: url('/images/xlnt-3.jpg'); }
+.project-img-2 { background-image: url('/images/thi-cong-benh-vien-tu-du.jpg'); }
+.project-img-3 { background-image: url('/images/thi-cong-nha-dieu-hanh-khu-tai-dinh-cu-thoi-thuan.jpg'); }
+.project-img-4 { background-image: url('/images/xlnt-bau-cat.jpg'); }
+.project-img-5 { background-image: url('/images/duy-tu-he-thong-thoat-nuoc-dương-noi-bo-tram-ep-rac-thanh-my-loi.jpg'); }
+.project-img-6 { background-image: url('/images/xlnt-5.jpg'); }
+
+.project-badge { position: absolute; top: 12px; left: 12px; background: #1b5e20; color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px; }
+.project-body { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.project-name { font-size: 16px; color: #12264e; font-weight: 800; margin-bottom: 6px; }
+.project-sub { color: #64748b; font-size: 13px; margin-bottom: 12px; }
+.project-footer { border-top: 1px solid #f1f5f9; padding-top: 10px; font-size: 12px; color: #64748b; display: flex; justify-content: space-between; }
+
+/* Rủi ro & Why us */
+.risk-card { background: #fff; padding: 25px; border-radius: 8px; border-left: 4px solid #dc2626; border: 1px solid #e2e8f0; }
+.why-box { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #bbf7d0; }
+.why-icon { font-size: 32px; margin-bottom: 15px; }
+
+/* Workflow */
+.grid-workflow { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
+.step-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; }
+.step-num { color: #fff; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; margin-bottom: 15px; }
+.bg-teal { background: #00cba0; }
+.bg-blue { background: #0092ca; }
+.step-list { list-style: disc; padding-left: 20px; color: #475569; font-size: 14px; line-height: 1.6; }
+
+/* CTA Banner */
+.cta-banner { padding: 50px 5%; background: linear-gradient(135deg, #12264e 0%, #1e3d7b 100%); color: #fff; text-align: center; }
+.container-cta { max-width: 800px; margin: 0 auto; }
+.btn-cta { background: #00cba0; color: #fff; padding: 14px 32px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 15px; display: inline-block; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,203,160,0.4); margin-top: 15px; }
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .hero-slider-container { height: 400px; }
+    .slide-title { font-size: 26px; }
+    .section-title { font-size: 24px; }
+    .slider-item { padding: 0 5%; }
+}

@@ -1,0 +1,191 @@
+/* ==================== LỊCH SỬ NĂNG LỰC & DỰ ÁN - TTT TECHNOLOGY ==================== */
+
+.main-wrapper-project {
+    padding: 50px 0;
+    background-color: #f8fafc;
+    min-height: 70vh;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #334155;
+}
+
+.container-project {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Section */
+.project-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.project-tag {
+    color: #1b5e20;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-main-title {
+    font-size: 34px;
+    color: #1e3d7b;
+    font-weight: 800;
+    margin: 10px 0 15px 0;
+}
+
+.project-desc {
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Projects Grid */
+.projects-grid-wrapper {
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+/* Project Card */
+.project-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-image-box {
+    height: 200px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-badge-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #1b5e20;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.project-content-box {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-category {
+    color: #0092ca;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.project-title {
+    font-size: 17px;
+    color: #1e3d7b;
+    font-weight: 800;
+    margin: 8px 0 10px 0;
+    line-height: 1.4;
+}
+
+.project-summary {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.project-footer-info {
+    border-top: 1px solid #f1f5f9;
+    padding-top: 12px;
+    font-size: 13px;
+    color: #475569;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-location i {
+    color: #1b5e20;
+}
+
+.project-client {
+    color: #1b5e20;
+}
+
+/* Background images cho từng dự án cụ thể */
+.bg-gang-viet { background-image: url('/images/xlnt-9.jpg'); }
+.bg-giay-nam-tien { background-image: url('/images/xlnt-1.jpg'); }
+.bg-mocal { background-image: url('/images/thi-cong-an-giang-duong-1.jpg'); }
+.bg-greenfeed { background-image: url('/images/thi-cong-bai-rac-dap-da.jpg'); }
+.bg-thoai-son { background-image: url('/images/di-tu-ha-tang-kcn-cat-lai.jpg'); }
+.bg-cat-lai { background-image: url('/images/cayxanh-1.jpg'); }
+.bg-dap-da { background-image: url('/images/thi-cong-nha-dieu-hanh-khu-tai-dinh-cu-thoi-thuan.jpg'); }
+.bg-tasa { background-image: url('/images/xlnt-bau-cat.jpg'); }
+.bg-tu-du { background-image: url('/images/thi-cong-benh-vien-tu-du.jpg'); }
+
+/* Call To Action Box */
+.project-cta-box {
+    text-align: center;
+    background: #1e3d7b;
+    color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.project-cta-title {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.project-cta-desc {
+    color: #cbd5e1;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.btn-profile-cta {
+    display: inline-block;
+    background-color: #1b5e20;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.btn-profile-cta:hover {
+    background-color: #144517;
+}
+
+/* ==================== RESPONSIVE CHO MOBILE ==================== */
+@media (max-width: 768px) {
+    .project-main-title {
+        font-size: 26px;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

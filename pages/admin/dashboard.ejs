@@ -1,0 +1,158 @@
+<%- include('header') %>
+
+<div style="display: flex; min-height: 100vh; background-color: #f1f5f9; font-family: 'Segoe UI', Roboto, sans-serif; width: 100%; overflow-x: hidden;">
+    
+    <!-- SIDEBAR -->
+    <%- include('sidebar') %>
+
+    <!-- MAIN CONTENT AREA -->
+    <div style="flex: 1; min-width: 0; padding: 30px; box-sizing: border-box; overflow-y: auto;">  
+        
+        <!-- TOP HEADER NỘI BỘ -->
+        <div style="background: #ffffff; padding: 18px 25px; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.02);">
+            <div>
+                <h1 style="font-size: 20px; font-weight: 800; color: #1b5e20; margin: 0;">Bảng Điều Khiển Tổng Quan</h1>
+                <p style="font-size: 13px; color: #64748b; margin: 3px 0 0 0;">Chào mừng bạn quay trở lại hệ thống quản trị TTT Group.</p>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 40px; height: 40px; background: #1b5e20; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px;">TT</div>
+                <div>
+                    <div style="font-weight: 700; font-size: 13.5px; color: #334155;">Quản Trị Viên</div>
+                    <div style="font-size: 11.5px; color: #64748b;">admin@tttgroup.com.vn</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STATS CARDS GRID (Dữ liệu động từ Database) -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 25px;">
+            <div style="background: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                <div style="font-size: 12px; text-transform: uppercase; color: #64748b; font-weight: 700; margin-bottom: 5px;">Yêu Cầu Báo Giá</div>
+                <div style="font-size: 26px; font-weight: 900; color: #1b5e20;"><%= stats.requests %></div>
+            </div>
+            <div style="background: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                <div style="font-size: 12px; text-transform: uppercase; color: #64748b; font-weight: 700; margin-bottom: 5px;">Hồ Sơ Tuyển Dụng</div>
+                <div style="font-size: 26px; font-weight: 900; color: #0284c7;"><%= stats.careers %></div>
+            </div>
+            <div style="background: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                <div style="font-size: 12px; text-transform: uppercase; color: #64748b; font-weight: 700; margin-bottom: 5px;">Dịch Vụ Đang Quản Lý</div>
+                <div style="font-size: 26px; font-weight: 900; color: #d97706;"><%= stats.services %></div>
+            </div>
+            <div style="background: #ffffff; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                <div style="font-size: 12px; text-transform: uppercase; color: #64748b; font-weight: 700; margin-bottom: 5px;">Lượt Truy Cập Tháng</div>
+                <div style="font-size: 26px; font-weight: 900; color: #7c3aed;"><%= stats.visitors %></div>
+            </div>
+        </div>
+
+        <!-- RECENT DATA TABLE PANEL -->
+        <div style="background: #ffffff; border-radius: 12px; padding: 22px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.02); margin-bottom: 25px;">
+            <div style="font-size: 15px; font-weight: 800; color: #1e3d7b; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;">
+                <span>Yêu Cầu Khảo Sát & Báo Giá Mới Nhất</span>
+                <a href="/admin/requests" style="font-size: 13px; color: #1b5e20; text-decoration: none; font-weight: 600;">Xem tất cả &rarr;</a>
+            </div>
+            
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 13.5px;">
+                    <thead>
+                        <tr style="background: #f8fafc; color: #475569; border-bottom: 2px solid #e2e8f0;">
+                            <th style="padding: 12px 14px; font-weight: 700;">Khách Hàng / Đơn Vị</th>
+                            <th style="padding: 12px 14px; font-weight: 700;">Dịch Vụ Yêu Cầu</th>
+                            <th style="padding: 12px 14px; font-weight: 700;">Số Điện Thoại</th>
+                            <th style="padding: 12px 14px; font-weight: 700;">Thời Gian</th>
+                            <th style="padding: 12px 14px; font-weight: 700;">Trạng Thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (recentRequests && recentRequests.length > 0) { %>
+                            <% recentRequests.forEach(item => { %>
+                                <tr style="border-bottom: 1px solid #f1f5f9;">
+                                    <td style="padding: 13px 14px; font-weight: 600; color: #334155;"><%= item.customer_name %></td>
+                                    <td style="padding: 13px 14px; color: #475569;"><%= item.service_name %></td>
+                                    <td style="padding: 13px 14px; color: #475569;"><%= item.phone %></td>
+                                    <td style="padding: 13px 14px; color: #64748b;"><%= item.created_at %></td>
+                                    <td style="padding: 13px 14px;"><span style="background: #dcfce7; color: #166534; padding: 4px 10px; border-radius: 20px; font-size: 11.5px; font-weight: 700;"><%= item.status || 'Mới Tiếp Nhận' %></span></td>
+                                </tr>
+                            <% }) %>
+                        <% } else { %>
+                            <tr>
+                                <td colspan="5" style="text-align: center; padding: 25px; color: #64748b;">Chưa có yêu cầu báo giá nào mới.</td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- KHỐI BIỂU ĐỒ TRỰC QUAN -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
+            <!-- Biểu đồ đường (Line Chart) -->
+            <div style="background: #ffffff; border-radius: 12px; padding: 22px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                <div style="font-size: 15px; font-weight: 800; color: #1e3d7b; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Biểu Đồ Yêu Cầu Tư Vấn (Theo Tháng)</span>
+                    <i class="fa-solid fa-chart-line" style="color: #1b5e20;"></i>
+                </div>
+                <canvas id="requestLineChart" height="110"></canvas>
+            </div>
+
+            <!-- Biểu đồ tròn (Doughnut Chart) -->
+            <div style="background: #ffffff; border-radius: 12px; padding: 22px; border: 1px solid #e2e8f0; box-shadow: 0 4px 12px rgba(0,0,0,0.02);">
+                <div style="font-size: 15px; font-weight: 800; color: #1e3d7b; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center;">
+                    <span>Tỷ Lệ Lĩnh Vực</span>
+                    <i class="fa-solid fa-chart-pie" style="color: #0284c7;"></i>
+                </div>
+                <canvas id="categoryDoughnutChart" height="190"></canvas>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Thư viện Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // 1. Cấu hình Biểu đồ Đường
+    const ctxLine = document.getElementById('requestLineChart').getContext('2d');
+    new Chart(ctxLine, {
+        type: 'line',
+        data: {
+            labels: ['Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11'],
+            datasets: [{
+                label: 'Số lượng yêu cầu',
+                data: [15, 22, 18, 30, 42, <%= stats.requests %>],
+                borderColor: '#1b5e20',
+                backgroundColor: 'rgba(27, 94, 32, 0.08)',
+                borderWidth: 3,
+                fill: true,
+                tension: 0.35
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { beginAtZero: true, grid: { color: '#f1f5f9' } },
+                x: { grid: { display: false } }
+            }
+        }
+    });
+
+    // 2. Cấu hình Biểu đồ Tròn
+    const ctxDoughnut = document.getElementById('categoryDoughnutChart').getContext('2d');
+    new Chart(ctxDoughnut, {
+        type: 'doughnut',
+        data: {
+            labels: ['Xử lý nước thải', 'Duy tu hạ tầng', 'Vận hành O&M'],
+            datasets: [{
+                data: [45, 30, 25],
+                backgroundColor: ['#1b5e20', '#0092ca', '#f59e0b'],
+                borderWidth: 2,
+                borderColor: '#ffffff'
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 12 } } } }
+        }
+    });
+</script>
+
+<%- include('footer') %>

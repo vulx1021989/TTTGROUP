@@ -1,6 +1,5 @@
-
 <footer class="site-footer">
-    <div class="container">
+    <div class="footer-container">
         <div class="footer-grid">
             <!-- Cột 1: Thông tin liên hệ -->
             <div class="footer-col">
@@ -35,34 +34,28 @@
 
             <!-- Cột 2: Dịch vụ trọng tâm -->
             <div class="footer-col">
-                <h3 style="font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 20px; position: relative; padding-bottom: 10px;">
-                    Dịch Vụ Trọng Tâm
-                    <span style="position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background-color: #10b981; border-radius: 2px;"></span>
-                </h3>
-                <ul class="footer-links" style="list-style: none; padding: 0; margin: 0;">
+                <h3>Dịch Vụ Trọng Tâm</h3>
+                <ul class="footer-links">
                     <% if (typeof servicesMenu !== 'undefined' && servicesMenu.length > 0) { %>
                         <% servicesMenu.forEach(service => { %>
-                            <li style="margin-bottom: 12px;">
-                                <a href="/dich-vu/<%= service.slug %>" style="color: #94a3b8; text-decoration: none; font-size: 14px; transition: color 0.2s, padding-left 0.2s; display: inline-flex; align-items: center; gap: 8px;" onmouseover="this.style.color='#10b981'; this.style.paddingLeft='5px';" onmouseout="this.style.color='#94a3b8'; this.style.paddingLeft='0px';">
+                            <li>
+                                <a href="/dich-vu/<%= service.slug %>">
                                     <i class="fa-solid fa-angle-right" style="font-size: 11px; color: #10b981;"></i>
                                     <%= service.title %>
                                 </a>
                             </li>
                         <% }) %>
                     <% } else { %>
-                        <li><a href="#" style="color: #64748b; text-decoration: none; font-size: 14px;">Đang cập nhật dịch vụ...</a></li>
+                        <li><a href="#" style="color: #64748b;">Đang cập nhật dịch vụ...</a></li>
                     <% } %>
                 </ul>
             </div>
 
             <!-- Cột 3: Bản đồ Trụ sở chính -->
-            <div class="footer-col footer-right-col">
-                <div class="headquarter-image-box">
-                    <h3 class="hq-title">Trụ Sở Chính (Bản Đồ)</h3>
-                    <div class="hq-map-container" style="border-radius: 8px; overflow: hidden; height: 180px; width: 100%;">
-                        <!-- Nhúng Google Map trực tiếp tại địa chỉ 27 Lê Trung Nghĩa, Tân Bình, TP.HCM -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.142094556701!2d106.64915367596224!3d10.800427189349831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529483117b587%3A0xb059b44a6e355970!2zMjcgTMOqIFRydW5nIE5naMSpYSwgQuG6o3kgSGnhu4FuLCBI4buTIENow60gTWluaCA3MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2sus!4v1792048474515!5m2!1svi!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                    </div>
+            <div class="footer-col">
+                <h3>Trụ Sở Chính (Bản Đồ)</h3>
+                <div class="hq-map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.142094556701!2d106.64915367596224!3d10.800427189349831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529483117b587%3A0xb059b44a6e355970!2zMjcgTMOqIFRydW5nIE5naMSpYSwgQuG6o3kgSGnhu4FuLCBI4buTIENow60gTWluaCA3MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2sus!4v1792048474515!5m2!1svi!2sus" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                 </div>
             </div>
         </div>
@@ -75,82 +68,40 @@
 </footer>
 
 <!-- ========================================== -->
-    <!-- NÚT HOTLINE GỌI NHANH MÀU ĐỎ & BACK TO TOP -->
-    <!-- ========================================== -->
-    
-    <!-- 1. Nút Hotline Gọi Nhanh (Góc dưới bên trái/phải) -->
-    <a href="tel:0946117878" id="hotlineWidget" title="Gọi Hotline 0946 117 878" style="
-        position: fixed;
-        bottom: 30px;
-        left: 30px;
-        z-index: 999;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        background-color: #dc2626;
-        color: #ffffff;
-        padding: 10px 18px 10px 14px;
-        border-radius: 30px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 14px;
-        box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
-        transition: transform 0.2s, background-color 0.2s;
-    " onmouseover="this.style.backgroundColor='#b91c1c'; this.style.transform='scale(1.05)';" onmouseout="this.style.backgroundColor='#dc2626'; this.style.transform='scale(1)';">
-        <div style="
-            width: 32px;
-            height: 32px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        ">
-            <i class="fa-solid fa-phone" style="font-size: 15px; color: #fff;"></i>
-        </div>
-        <span>Hotline: 0946 117 878</span>
-    </a>
+<!-- NÚT HOTLINE GỌI NHANH & BACK TO TOP -->
+<!-- ========================================== -->
 
-    <!-- 2. Nút Cuộn Lên Đầu Trang (Góc dưới bên phải) -->
-    <button id="backToTopBtn" title="Lên đầu trang" style="
-        display: none;
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        z-index: 999;
-        width: 45px;
-        height: 45px;
-        background-color: #0f172a;
-        color: #ffffff;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.2s, transform 0.2s;
-    " onmouseover="this.style.backgroundColor='#059669'; this.style.transform='translateY(-3px)';" onmouseout="this.style.backgroundColor='#0f172a'; this.style.transform='translateY(0)';">
-        <i class="fa-solid fa-arrow-up" style="font-size: 18px;"></i>
-    </button>
+<!-- 1. Nút Hotline Gọi Nhanh (Góc dưới bên trái) -->
+<a href="tel:0946117878" class="hotline-widget" title="Gọi Hotline 0946 117 878">
+    <div class="hotline-icon-box">
+        <i class="fa-solid fa-phone" style="font-size: 14px; color: #fff;"></i>
+    </div>
+    <span>Hotline: 0946 117 878</span>
+</a>
 
-    <script>
-        // Xử lý ẩn/hiện nút Back to Top
-        const backToTopBtn = document.getElementById('backToTopBtn');
+<!-- 2. Nút Cuộn Lên Đầu Trang (Góc dưới bên phải) -->
+<button id="backToTopBtn" class="back-to-top-btn" title="Lên đầu trang">
+    <i class="fa-solid fa-arrow-up" style="font-size: 16px;"></i>
+</button>
 
-        window.addEventListener('scroll', function () {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.style.display = 'flex';
-            } else {
-                backToTopBtn.style.display = 'none';
-            }
+<script>
+    // Xử lý ẩn/hiện nút Back to Top
+    const backToTopBtn = document.getElementById('backToTopBtn');
+
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.style.display = 'flex';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+
+    backToTopBtn.addEventListener('click', function () {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
-
-        backToTopBtn.addEventListener('click', function () {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
+    });
+</script>
 </body>
 </html>

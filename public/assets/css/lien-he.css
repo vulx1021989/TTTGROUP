@@ -1,0 +1,179 @@
+/* ==================== TRANG LIÊN HỆ - TTT INFRASTRUCTURE ==================== */
+
+.main-wrapper-contact {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #334155;
+    min-height: 70vh;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Tiêu đề trang */
+.contact-page-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-page-title {
+    font-size: 32px;
+    color: #111;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.contact-page-desc {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Bố cục 2 cột */
+.contact-grid-2cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    align-items: start;
+}
+
+/* Hộp thông tin liên hệ */
+.contact-info-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contact-box-title {
+    font-size: 22px;
+    color: #222;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 10px;
+}
+
+.contact-info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-info-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.contact-info-icon {
+    color: #0066cc;
+    font-size: 18px;
+    margin-top: 4px;
+}
+
+.contact-info-text strong {
+    display: block;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.contact-info-text span {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Hộp Form gửi tin nhắn */
+.contact-form-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.contact-form-input,
+.contact-form-select,
+.contact-form-textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.contact-form-input:focus,
+.contact-form-select:focus,
+.contact-form-textarea:focus {
+    border-color: #0066cc;
+}
+
+.contact-form-select {
+    cursor: pointer;
+}
+
+.contact-form-textarea {
+    resize: vertical;
+}
+
+.btn-submit-contact {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-submit-contact:hover {
+    background-color: #0052a3;
+}
+
+/* ==================== RESPONSIVE MOBILE ==================== */
+@media (max-width: 768px) {
+    .main-wrapper-contact {
+        padding: 30px 0;
+    }
+
+    .contact-page-title {
+        font-size: 26px;
+    }
+
+    .contact-grid-2cols {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-info-box,
+    .contact-form-box {
+        padding: 20px;
+    }
+}

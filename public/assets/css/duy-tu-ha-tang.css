@@ -1,0 +1,386 @@
+/* ==================== DUY TU & BẢO TRÌ HẠ TẦNG - TTT GROUP ==================== */
+/* 1. Đảm bảo toàn bộ trang không bị trượt ngang */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+.main-wrapper-ww {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+}
+.main-wrapper-infra {
+    background-color: #f8fafc;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #334155;
+    line-height: 1.6;
+    min-height: 70vh;
+}
+
+/* 1. Hero Banner */
+.infra-hero {
+    position: relative;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.75) 0%, rgba(30, 41, 59, 0.85) 100%), url('/images/banner-duy-tu-thoat-nuoc-duong.png') center/cover no-repeat;
+    color: #fff;
+    padding: 90px 5% 80px 5%;
+    text-align: center;
+}
+
+.infra-hero-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.infra-hero-badge {
+    background: rgba(2, 132, 199, 0.3);
+    color: #38bdf8;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 1px solid rgba(56,189,248,0.4);
+    display: inline-block;
+}
+
+.infra-hero-title {
+    font-size: 38px;
+    font-weight: 800;
+    margin: 20px 0 15px 0;
+    line-height: 1.3;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.infra-hero-desc {
+    font-size: 16px;
+    color: #f1f5f9;
+    line-height: 1.7;
+    margin: 0 auto 30px auto;
+    max-width: 780px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.infra-hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-infra-primary {
+    background-color: #0284c7;
+    color: #fff;
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: background 0.2s;
+}
+.btn-infra-primary:hover { background-color: #0369a1; }
+
+.btn-infra-outline {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 13px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s;
+}
+.btn-infra-outline:hover { background: rgba(255,255,255,0.3); }
+
+/* 2. Năng lực stats bar */
+.infra-stats-section {
+    background: #fff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 35px 5%;
+}
+
+.infra-stats-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.infra-stat-num-blue { font-size: 32px; font-weight: 800; color: #0284c7; }
+.infra-stat-num-green { font-size: 32px; font-weight: 800; color: #059669; }
+.infra-stat-num-amber { font-size: 32px; font-weight: 800; color: #d97706; }
+.infra-stat-num-purple { font-size: 32px; font-weight: 800; color: #9333ea; }
+.infra-stat-label { font-size: 13px; color: #64748b; font-weight: 600; margin-top: 5px; }
+
+/* 3. Lĩnh vực duy tu chuyên sâu */
+.infra-services-section {
+    padding: 70px 5%;
+    background-color: #f8fafc;
+}
+
+.infra-container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.infra-section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.infra-section-tag {
+    color: #0284c7;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.infra-section-title {
+    color: #0f172a;
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 8px;
+}
+
+.infra-section-desc {
+    color: #64748b;
+    font-size: 15px;
+    max-width: 700px;
+    margin: 10px auto 0 auto;
+}
+
+.infra-grid-3cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.infra-service-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+
+.infra-service-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.bg-blue-soft { background: #e0f2fe; color: #0284c7; }
+.bg-amber-soft { background: #fef3c7; color: #d97706; }
+.bg-green-soft { background: #ecfdf5; color: #059669; }
+
+.infra-service-title {
+    font-size: 19px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.infra-service-list {
+    padding-left: 18px;
+    color: #475569;
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.8;
+}
+
+/* 4. Dự án tiêu biểu */
+.infra-projects-section {
+    padding: 70px 5%;
+    background-color: #fff;
+    border-top: 1px solid #e2e8f0;
+}
+
+.infra-project-card {
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+}
+
+.infra-project-img-1 {
+    height: 200px;
+    background: url('/images/di-tu-ha-tang-kcn-cat-lai.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.infra-project-img-2 {
+    height: 200px;
+    background: url('/images/thi-cong-bai-rac-dap-da.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.infra-project-tag {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: rgba(15, 23, 42, 0.8);
+    color: #38bdf8;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.infra-project-body {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.infra-project-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.infra-project-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.infra-project-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #475569;
+}
+
+/* 5. Form đăng ký */
+.infra-form-section {
+    padding: 70px 5%;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #fff;
+}
+
+.infra-form-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 45px;
+    border-radius: 16px;
+    color: #334155;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+.infra-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.infra-form-group {
+    margin-bottom: 15px;
+}
+
+.infra-form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #1e293b;
+}
+
+.infra-form-input, .infra-form-select, .infra-form-textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.infra-form-textarea {
+    resize: vertical;
+}
+
+.btn-submit-infra {
+    width: 100%;
+    background: #0284c7;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-submit-infra:hover { background: #0369a1; }
+
+/* ==================== FIX TRIỆT ĐỂ LỖI TRÀN GRID FORM HẠ TẦNG / DUY TU ==================== */
+@media (max-width: 768px) {
+    /* 1. Ép wrapper form hạ tầng về đúng chiều rộng màn hình */
+    .infra-form-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 12px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. Chuyển infra-form-grid từ dạng nhiều cột thành xếp dọc 1 cột */
+    .infra-form-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 3. Đảm bảo nhóm thẻ infra-form-group chiếm đủ 100% chiều rộng */
+    .infra-form-group {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 4. Fix ô input, select, textarea bên trong không bị vượt quá lề */
+    .infra-form-input, 
+    .infra-form-select, 
+    .infra-form-textarea {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}

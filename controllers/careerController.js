@@ -15,7 +15,13 @@ const careerController = {
             // Render ra trang tuyen-dung.ejs (hoặc careers.ejs)
             res.render('pages/tuyen-dung', {
                 title: 'Tuyển Dụng - TTT Technology',
-                jobs: jobs
+                jobs: jobs,
+                seo: {
+                    title: 'Tuyển Dụng | Cơ Hội Nghề Nghiệp Tại TTT Group',
+                    description: 'Gia nhập đội ngũ TTT Group để phát triển sự nghiệp trong lĩnh vực hạ tầng kỹ thuật, tổng thầu EPC và môi trường với chế độ đãi ngộ hấp dẫn.',
+                    keywords: 'tuyển dụng ttt group, việc làm hạ tầng môi trường, tuyển kỹ sư ttt',
+                    canonical: 'https://tttgroup.com/tuyen-dung'
+                }
             });
         } catch (error) {
             console.error('Lỗi khi tải trang tuyển dụng:', error);

@@ -1,413 +1,390 @@
 <%- include('components/header', { title: 'Trang Chủ - Hạ Tầng & Môi Trường TTT Technology' }) %>
 
+<!-- NHÚNG FILE CSS RIÊNG -->
+<link rel="stylesheet" href="/css/home.css">
+
 <!-- MAIN CONTENT - TRANG CHỦ -->
 <main class="main-wrapper">
 
-    <!-- 1. HERO SLIDER SECTION (Banner Động 3 Dịch Vụ Cốt Lõi) -->
-    <section class="hero-slider-section" style="position: relative; overflow: hidden; background: #12264e; color: #fff;">
-        <div class="hero-slider-container" style="position: relative; width: 100%; height: 500px; display: flex; align-items: center; justify-content: center;">
+    <!-- 1. HERO SLIDER SECTION -->
+    <section class="hero-slider-section">
+        <div class="hero-slider-container">
             
-            <!-- Slide 1: Thiết Kế - Thi Công - Vận Hành Xử Lý Nước Thải -->
-            <div class="slider-item" style="position: absolute; inset: 0; opacity: 1; transition: opacity 0.7s ease; display: flex; align-items: center; justify-content: flex-start; background: linear-gradient(rgba(18, 38, 78, 0.6), rgba(30, 61, 123, 0.6)), url('/images/slide/banner-slide-1.png') center/cover no-repeat; padding: 0 8%;">
-                <div class="container" style="max-width: 700px; margin: 0; text-align: left;">
-                    <span style="display: inline-block; background: rgba(0, 203, 160, 0.25); color: #00cba0; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; margin-bottom: 15px; border: 1px solid rgba(0,203,160,0.4);">Tổng Thầu EPC & O&M</span>
-                    <h1 style="font-size: 36px; font-weight: 900; margin-bottom: 15px; line-height: 1.3; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Thiết Kế - Thi Công - Vận Hành <br><span style="color: #00cba0;">Xử Lý Nước Thải</span></h1>
-                    <p style="font-size: 15px; color: #f1f5f9; margin-bottom: 25px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">Giải pháp trọn gói nâng cấp, xây mới và vận hành trạm XLNT công nghiệp, y tế đạt chuẩn quy chuẩn môi trường hiện hành (ISO 9001:2015).</p>
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        <a href="/services/thiet-ke-thi-cong-xu-ly-nuoc-thai" style="background: #00cba0; color: #fff; padding: 12px 25px; border-radius: 6px; font-weight: 700; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,203,160,0.3);">Khám Phá Dịch Vụ</a>
-                        <a href="/contact" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(4px); border: 2px solid #fff; color: #fff; padding: 12px 25px; border-radius: 6px; font-weight: 700; text-decoration: none; transition: 0.3s;">Tư Vấn Ngay</a>
+            <!-- Slide 1 -->
+            <div class="slider-item active slide-bg-1">
+                <div class="slide-content">
+                    <span class="slide-badge badge-green">Tổng Thầu EPC & O&M</span>
+                    <h1 class="slide-title">Thiết Kế - Thi Công - Vận Hành <br><span>Xử Lý Nước Thải</span></h1>
+                    <p class="slide-desc">Giải pháp trọn gói nâng cấp, xây mới và vận hành trạm XLNT công nghiệp, y tế đạt chuẩn quy chuẩn môi trường hiện hành (ISO 9001:2015).</p>
+                    <div class="slide-buttons">
+                        <a href="/services/thiet-ke-thi-cong-xu-ly-nuoc-thai" class="btn-slide btn-green">Khám Phá Dịch Vụ</a>
+                        <a href="/contact" class="btn-slide btn-outline">Tư Vấn Ngay</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 2: Thi Công Hạ Tầng Kỹ Thuật & Đường Giao Thông -->
-            <div class="slider-item" style="position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 0.7s ease; display: flex; align-items: center; justify-content: flex-start; background: linear-gradient(rgba(15, 56, 30, 0.65), rgba(22, 101, 52, 0.65)), url('/images/slide/banner-slide-2.png') center/cover no-repeat; padding: 0 8%;">
-                <div class="container" style="max-width: 700px; margin: 0; text-align: left;">
-                    <span style="display: inline-block; background: rgba(34, 197, 94, 0.25); color: #4ade80; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; margin-bottom: 15px; border: 1px solid rgba(34,197,94,0.4);">Hạ Tầng Kỹ Thuật Đô Thị & KCN</span>
-                    <h1 style="font-size: 36px; font-weight: 900; margin-bottom: 15px; line-height: 1.3; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Thi Công Hạ Tầng Kỹ Thuật & <br><span style="color: #4ade80;">Đường Giao Thông</span></h1>
-                    <p style="font-size: 15px; color: #f1f5f9; margin-bottom: 25px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">San lấp nền móng, thảm bê tông nhựa nóng, duy tu thoát nước, kênh mương thủy lợi và cảnh quan đô thị.</p>
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        <a href="/services/duy-tu-thoat-nuoc-va-duong-giao-thong" style="background: #22c55e; color: #fff; padding: 12px 25px; border-radius: 6px; font-weight: 700; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 10px rgba(34,197,94,0.3);">Xem Chi Tiết</a>
-                        <a href="/contact" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(4px); border: 2px solid #fff; color: #fff; padding: 12px 25px; border-radius: 6px; font-weight: 700; text-decoration: none; transition: 0.3s;">Liên Hệ Ngay</a>
+            <!-- Slide 2 -->
+            <div class="slider-item slide-bg-2">
+                <div class="slide-content">
+                    <span class="slide-badge badge-lime">Hạ Tầng Kỹ Thuật Đô Thị & KCN</span>
+                    <h1 class="slide-title">Thi Công Hạ Tầng Kỹ Thuật & <br><span>Đường Giao Thông</span></h1>
+                    <p class="slide-desc">San lấp nền móng, thảm bê tông nhựa nóng, duy tu thoát nước, kênh mương thủy lợi và cảnh quan đô thị.</p>
+                    <div class="slide-buttons">
+                        <a href="/services/duy-tu-thoat-nuoc-va-duong-giao-thong" class="btn-slide btn-lime-solid">Xem Chi Tiết</a>
+                        <a href="/contact" class="btn-slide btn-outline">Liên Hệ Ngay</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 3: Vận Hành & Bảo Trì Hệ Thống Kỹ Thuật Bệnh Viện -->
-            <div class="slider-item" style="position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity 0.7s ease; display: flex; align-items: center; justify-content: flex-start; background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(30, 41, 59, 0.7)), url('/images/slide/banner-slide-3.png') center/cover no-repeat; padding: 0 8%;">
-                <div class="container" style="max-width: 700px; margin: 0; text-align: left;">
-                    <span style="display: inline-block; background: rgba(0, 146, 202, 0.25); color: #0092ca; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; padding: 4px 12px; border-radius: 20px; margin-bottom: 15px; border: 1px solid rgba(0,146,202,0.4);">Hospital O&M Services</span>
-                    <h1 style="font-size: 36px; font-weight: 900; margin-bottom: 15px; line-height: 1.3; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">Vận Hành & Bảo Trì <br><span style="color: #0092ca;">Kỹ Thuật Bệnh Viện</span></h1>
-                    <p style="font-size: 15px; color: #f1f5f9; margin-bottom: 25px; line-height: 1.6; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">Quản lý liên tục 24/7 hệ thống điện M&E, khí y tế trung tâm, điều hòa HVAC phòng mổ, nước RO chạy thận và XLNT y tế.</p>
-                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                        <a href="/services/quan-ly-van-hanh-htnt-benh-vien" style="background: #0092ca; color: #fff; padding: 12px 25px; border-radius: 6px; font-weight: 700; text-decoration: none; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,146,202,0.3);">Tìm Hiểu Thêm</a>
-                        <a href="/contact" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(4px); border: 2px solid #fff; color: #fff; padding: 12px 25px; border-radius: 6px; font-weight: 700; text-decoration: none; transition: 0.3s;">Liên Hệ Tư Vấn</a>
+            <!-- Slide 3 -->
+            <div class="slider-item slide-bg-3">
+                <div class="slide-content">
+                    <span class="slide-badge badge-blue">Hospital O&M Services</span>
+                    <h1 class="slide-title">Vận Hành & Bảo Trì <br><span>Kỹ Thuật Bệnh Viện</span></h1>
+                    <p class="slide-desc">Quản lý liên tục 24/7 hệ thống điện M&E, khí y tế trung tâm, điều hòa HVAC phòng mổ, nước RO chạy thận và XLNT y tế.</p>
+                    <div class="slide-buttons">
+                        <a href="/services/quan-ly-van-hanh-htnt-benh-vien" class="btn-slide btn-blue-solid">Tìm Hiểu Thêm</a>
+                        <a href="/contact" class="btn-slide btn-outline">Liên Hệ Tư Vấn</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Nút chuyển Slide Trái / Phải -->
-            <button onclick="prevSlide()" style="position: absolute; left: 20px; z-index: 10; background: rgba(0,0,0,0.4); color: #fff; border: none; width: 42px; height: 42px; border-radius: 50%; cursor: pointer; font-size: 16px; transition: 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.7)'" onmouseout="this.style.background='rgba(0,0,0,0.4)'"><i class="fa-solid fa-chevron-left"></i></button>
-            <button onclick="nextSlide()" style="position: absolute; right: 20px; z-index: 10; background: rgba(0,0,0,0.4); color: #fff; border: none; width: 42px; height: 42px; border-radius: 50%; cursor: pointer; font-size: 16px; transition: 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.7)'" onmouseout="this.style.background='rgba(0,0,0,0.4)'"><i class="fa-solid fa-chevron-right"></i></button>
+            <!-- Nút điều hướng -->
+            <button onclick="prevSlide()" class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button onclick="nextSlide()" class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
 
-            <!-- Chấm Chỉ Mục Slider -->
-            <div style="position: absolute; bottom: 20px; z-index: 10; display: flex; gap: 8px;">
-                <span onclick="currentSlide(0)" class="dot" style="width: 12px; height: 12px; border-radius: 50%; background: #00cba0; cursor: pointer; display: inline-block; box-shadow: 0 1px 3px rgba(0,0,0,0.3);"></span>
-                <span onclick="currentSlide(1)" class="dot" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; display: inline-block; box-shadow: 0 1px 3px rgba(0,0,0,0.3);"></span>
-                <span onclick="currentSlide(2)" class="dot" style="width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; display: inline-block; box-shadow: 0 1px 3px rgba(0,0,0,0.3);"></span>
+            <!-- Chấm chỉ mục -->
+            <div class="slider-dots">
+                <span onclick="currentSlide(0)" class="dot active"></span>
+                <span onclick="currentSlide(1)" class="dot"></span>
+                <span onclick="currentSlide(2)" class="dot"></span>
             </div>
 
         </div>
     </section>
 
     <!-- 2. GIỚI THIỆU TÓM TẮT & CON SỐ NĂNG LỰC -->
-    <section style="padding: 50px 5%; background: #fff; border-bottom: 1px solid #e2e8f0;">
-        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;">
+    <section class="section-padding section-white border-bottom">
+        <div class="container-max grid-2cols">
             <div>
-                <span style="color: #1b5e20; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Về TTT Technology</span>
-                <h2 style="font-size: 28px; color: #1e3d7b; font-weight: 800; margin: 10px 0 15px 0; line-height: 1.3;">Chuyên Gia Hạ Tầng Kỹ Thuật & Giải Pháp Môi Trường</h2>
-                <p style="color: #475569; font-size: 14px; line-height: 1.7; margin-bottom: 20px;">
+                <span class="section-tag text-green">Về TTT Technology</span>
+                <h2 class="section-title">Chuyên Gia Hạ Tầng Kỹ Thuật & Giải Pháp Môi Trường</h2>
+                <p class="section-text">
                     TTT Technology là đơn vị tiên phong trong thi công hạ tầng kỹ thuật, tổng thầu EPC môi trường và vận hành bảo trì hệ thống kỹ thuật đạt chuẩn chất lượng ISO 9001:2015.
                 </p>
-                <a href="/about-us" style="color: #1b5e20; font-weight: 700; text-decoration: none; font-size: 14px;">Tìm hiểu thêm về TTT <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="/lien-he" class="link-more text-green">Tìm hiểu thêm về TTT <i class="fa-solid fa-arrow-right"></i></a>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
-                <div style="background: #f8fafc; padding: 20px; border-radius: 10px; border: 1px solid #e2e8f0; text-align: center;">
-                    <div style="font-size: 32px; font-weight: 900; color: #1e3d7b;">10+</div>
-                    <div style="font-size: 13px; color: #64748b; font-weight: 600;">Năm Kinh Nghiệm</div>
+            <div class="grid-stats">
+                <div class="stat-box">
+                    <div class="stat-num text-navy">10+</div>
+                    <div class="stat-label">Năm Kinh Nghiệm</div>
                 </div>
-                <div style="background: #f8fafc; padding: 20px; border-radius: 10px; border: 1px solid #e2e8f0; text-align: center;">
-                    <div style="font-size: 32px; font-weight: 900; color: #1b5e20;">ISO</div>
-                    <div style="font-size: 13px; color: #64748b; font-weight: 600;">9001:2015</div>
+                <div class="stat-box">
+                    <div class="stat-num text-green">ISO</div>
+                    <div class="stat-label">9001:2015</div>
                 </div>
-                <div style="background: #f8fafc; padding: 20px; border-radius: 10px; border: 1px solid #e2e8f0; text-align: center;">
-                    <div style="font-size: 32px; font-weight: 900; color: #0092ca;">50+</div>
-                    <div style="font-size: 13px; color: #64748b; font-weight: 600;">Dự Án Quy Mô Lớn</div>
+                <div class="stat-box">
+                    <div class="stat-num text-blue">50+</div>
+                    <div class="stat-label">Dự Án Quy Mô Lớn</div>
                 </div>
-                <div style="background: #f8fafc; padding: 20px; border-radius: 10px; border: 1px solid #e2e8f0; text-align: center;">
-                    <div style="font-size: 32px; font-weight: 900; color: #dc2626;">24/7</div>
-                    <div style="font-size: 13px; color: #64748b; font-weight: 600;">Hỗ Trợ Kỹ Thuật</div>
+                <div class="stat-box">
+                    <div class="stat-num text-red">24/7</div>
+                    <div class="stat-label">Hỗ Trợ Kỹ Thuật</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 3. 4 LĨNH VỰC HOẠT ĐỘNG CHÍNH -->
-    <section style="padding: 60px 5%; background-color: #f8fafc;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto;">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
-                <span style="color: #1b5e20; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Core Business Areas</span>
-                <h2 style="font-size: 30px; color: #1e3d7b; font-weight: 800; margin: 10px 0;">Lĩnh Vực Hoạt Động Cốt Lõi</h2>
-                <p style="color: #475569; font-size: 15px; line-height: 1.6;">Năng lực cung cấp dịch vụ toàn diện đáp ứng mọi tiêu chuẩn kỹ thuật khắt khe nhất từ Chủ đầu tư.</p>
+    <section class="section-padding section-light">
+        <div class="container-max">
+            <div class="section-header-center">
+                <span class="section-tag text-green">Core Business Areas</span>
+                <h2 class="section-title">Lĩnh Vực Hoạt Động Cốt Lõi</h2>
+                <p class="section-desc">Năng lực cung cấp dịch vụ toàn diện đáp ứng mọi tiêu chuẩn kỹ thuật khắt khe nhất từ Chủ đầu tư.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 25px;">
-                
-                <!-- Lĩnh vực 1 -->
-                <div style="background: #fff; border: 1px solid #e2e8f0; border-top: 4px solid #1b5e20; border-radius: 10px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-                    <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 12px;">
-                        <h3 style="font-weight: 800; font-size: 14px; color: #1b5e20; text-transform: uppercase;">1. Thi Công Hạ Tầng Kỹ Thuật</h3>
+            <div class="grid-4cols">
+                <div class="card-item">
+                    <div class="card-header">
+                        <h3>1. Thi Công Hạ Tầng Kỹ Thuật</h3>
                     </div>
-                    <ul style="padding-left: 18px; color: #475569; font-size: 13px; line-height: 1.6;">
-                        <li><strong style="color: #1e3d7b;">Đường giao thông:</strong> San lấp nền móng, thảm bê tông nhựa nóng, đường BTCM.</li>
-                        <li><strong style="color: #1e3d7b;">Kênh mương thủy lợi:</strong> Thi công kè, nạo vét, gia cố chống sạt lở.</li>
-                        <li><strong style="color: #1e3d7b;">Hệ thống thoát nước:</strong> Cống hộp, cống tròn, hố ga, tuyến ống thoát nước.</li>
-                        <li><strong style="color: #1e3d7b;">Cảnh quan cây xanh:</strong> Quy hoạch vệt cây xanh & thảm cỏ đô thị.</li>
+                    <ul class="card-list">
+                        <li><strong>Đường giao thông:</strong> San lấp nền móng, thảm bê tông nhựa nóng, đường BTCM.</li>
+                        <li><strong>Kênh mương thủy lợi:</strong> Thi công kè, nạo vét, gia cố chống sạt lở.</li>
+                        <li><strong>Hệ thống thoát nước:</strong> Cống hộp, cống tròn, hố ga, tuyến ống thoát nước.</li>
+                        <li><strong>Cảnh quan cây xanh:</strong> Quy hoạch vệt cây xanh & thảm cỏ đô thị.</li>
                     </ul>
                 </div>
 
-                <!-- Lĩnh vực 2 -->
-                <div style="background: #fff; border: 1px solid #e2e8f0; border-top: 4px solid #1b5e20; border-radius: 10px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-                    <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 12px;">
-                        <h3 style="font-weight: 800; font-size: 14px; color: #1b5e20; text-transform: uppercase;">2. Tổng Thầu EPC Môi Trường</h3>
+                <div class="card-item">
+                    <div class="card-header">
+                        <h3>2. Tổng Thầu EPC Môi Trường</h3>
                     </div>
-                    <ul style="padding-left: 18px; color: #475569; font-size: 13px; line-height: 1.6;">
-                        <li><strong style="color: #1e3d7b;">Xử lý nước thải:</strong> Thiết kế & thi công hệ thống xử lý nước thải sinh hoạt, công nghiệp.</li>
-                        <li><strong style="color: #1e3d7b;">Cấp nước sạch:</strong> Trạm lọc nước cấp, xử lý nước ngầm và nước mặt quy mô lớn.</li>
-                        <li><strong style="color: #1e3d7b;">Xử lý khí thải:</strong> Hệ thống lọc bụi, hấp thụ khí độc cho nhà máy.</li>
-                        <li><strong style="color: #1e3d7b;">Vận hành & Bảo trì (O&M):</strong> Dịch vụ vận hành thuê trạm xử lý trọn gói.</li>
+                    <ul class="card-list">
+                        <li><strong>Xử lý nước thải:</strong> Thiết kế & thi công hệ thống xử lý nước thải sinh hoạt, công nghiệp.</li>
+                        <li><strong>Cấp nước sạch:</strong> Trạm lọc nước cấp, xử lý nước ngầm và nước mặt quy mô lớn.</li>
+                        <li><strong>Xử lý khí thải:</strong> Hệ thống lọc bụi, hấp thụ khí độc cho nhà máy.</li>
+                        <li><strong>Vận hành & Bảo trì (O&M):</strong> Dịch vụ vận hành thuê trạm xử lý trọn gói.</li>
                     </ul>
                 </div>
 
-                <!-- Lĩnh vực 3 -->
-                <div style="background: #fff; border: 1px solid #e2e8f0; border-top: 4px solid #1b5e20; border-radius: 10px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-                    <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 12px;">
-                        <h3 style="font-weight: 800; font-size: 14px; color: #1b5e20; text-transform: uppercase;">3. Vận Hành Kỹ Thuật Bệnh Viện</h3>
+                <div class="card-item">
+                    <div class="card-header">
+                        <h3>3. Vận Hành Kỹ Thuật Bệnh Viện</h3>
                     </div>
-                    <ul style="padding-left: 18px; color: #475569; font-size: 13px; line-height: 1.6;">
-                        <li><strong style="color: #1e3d7b;">Hệ Thống M&E 24/7:</strong> Quản lý trạm biến áp, máy phát điện & chiếu sáng sự cố.</li>
-                        <li><strong style="color: #1e3d7b;">Khí Y Tế & HVAC:</strong> Bảo dưỡng hệ thống khí y tế trung tâm & điều hòa phòng mổ.</li>
-                        <li><strong style="color: #1e3d7b;">Nước Cấp & Thải Y Tế:</strong> Vận hành trạm XLNT y tế QCVN 28 & hệ thống RO chạy thận.</li>
-                        <li><strong style="color: #1e3d7b;">PCCC & An Toàn:</strong> Kiểm định hệ thống báo cháy tự động & chữa cháy tòa nhà.</li>
+                    <ul class="card-list">
+                        <li><strong>Hệ Thống M&E 24/7:</strong> Quản lý trạm biến áp, máy phát điện & chiếu sáng sự cố.</li>
+                        <li><strong>Khí Y Tế & HVAC:</strong> Bảo dưỡng hệ thống khí y tế trung tâm & điều hòa phòng mổ.</li>
+                        <li><strong>Nước Cấp & Thải Y Tế:</strong> Vận hành trạm XLNT y tế QCVN 28 & hệ thống RO chạy thận.</li>
+                        <li><strong>PCCC & An Toàn:</strong> Kiểm định hệ thống báo cháy tự động & chữa cháy tòa nhà.</li>
                     </ul>
                 </div>
 
-                <!-- Lĩnh vực 4 -->
-                <div style="background: #fff; border: 1px solid #e2e8f0; border-top: 4px solid #1b5e20; border-radius: 10px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
-                    <div style="border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 12px;">
-                        <h3 style="font-weight: 800; font-size: 14px; color: #1b5e20; text-transform: uppercase;">4. Tư Vấn & Cung Cấp Thiết Bị</h3>
+                <div class="card-item">
+                    <div class="card-header">
+                        <h3>4. Tư Vấn & Cung Cấp Thiết Bị</h3>
                     </div>
-                    <ul style="padding-left: 18px; color: #475569; font-size: 13px; line-height: 1.6;">
-                        <li><strong style="color: #1e3d7b;">Tư vấn môi trường:</strong> Lập báo cáo ĐTM, giấy phép môi trường, hồ sơ xả thải.</li>
-                        <li><strong style="color: #1e3d7b;">Phân phối thiết bị:</strong> Bơm công nghiệp, máy thổi khí, cảm biến, van chuyên dụng.</li>
-                        <li><strong style="color: #1e3d7b;">Vật tư hạ tầng:</strong> Ống uPVC/HDPE, vải địa kỹ thuật, cấu kiện bê tông.</li>
-                        <li><strong style="color: #1e3d7b;">Năng lượng xanh:</strong> Giải pháp điện mặt trời mái nhà cho nhà máy.</li>
+                    <ul class="card-list">
+                        <li><strong>Tư vấn môi trường:</strong> Lập báo cáo ĐTM, giấy phép môi trường, hồ sơ xả thải.</li>
+                        <li><strong>Phân phối thiết bị:</strong> Bơm công nghiệp, máy thổi khí, cảm biến, van chuyên dụng.</li>
+                        <li><strong>Vật tư hạ tầng:</strong> Ống uPVC/HDPE, vải địa kỹ thuật, cấu kiện bê tông.</li>
+                        <li><strong>Năng lượng xanh:</strong> Giải pháp điện mặt trời mái nhà cho nhà máy.</li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- 4. HÌNH ẢNH THỰC TẾ CÔNG TRÌNH TIÊU BIỂU (THAY THẾ MỚI) -->
-    <section class="featured-projects" style="padding: 60px 5%; background-color: #fff;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto;">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
-                <span style="color: #1b5e20; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Featured On-Site Project References</span>
-                <h2 style="font-size: 30px; color: #1e3d7b; font-weight: 800; margin: 10px 0;">Hình Ảnh Thực Tế Công Trình Tiêu Biểu</h2>
-                <p style="color: #475569; font-size: 15px; line-height: 1.6;">Tổng thầu uy tín thực hiện thành công các dự án hạ tầng, giao thông và môi trường trên toàn quốc.</p>
+    <!-- 4. HÌNH ẢNH THỰC TẾ CÔNG TRÌNH TIÊU BIỂU -->
+    <section class="section-padding section-white">
+        <div class="container-max">
+            <div class="section-header-center">
+                <span class="section-tag text-green">Featured On-Site Project References</span>
+                <h2 class="section-title">Hình Ảnh Thực Tế Công Trình Tiêu Biểu</h2>
+                <p class="section-desc">Tổng thầu uy tín thực hiện thành công các dự án hạ tầng, giao thông và môi trường trên toàn quốc.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
-                
-                <!-- Dự án 1: Nhà máy Găng Việt -->
-                <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; display: flex; flex-direction: column;">
-                    <div style="height: 200px; position: relative; background-image: url('/images/xlnt-3.jpg'); background-size: cover; background-position: center;">
-                        <span style="position: absolute; top: 12px; left: 12px; background: #1b5e20; color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px;">Cảnh quan Xanh</span>
+            <div class="grid-projects">
+                <div class="project-box">
+                    <div class="project-img project-img-1">
+                        <span class="project-badge">Cảnh quan Xanh</span>
                     </div>
-                    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="project-body">
                         <div>
-                            <h3 style="font-size: 16px; color: #12264e; font-weight: 800; margin-bottom: 6px;">THI CÔNG VẬN HÀNH BẢO TRÌ NHÀ MÁY GĂNG VIỆT</h3>
-                            <p style="color: #64748b; font-size: 13px; line-height: 1.5; margin-bottom: 12px; font-style: italic;">Industrial Landscaping & Greenery Installation</p>
+                            <h3 class="project-name">THI CÔNG VẬN HÀNH BẢO TRÌ NHÀ MÁY GĂNG VIỆT</h3>
+                            <p class="project-sub">Industrial Landscaping & Greenery Installation</p>
                         </div>
-                        <div style="border-top: 1px solid #f1f5f9; padding-top: 10px; font-size: 12px; color: #64748b; display: flex; justify-content: space-between;">
-                            <span><i class="fa-solid fa-location-dot" style="color: #1b5e20;"></i> Bình Dương</span>
-                            <span style="color: #1b5e20; font-weight: 700;">Nhà máy Găng Việt</span>
+                        <div class="project-footer">
+                            <span><i class="fa-solid fa-location-dot text-green"></i> Bình Dương</span>
+                            <span class="text-green font-bold">Nhà máy Găng Việt</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Dự án 2: Bệnh viện Từ Dũ -->
-                <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; display: flex; flex-direction: column;">
-                    <div style="height: 200px; position: relative; background-image: url('/images/thi-cong-benh-vien-tu-du.jpg'); background-size: cover; background-position: center;">
-                        <span style="position: absolute; top: 12px; left: 12px; background: #1b5e20; color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px;">2025</span>
+                <div class="project-box">
+                    <div class="project-img project-img-2">
+                        <span class="project-badge">2025</span>
                     </div>
-                    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="project-body">
                         <div>
-                            <h3 style="font-size: 16px; color: #12264e; font-weight: 800; margin-bottom: 6px;">THI CÔNG CẢI TẠO BỆNH VIỆN TỪ DŨ</h3>
-                            <p style="color: #64748b; font-size: 13px; line-height: 1.5; margin-bottom: 12px; font-style: italic;">Urban Greenery Maintenance & Irrigation</p>
+                            <h3 class="project-name">THI CÔNG CẢI TẠO BỆNH VIỆN TỪ DŨ</h3>
+                            <p class="project-sub">Urban Greenery Maintenance & Irrigation</p>
                         </div>
-                        <div style="border-top: 1px solid #f1f5f9; padding-top: 10px; font-size: 12px; color: #64748b; display: flex; justify-content: space-between;">
-                            <span><i class="fa-solid fa-location-dot" style="color: #1b5e20;"></i> TP. Hồ Chí Minh</span>
-                            <span style="color: #1b5e20; font-weight: 700;">Bệnh viện Từ Dũ</span>
+                        <div class="project-footer">
+                            <span><i class="fa-solid fa-location-dot text-green"></i> TP. Hồ Chí Minh</span>
+                            <span class="text-green font-bold">Bệnh viện Từ Dũ</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Dự án 3: Khu tái định cư Thới Thuận -->
-                <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; display: flex; flex-direction: column;">
-                    <div style="height: 200px; position: relative; background-image: url('/images/thi-cong-nha-dieu-hanh-khu-tai-dinh-cu-thoi-thuan.jpg'); background-size: cover; background-position: center;">
-                        <span style="position: absolute; top: 12px; left: 12px; background: #1b5e20; color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px;">2026</span>
+                <div class="project-box">
+                    <div class="project-img project-img-3">
+                        <span class="project-badge">2026</span>
                     </div>
-                    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="project-body">
                         <div>
-                            <h3 style="font-size: 16px; color: #12264e; font-weight: 800; margin-bottom: 6px;">THI CÔNG NHÀ ĐIỀU HÀNH & THOÁT NƯỚC KDC THỚI THUẬN</h3>
-                            <p style="color: #64748b; font-size: 13px; line-height: 1.5; margin-bottom: 12px;">Quy mô: Thi công hoàn thiện nhà điều hành & hệ thống hạ tầng thoát nước.</p>
+                            <h3 class="project-name">THI CÔNG NHÀ ĐIỀU HÀNH & THOÁT NƯỚC KDC THỚI THUẬN</h3>
+                            <p class="project-sub">Quy mô: Thi công hoàn thiện nhà điều hành & hệ thống hạ tầng thoát nước.</p>
                         </div>
-                        <div style="border-top: 1px solid #f1f5f9; padding-top: 10px; font-size: 12px; color: #64748b; display: flex; justify-content: space-between;">
-                            <span><i class="fa-solid fa-location-dot" style="color: #1b5e20;"></i> Tam Nông, Phú Thọ</span>
-                            <span style="color: #1b5e20; font-weight: 700;">Dự án Hạ tầng</span>
+                        <div class="project-footer">
+                            <span><i class="fa-solid fa-location-dot text-green"></i> Tam Nông, Phú Thọ</span>
+                            <span class="text-green font-bold">Dự án Hạ tầng</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Dự án 4: Khu dân cư Bàu Cát -->
-                <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; display: flex; flex-direction: column;">
-                    <div style="height: 200px; position: relative; background-image: url('/images/xlnt-bau-cat.jpg'); background-size: cover; background-position: center;">
-                        <span style="position: absolute; top: 12px; left: 12px; background: #1b5e20; color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px;">2026</span>
+                <div class="project-box">
+                    <div class="project-img project-img-4">
+                        <span class="project-badge">2026</span>
                     </div>
-                    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="project-body">
                         <div>
-                            <h3 style="font-size: 16px; color: #12264e; font-weight: 800; margin-bottom: 6px;">VẬN HÀNH XỬ LÝ NƯỚC THẢI KHU DÂN CƯ BÀU CÁT</h3>
-                            <p style="color: #64748b; font-size: 13px; line-height: 1.5; margin-bottom: 12px;">Quy mô: Quản lý vận hành hệ thống xử lý nước thải khu dân cư đạt chuẩn.</p>
+                            <h3 class="project-name">VẬN HÀNH XỬ LÝ NƯỚC THẢI KHU DÂN CƯ BÀU CÁT</h3>
+                            <p class="project-sub">Quy mô: Quản lý vận hành hệ thống xử lý nước thải khu dân cư đạt chuẩn.</p>
                         </div>
-                        <div style="border-top: 1px solid #f1f5f9; padding-top: 10px; font-size: 12px; color: #64748b; display: flex; justify-content: space-between;">
-                            <span><i class="fa-solid fa-location-dot" style="color: #1b5e20;"></i> TP. Hồ Chí Minh</span>
-                            <span style="color: #1b5e20; font-weight: 700;">Vận hành O&M</span>
+                        <div class="project-footer">
+                            <span><i class="fa-solid fa-location-dot text-green"></i> TP. Hồ Chí Minh</span>
+                            <span class="text-green font-bold">Vận hành O&M</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Dự án 5: Trạm ép rác Thạnh Mỹ Lợi -->
-                <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; display: flex; flex-direction: column;">
-                    <div style="height: 200px; position: relative; background-image: url('/images/duy-tu-he-thong-thoat-nuoc-dương-noi-bo-tram-ep-rac-thanh-my-loi.jpg'); background-size: cover; background-position: center;">
-                        <span style="position: absolute; top: 12px; left: 12px; background: #1b5e20; color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px;">2026</span>
+                <div class="project-box">
+                    <div class="project-img project-img-5">
+                        <span class="project-badge">2026</span>
                     </div>
-                    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="project-body">
                         <div>
-                            <h3 style="font-size: 16px; color: #12264e; font-weight: 800; margin-bottom: 6px;">DUY TU HỆ THỐNG THOÁT NƯỚC, ĐƯỜNG NỘI BỘ TRẠM ÉP RÁC THẠNH MỸ LỢI</h3>
-                            <p style="color: #64748b; font-size: 13px; line-height: 1.5; margin-bottom: 12px;">Quy mô: Duy tu bảo dưỡng hạ tầng giao thông & thoát nước nội bộ.</p>
+                            <h3 class="project-name">DUY TU HỆ THỐNG THOÁT NƯỚC, ĐƯỜNG NỘI BỘ TRẠM ÉP RÁC THẠNH MỸ LỢI</h3>
+                            <p class="project-sub">Quy mô: Duy tu bảo dưỡng hạ tầng giao thông & thoát nước nội bộ.</p>
                         </div>
-                        <div style="border-top: 1px solid #f1f5f9; padding-top: 10px; font-size: 12px; color: #64748b; display: flex; justify-content: space-between;">
-                            <span><i class="fa-solid fa-location-dot" style="color: #1b5e20;"></i> TP. Thủ Đức, TP.HCM</span>
-                            <span style="color: #1b5e20; font-weight: 700;">Duy tu Hạ tầng</span>
+                        <div class="project-footer">
+                            <span><i class="fa-solid fa-location-dot text-green"></i> TP. Thủ Đức, TP.HCM</span>
+                            <span class="text-green font-bold">Duy tu Hạ tầng</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Dự án 6: XLNT Phan Rang -->
-                <div style="background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; display: flex; flex-direction: column;">
-                    <div style="height: 200px; position: relative; background-image: url('/images/xlnt-5.jpg'); background-size: cover; background-position: center;">
-                        <span style="position: absolute; top: 12px; left: 12px; background: #1b5e20; color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px;">Xây dựng Kết cấu</span>
+                <div class="project-box">
+                    <div class="project-img project-img-6">
+                        <span class="project-badge">Xây dựng Kết cấu</span>
                     </div>
-                    <div style="padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="project-body">
                         <div>
-                            <h3 style="font-size: 16px; color: #12264e; font-weight: 800; margin-bottom: 6px;">VẬN HÀNH XỬ LÝ NƯỚC THẢI PHAN RANG</h3>
-                            <p style="color: #64748b; font-size: 13px; line-height: 1.5; margin-bottom: 12px;">Quy mô: Quản lý kỹ thuật và vận hành trạm xử lý nước thải đô thị.</p>
+                            <h3 class="project-name">VẬN HÀNH XỬ LÝ NƯỚC THẢI PHAN RANG</h3>
+                            <p class="project-sub">Quy mô: Quản lý kỹ thuật và vận hành trạm xử lý nước thải đô thị.</p>
                         </div>
-                        <div style="border-top: 1px solid #f1f5f9; padding-top: 10px; font-size: 12px; color: #64748b; display: flex; justify-content: space-between;">
-                            <span><i class="fa-solid fa-location-dot" style="color: #1b5e20;"></i> Phan Rang, Ninh Thuận</span>
-                            <span style="color: #1b5e20; font-weight: 700;">Môi trường Đô thị</span>
+                        <div class="project-footer">
+                            <span><i class="fa-solid fa-location-dot text-green"></i> Phan Rang, Ninh Thuận</span>
+                            <span class="text-green font-bold">Môi trường Đô thị</span>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- 5. GÓC NHÌN CHUYÊN GIA: RỦI RO KHI KHÁCH HÀNG TỰ VẬN HÀNH -->
-    <section class="self-operation-risks" style="padding: 60px 5%; background-color: #f8fafc;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto;">
-            <div style="margin-bottom: 50px;">
-                <div style="max-width: 800px; margin-bottom: 30px;">
-                    <span style="color: #dc2626; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Góc Nhìn Thực Tế</span>
-                    <h2 style="font-size: 28px; color: #1e3d7b; font-weight: 800; margin: 10px 0;">Khách Hàng Tự Vận Hành: Những Rủi Ro Tiềm Ẩn Là Gì?</h2>
-                    <p style="color: #475569; font-size: 15px; line-height: 1.6;">Đối với hầu hết Chủ đầu tư tự tuyển dụng và quản lý Đội vận hành hệ thống xử lý nước, việc đào tạo thường chỉ thực hiện 1 lần lúc bàn giao, dẫn đến bị động khi gặp sự cố.</p>
+    <!-- 5. GÓC NHÌN CHUYÊN GIA -->
+    <section class="section-padding section-light">
+        <div class="container-max">
+            <div class="section-header-left">
+                <span class="section-tag text-red">Góc Nhìn Thực Tế</span>
+                <h2 class="section-title">Khách Hàng Tự Vận Hành: Những Rủi Ro Tiềm Ẩn Là Gì?</h2>
+                <p class="section-desc">Đối với hầu hết Chủ đầu tư tự tuyển dụng và quản lý Đội vận hành hệ thống xử lý nước, việc đào tạo thường chỉ thực hiện 1 lần lúc bàn giao, dẫn đến bị động khi gặp sự cố.</p>
+            </div>
+
+            <div class="grid-3cols">
+                <div class="risk-card">
+                    <h3><i class="fa-solid fa-triangle-exclamation text-red"></i> Không xác định được nguyên nhân</h3>
+                    <p>Do không nắm rõ nguyên lý và các yếu tố ảnh hưởng, dẫn đến chậm trễ xử lý, ảnh hưởng tiến độ sản xuất hoặc vi phạm tiêu chuẩn xả thải.</p>
                 </div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                    <div style="background: #fff; padding: 25px; border-radius: 8px; border-left: 4px solid #dc2626; border: 1px solid #e2e8f0;">
-                        <h3 style="font-size: 16px; color: #12264e; font-weight: 700; margin-bottom: 10px;"><i class="fa-solid fa-triangle-exclamation" style="color: #dc2626; margin-right: 8px;"></i> Không xác định được nguyên nhân</h3>
-                        <p style="color: #64748b; font-size: 14px; line-height: 1.6;">Do không nắm rõ nguyên lý và các yếu tố ảnh hưởng, dẫn đến chậm trễ xử lý, ảnh hưởng tiến độ sản xuất hoặc vi phạm tiêu chuẩn xả thải.</p>
-                    </div>
-
-                    <div style="background: #fff; padding: 25px; border-radius: 8px; border-left: 4px solid #dc2626; border: 1px solid #e2e8f0;">
-                        <h3 style="font-size: 16px; color: #12264e; font-weight: 700; margin-bottom: 10px;"><i class="fa-solid fa-rotate-right" style="color: #dc2626; margin-right: 8px;"></i> Khắc phục không triệt để</h3>
-                        <p style="color: #64748b; font-size: 14px; line-height: 1.6;">Hệ thống thường xuyên bất ổn, lúc đạt lúc không, sự cố này vừa khắc phục lại phát sinh sự cố khác do không trị dứt điểm gốc rễ.</p>
-                    </div>
-
-                    <div style="background: #fff; padding: 25px; border-radius: 8px; border-left: 4px solid #dc2626; border: 1px solid #e2e8f0;">
-                        <h3 style="font-size: 16px; color: #12264e; font-weight: 700; margin-bottom: 10px;"><i class="fa-solid fa-users-slash" style="color: #dc2626; margin-right: 8px;"></i> Bị động nhân lực & thiết bị</h3>
-                        <p style="color: #64748b; font-size: 14px; line-height: 1.6;">Định biên nhân sự "vừa đủ", dễ hụt hẫng khi nhân sự nghỉ việc và chậm trễ thay thế thiết bị dự phòng.</p>
-                    </div>
+                <div class="risk-card">
+                    <h3><i class="fa-solid fa-rotate-right text-red"></i> Khắc phục không triệt để</h3>
+                    <p>Hệ thống thường xuyên bất ổn, lúc đạt lúc không, sự cố này vừa khắc phục lại phát sinh sự cố khác do không trị dứt điểm gốc rễ.</p>
+                </div>
+                <div class="risk-card">
+                    <h3><i class="fa-solid fa-users-slash text-red"></i> Bị động nhân lực & thiết bị</h3>
+                    <p>Định biên nhân sự "vừa đủ", dễ hụt hẫng khi nhân sự nghỉ việc và chậm trễ thay thế thiết bị dự phòng.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 6. VÌ SAO KHÁCH HÀNG CHỌN CHÚNG TÔI -->
-    <section class="why-choose-us" style="padding: 60px 5%; background-color: #f0fdf4;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto;">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 40px auto;">
-                <span style="color: #00cba0; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Giải Pháp Tối Ưu Từ TTT Group</span>
-                <h2 style="font-size: 30px; color: #1e3d7b; font-weight: 800; margin: 10px 0;">Vì Sao Khách Hàng Chọn Chúng Tôi?</h2>
-                <p style="font-size: 18px; color: #0092ca; font-weight: 700;">TTT Vận Hành Có Những Ưu Điểm Gì?</p>
+    <section class="section-padding section-green-light">
+        <div class="container-max">
+            <div class="section-header-center">
+                <span class="section-tag text-teal">Giải Pháp Tối Ưu Từ TTT Group</span>
+                <h2 class="section-title">Vì Sao Khách Hàng Chọn Chúng Tôi?</h2>
+                <p class="section-subtitle text-blue">TTT Vận Hành Có Những Ưu Điểm Gì?</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-                <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #bbf7d0;">
-                    <div style="font-size: 32px; color: #00cba0; margin-bottom: 15px;"><i class="fa-solid fa-shield-check"></i></div>
-                    <h3 style="font-size: 18px; color: #12264e; font-weight: 700; margin-bottom: 10px;">Đảm Bảo Chất Lượng Nước Sau Xử Lý</h3>
-                    <p style="color: #475569; font-size: 14px; line-height: 1.6;">Đội ngũ kỹ sư trình độ cao, giàu kinh nghiệm thực chiến tối ưu hiệu quả vận hành liên tục hàng ngày.</p>
+            <div class="grid-4cols">
+                <div class="why-box">
+                    <div class="why-icon text-teal"><i class="fa-solid fa-shield-check"></i></div>
+                    <h3>Đảm Bảo Chất Lượng Nước Sau Xử Lý</h3>
+                    <p>Đội ngũ kỹ sư trình độ cao, giàu kinh nghiệm thực chiến tối ưu hiệu quả vận hành liên tục hàng ngày.</p>
                 </div>
-
-                <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #bbf7d0;">
-                    <div style="font-size: 32px; color: #00cba0; margin-bottom: 15px;"><i class="fa-solid fa-user-gear"></i></div>
-                    <h3 style="font-size: 18px; color: #12264e; font-weight: 700; margin-bottom: 10px;">An Toàn Và Chuyên Nghiệp</h3>
-                    <p style="color: #475569; font-size: 14px; line-height: 1.6;">Mỗi kỹ thuật viên được đào tạo chuyên môn vững vàng về cơ điện, sinh học, hóa học và an toàn lao động.</p>
+                <div class="why-box">
+                    <div class="why-icon text-teal"><i class="fa-solid fa-user-gear"></i></div>
+                    <h3>An Toàn Và Chuyên Nghiệp</h3>
+                    <p>Mỗi kỹ thuật viên được đào tạo chuyên môn vững vàng về cơ điện, sinh học, hóa học và an toàn lao động.</p>
                 </div>
-
-                <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #bbf7d0;">
-                    <div style="font-size: 32px; color: #00cba0; margin-bottom: 15px;"><i class="fa-solid fa-bolt-lightning"></i></div>
-                    <h3 style="font-size: 18px; color: #12264e; font-weight: 700; margin-bottom: 10px;">Chủ Động Trong Mọi Tình Huống</h3>
-                    <p style="color: #475569; font-size: 14px; line-height: 1.6;">Nguồn nhân lực, thiết bị, vật liệu và hóa chất luôn sẵn sàng đáp ứng sửa chữa, thay thế kịp thời.</p>
+                <div class="why-box">
+                    <div class="why-icon text-teal"><i class="fa-solid fa-bolt-lightning"></i></div>
+                    <h3>Chủ Động Trong Mọi Tình Huống</h3>
+                    <p>Nguồn nhân lực, thiết bị, vật liệu và hóa chất luôn sẵn sàng đáp ứng sửa chữa, thay thế kịp thời.</p>
                 </div>
-
-                <div style="background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #bbf7d0;">
-                    <div style="font-size: 32px; color: #00cba0; margin-bottom: 15px;"><i class="fa-solid fa-face-smile-beam"></i></div>
-                    <h3 style="font-size: 18px; color: #12264e; font-weight: 700; margin-bottom: 10px;">An Tâm Và Tiết Kiệm</h3>
-                    <p style="color: #475569; font-size: 14px; line-height: 1.6;">Chịu trách nhiệm hoàn toàn về chất lượng đầu ra, mang lại sự an tâm tuyệt đối và tiết kiệm chi phí cho Chủ đầu tư.</p>
+                <div class="why-box">
+                    <div class="why-icon text-teal"><i class="fa-solid fa-face-smile-beam"></i></div>
+                    <h3>An Tâm Và Tiết Kiệm</h3>
+                    <p>Chịu trách nhiệm hoàn toàn về chất lượng đầu ra, mang lại sự an tâm tuyệt đối và tiết kiệm chi phí cho Chủ đầu tư.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. QUY TRÌNH LÀM VIỆC VỚI KHÁCH HÀNG -->
-    <section class="workflow-section" style="padding: 60px 5%; background-color: #fff;">
-        <div class="container" style="max-width: 1200px; margin: 0 auto;">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
-                <span style="color: #0092ca; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Quy Trình Chuyên Nghiệp</span>
-                <h2 style="font-size: 30px; color: #1e3d7b; font-weight: 800; margin: 10px 0;">Quy Trình Làm Việc Với Khách Hàng</h2>
-                <p style="color: #475569; font-size: 15px; line-height: 1.6;">Các bước triển khai bài bản đảm bảo chất lượng và tiến độ cam kết.</p>
+    <!-- 7. QUY TRÌNH LÀM VIỆC -->
+    <section class="section-padding section-white">
+        <div class="container-max">
+            <div class="section-header-center">
+                <span class="section-tag text-blue">Quy Trình Chuyên Nghiệp</span>
+                <h2 class="section-title">Quy Trình Làm Việc Với Khách Hàng</h2>
+                <p class="section-desc">Các bước triển khai bài bản đảm bảo chất lượng và tiến độ cam kết.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px;">
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px;">
-                    <div style="background: #00cba0; color: #fff; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; margin-bottom: 15px;">1</div>
-                    <h3 style="font-size: 18px; color: #1e3d7b; font-weight: 700; margin-bottom: 12px;">Tiếp nhận thông tin</h3>
-                    <p style="color: #475569; font-size: 14px; line-height: 1.6;">Lắng nghe và ghi nhận các yêu cầu ban đầu từ phía Khách hàng.</p>
+            <div class="grid-workflow">
+                <div class="step-card">
+                    <div class="step-num bg-teal">1</div>
+                    <h3>Tiếp nhận thông tin</h3>
+                    <p>Lắng nghe và ghi nhận các yêu cầu ban đầu từ phía Khách hàng.</p>
                 </div>
-
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px;">
-                    <div style="background: #0092ca; color: #fff; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; margin-bottom: 15px;">2</div>
-                    <h3 style="font-size: 18px; color: #1e3d7b; font-weight: 700; margin-bottom: 12px;">Khảo sát</h3>
-                    <ul style="list-style: disc; padding-left: 20px; color: #475569; font-size: 14px; line-height: 1.6;">
+                <div class="step-card">
+                    <div class="step-num bg-blue">2</div>
+                    <h3>Khảo sát</h3>
+                    <ul class="step-list">
                         <li>Nhu cầu Khách hàng</li>
                         <li>Hiện trạng hệ thống</li>
                         <li>Lấy mẫu, đo đạc</li>
                     </ul>
                 </div>
-
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px;">
-                    <div style="background: #0092ca; color: #fff; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; margin-bottom: 15px;">3</div>
-                    <h3 style="font-size: 18px; color: #1e3d7b; font-weight: 700; margin-bottom: 12px;">Đánh giá</h3>
-                    <ul style="list-style: disc; padding-left: 20px; color: #475569; font-size: 14px; line-height: 1.6;">
+                <div class="step-card">
+                    <div class="step-num bg-blue">3</div>
+                    <h3>Đánh giá</h3>
+                    <ul class="step-list">
                         <li>Đánh giá thiết bị</li>
                         <li>Đánh giá công nghệ</li>
                         <li>Thử nghiệm phân tích</li>
                     </ul>
                 </div>
-
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px;">
-                    <div style="background: #0092ca; color: #fff; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; margin-bottom: 15px;">4</div>
-                    <h3 style="font-size: 18px; color: #1e3d7b; font-weight: 700; margin-bottom: 12px;">Đề xuất</h3>
-                    <ul style="list-style: disc; padding-left: 20px; color: #475569; font-size: 14px; line-height: 1.6;">
+                <div class="step-card">
+                    <div class="step-num bg-blue">4</div>
+                    <h3>Đề xuất</h3>
+                    <ul class="step-list">
                         <li>Đề xuất giải pháp</li>
                         <li>Thảo luận, thống nhất</li>
                     </ul>
                 </div>
-
-                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px;">
-                    <div style="background: #00cba0; color: #fff; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; margin-bottom: 15px;">5</div>
-                    <h3 style="font-size: 18px; color: #1e3d7b; font-weight: 700; margin-bottom: 12px;">Thực hiện</h3>
-                    <ul style="list-style: disc; padding-left: 20px; color: #475569; font-size: 14px; line-height: 1.6;">
+                <div class="step-card">
+                    <div class="step-num bg-teal">5</div>
+                    <h3>Thực hiện</h3>
+                    <ul class="step-list">
                         <li>Triển khai thực hiện</li>
                         <li>Kiểm soát tiến độ</li>
                         <li>Tối ưu & Cải tiến</li>
-                        <li>Báo cáo 2 chiều</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 8. BANNER KÊU GỌI HÀNH ĐỘNG (CTA) -->
-    <section style="padding: 50px 5%; background: linear-gradient(135deg, #12264e 0%, #1e3d7b 100%); color: #fff; text-align: center;">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 15px;">Bạn Cần Khảo Sát & Tư Vấn Giải Pháp Trọn Gói?</h2>
-            <p style="color: #cbd5e1; font-size: 15px; margin-bottom: 25px; line-height: 1.6;">Đội ngũ kỹ sư giàu kinh nghiệm của TTT Technology luôn sẵn sàng hỗ trợ khảo sát hiện trạng và đề xuất giải pháp tối ưu chi phí cho doanh nghiệp.</p>
-            <a href="/lien-he" style="background: #00cba0; color: #fff; padding: 14px 32px; border-radius: 6px; font-weight: 700; text-decoration: none; font-size: 15px; display: inline-block; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,203,160,0.4);">Liên Hệ Kỹ Sư Tư Vấn Ngay</a>
+    <!-- 8. BANNER CTA -->
+    <section class="cta-banner">
+        <div class="container-cta">
+            <h2>Bạn Cần Khảo Sát & Tư Vấn Giải Pháp Trọn Gói?</h2>
+            <p>Đội ngũ kỹ sư giàu kinh nghiệm của TTT Technology luôn sẵn sàng hỗ trợ khảo sát hiện trạng và đề xuất giải pháp tối ưu chi phí cho doanh nghiệp.</p>
+            <a href="/lien-he" class="btn-cta">Liên Hệ Kỹ Sư Tư Vấn Ngay</a>
         </div>
     </section>
 
@@ -422,11 +399,10 @@
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
-            slide.style.opacity = i === index ? '1' : '0';
-            slide.style.pointerEvents = i === index ? 'auto' : 'none';
+            slide.classList.toggle('active', i === index);
         });
         dots.forEach((dot, i) => {
-            dot.style.backgroundColor = i === index ? '#00cba0' : 'rgba(255,255,255,0.5)';
+            dot.classList.toggle('active', i === index);
         });
     }
 

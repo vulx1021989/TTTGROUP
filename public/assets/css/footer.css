@@ -1,47 +1,45 @@
-/* --- FOOTER CSS (3 CỘT, TRỤ SỞ CHIẾM 40%) --- */
+/* ==================== FOOTER & FLOATING WIDGETS RESPONSIVE ==================== */
+
 .site-footer {
-    background-color: #12264e;
-    color: #cbd5e1;
-    padding: 50px 5% 20px 5%;
-    margin-top: 60px;
-    border-top: 1px solid var(--border-color);
+    background-color: #0f172a;
+    color: #94a3b8;
+    padding: 60px 0 20px 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: 1150px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.33fr; /* Tỷ lệ 30% - 30% - 40% cho phần Trụ sở */
-    gap: 30px;
-    align-items: start;
-    margin-bottom: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
 .footer-col h3 {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 800;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
     margin-bottom: 20px;
     position: relative;
-    padding-bottom: 8px;
-    text-transform: uppercase;
+    padding-bottom: 10px;
 }
 
 .footer-col h3::after {
     content: '';
     position: absolute;
-    left: 0;
     bottom: 0;
+    left: 0;
     width: 40px;
     height: 3px;
-    background-color: var(--primary-teal);
+    background-color: #10b981;
     border-radius: 2px;
 }
 
-/* Danh sách liên hệ trong footer */
 .contact-info-list {
     list-style: none;
     padding: 0;
@@ -51,157 +49,143 @@
 .contact-info-list li {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 12px;
-    font-size: 13px;
-    color: #cbd5e1;
-    line-height: 1.5;
+    font-size: 14px;
+    color: #94a3b8;
 }
 
-.contact-info-list li i {
-    margin-top: 3px;
-    font-size: 15px;
-    min-width: 18px;
-    text-align: center;
-    color: var(--primary-teal);
-}
-
-/* Danh sách dịch vụ trong footer */
-.service-links-list {
+.footer-links {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.service-links-list li {
-    margin-bottom: 10px;
-}
-
-.service-links-list li a {
-    color: #cbd5e1;
-    text-decoration: none;
-    font-size: 13px;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.service-links-list li a i {
-    font-size: 10px;
-    margin-right: 6px;
-    color: var(--primary-teal);
-}
-
-.service-links-list li a:hover {
-    color: var(--primary-teal);
-    transform: translateX(5px);
-}
-
-/* Khối Bản đồ Trụ sở chính (Chiếm 40%) */
-.footer-right-col {
-    width: 100%;
-}
-
-.headquarter-image-box {
-    background: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
-.headquarter-image-box .hq-title {
-    font-size: 15px;
-    font-weight: 800;
-    color: var(--dark-blue);
+.footer-links li {
     margin-bottom: 12px;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 5px;
 }
 
-.headquarter-image-box .hq-title::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 30px;
-    height: 2px;
-    background-color: var(--primary-teal);
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s, padding-left 0.2s;
 }
 
+.footer-links a:hover {
+    color: #10b981;
+    padding-left: 5px;
+}
+
+/* Google Map responsive trong footer */
 .hq-map-container {
     border-radius: 8px;
     overflow: hidden;
-    height: 210px;
+    height: 180px;
     width: 100%;
 }
 
-.footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
-    text-align: center;
-    font-size: 12px;
-    color: #94a3b8;
+.hq-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
-/* --- RESPONSIVE CHO ĐIỆN THOẠI & TABLET --- */
+.footer-bottom {
+    border-top: 1px solid #1e293b;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* ==================== FLOATING BUTTONS (HOTLINE & BACK TO TOP) ==================== */
+
+.hotline-widget {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #dc2626;
+    color: #ffffff;
+    padding: 8px 14px 8px 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.hotline-widget:hover {
+    background-color: #b91c1c;
+    transform: scale(1.05);
+}
+
+.hotline-icon-box {
+    width: 28px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    background-color: #0f172a;
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.back-to-top-btn:hover {
+    background-color: #059669;
+    transform: translateY(-3px);
+}
+
+/* ==================== RESPONSIVE MOBILE ==================== */
+
 @media (max-width: 768px) {
-    .top-bar { 
-        display: none; 
-    }
-    
-    .navbar-container {
-        padding: 12px 15px;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .nav-menu { 
-        gap: 2px; 
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-item { 
-        padding: 6px 10px; 
-        font-size: 12px; 
-    }
-
-    .hero-banner { 
-        padding: 40px 20px; 
-    }
-
-    .hero-banner h2 { 
-        font-size: 20px; 
-    }
-
-    .dropdown-menu { 
-        position: static; 
-        box-shadow: none; 
-        display: block; 
-        border: none; 
-        padding-left: 15px; 
-    }
-
-    .contact-grid { 
-        grid-template-columns: 1fr; 
+    .site-footer {
+        padding: 40px 0 20px 0;
     }
 
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 30px;
-        text-align: left;
     }
 
-    .footer-right-col {
-        justify-content: flex-start;
+    /* Thu nhỏ nút hotline trên mobile để không chắn màn hình */
+    .hotline-widget {
+        bottom: 15px;
+        left: 15px;
+        padding: 6px 12px 6px 8px;
+        font-size: 12px;
     }
 
-    .headquarter-image-box {
-        max-width: 100%;
+    .back-to-top-btn {
+        bottom: 15px;
+        right: 15px;
+        width: 38px;
+        height: 38px;
     }
 }

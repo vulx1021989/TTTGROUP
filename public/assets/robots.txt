@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+Disallow: /admin/
+Disallow: /api/
+Disallow: /login
+Disallow: /register
+Disallow: /*?*
+
+Sitemap: https://tttgroup.com/sitemap.xml
