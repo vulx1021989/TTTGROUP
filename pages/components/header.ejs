@@ -23,7 +23,7 @@
 <div class="top-bar">
     <div class="top-bar-inner">
         <div class="top-bar-info">
-            <span><i class="fa-solid fa-phone"></i> Hotline: (84) 0904 200 220</span>
+            <span><i class="fa-solid fa-phone"></i> Hotline: (84) 0946 117 878</span>
             <span><i class="fa-solid fa-envelope"></i> Email: info@tttgroup.com.vn</span>
         </div>
         <div class="top-bar-social">
@@ -35,11 +35,13 @@
 <!-- Header & Navbar -->
 <header>
     <div class="navbar-container">
-        <a href="/home" class="brand-logo">
-            <div class="logo-hexagon">TTT</div>
+        <a href="/" class="brand-logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+            <!-- Thẻ hình ảnh logo thực tế với chiều cao cố định để cân đối với thanh menu -->
+            <img src="/images/logo/logo-ttt-hexagon-full-transparent.png" alt="TTT Group Logo" style="height: 42px; width: auto; object-fit: contain;">
+            
             <div class="brand-text">
-                <h1>Hạ Tầng & Môi Trường TTT</h1>
-                <p>Infrastructure & Environment</p>
+                <h1 style="font-size: 16px; font-weight: 700; color: #10b981; margin: 0; line-height: 1.2;">Hạ Tầng & Môi Trường TTT</h1>
+                <p style="font-size: 11px; color: #64748b; margin: 0; letter-spacing: 0.5px;">Infrastructure & Environment</p>
             </div>
         </a>
 
@@ -49,14 +51,14 @@
         </div>
 
         <ul class="nav-menu">
-            <li><a class="nav-item active" href="/home">Trang Chủ</a></li>
+            <li><a class="nav-item active" href="/trang-chu">Trang Chủ</a></li>
             
             <!-- Submenu Dịch Vụ -->
             <li class="dropdown">
                 <a class="nav-item" href="/#">Dịch Vụ <i class="fa-solid fa-angle-down" style="font-size: 11px; margin-left: 4px;"></i></a>
                 <ul class="dropdown-menu">
-                    <% if (locals.services && services.length > 0) { %>
-                        <% services.forEach(service => { %>
+                    <% if (typeof servicesMenu !== 'undefined' && servicesMenu.length > 0) { %>
+                        <% servicesMenu.forEach(service => { %>
                             <li><a href="/dich-vu/<%= service.slug %>"><%= service.title %></a></li>
                         <% }) %>
                     <% } else { %>
@@ -64,10 +66,10 @@
                     <% } %>
                 </ul>
             </li>
-            <li><a class="nav-item" href="/project">Dự Án</a></li>
-            <li><a class="nav-item" href="/about-us">Về Chúng Tôi</a></li>
-            <li><a class="nav-item" href="/careers">Tuyển Dụng</a></li>
-            <li><a class="nav-item" href="/contact">Liên Hệ</a></li>
+            <li><a class="nav-item" href="/du-an">Dự Án</a></li>
+            <li><a class="nav-item" href="/ve-chung-toi">Về Chúng Tôi</a></li>
+            <li><a class="nav-item" href="/tuyen-dung">Tuyển Dụng</a></li>
+            <li><a class="nav-item" href="/lien-he">Liên Hệ</a></li>
         </ul>
     </div>
 </header>

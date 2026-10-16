@@ -15,15 +15,38 @@
             </a>
         </li>
 
-        <!-- Quản lý Liên hệ (Có badge màu đỏ nổi bật) -->
+        <!-- Quản lý Yêu Cầu (Khảo sát & Báo giá dịch vụ) -->
+        <li>
+            <a href="/admin/requests" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin/requests' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>">
+                <span style="display: flex; align-items: center; gap: 12px;">
+                    <i class="fa-solid fa-file-invoice-dollar" style="width: 18px; color: <%= currentRoute === '/admin/requests' ? '#64ffda' : 'inherit' %>;"></i> Quản lý Yêu Cầu
+                </span>
+                <span class="request-badge-count" style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #ffffff; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 12px; box-shadow: 0 2px 6px rgba(245, 158, 11, 0.4); min-width: 20px; text-align: center;">
+                    <%= typeof requestTotal !== 'undefined' ? requestTotal : 0 %>
+                </span>
+            </a>
+        </li>
+
+        <!-- Quản lý Liên hệ -->
         <li>
             <a href="/admin/contacts" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin/contacts' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>">
                 <span style="display: flex; align-items: center; gap: 12px;">
                     <i class="fa-solid fa-address-book" style="width: 18px; color: <%= currentRoute === '/admin/contacts' ? '#64ffda' : 'inherit' %>;"></i> Quản lý Liên hệ
                 </span>
-                <!-- Badge hiển thị số lượng với tông màu đỏ bắt mắt -->
                 <span class="contact-badge-count" style="background: linear-gradient(135deg, #ff416c, #ff4b2b); color: #ffffff; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 12px; box-shadow: 0 2px 6px rgba(255, 65, 108, 0.4); min-width: 20px; text-align: center;">
                     <%= typeof contactTotal !== 'undefined' ? contactTotal : 0 %>
+                </span>
+            </a>
+        </li>
+
+        <!-- Quản lý Tuyển dụng (Ứng viên) -->
+        <li>
+            <a href="/admin/careers/applications" style="display: flex; align-items: center; justify-content: space-between; padding: 12px 20px; text-decoration: none; font-size: 14px; <%= currentRoute === '/admin/job-applications' ? 'color: #fff; background-color: #0066cc; font-weight: 600; border-left: 4px solid #64ffda;' : 'color: #a8b2d1; transition: 0.2s;' %>">
+                <span style="display: flex; align-items: center; gap: 12px;">
+                    <i class="fa-solid fa-user-tie" style="width: 18px; color: <%= currentRoute === '/admin/job-applications' ? '#64ffda' : 'inherit' %>;"></i> Quản lý Tuyển dụng
+                </span>
+                <span class="job-badge-count" style="background: linear-gradient(135deg, #00b09b, #96c93d); color: #ffffff; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0, 176, 155, 0.4); min-width: 20px; text-align: center;">
+                    <%= typeof jobApplicationTotal !== 'undefined' ? jobApplicationTotal : 0 %>
                 </span>
             </a>
         </li>
@@ -63,19 +86,33 @@
 <script>
     const socket = io();
 
-    // Lắng nghe sự kiện từ server gửi xuống
+    // Lắng nghe cập nhật số lượng Yêu cầu dịch vụ mới
+    socket.on('updateRequestTotal', function(newTotal) {
+        const badges = document.querySelectorAll('.request-badge-count');
+        badges.forEach(badge => {
+            badge.textContent = newTotal;
+            badge.style.transform = 'scale(1.25)';
+            setTimeout(() => { badge.style.transform = 'scale(1)'; }, 200);
+        });
+    });
+
+    // Lắng nghe cập nhật số lượng Liên hệ
     socket.on('updateContactTotal', function(newTotal) {
-        console.log("Đã nhận số lượng mới từ Socket:", newTotal); // Kiểm tra F12 Console xem có log này không
-        
         const badges = document.querySelectorAll('.contact-badge-count');
         badges.forEach(badge => {
             badge.textContent = newTotal;
-            
-            // Hiệu ứng nhấp nháy phóng to nhẹ khi đổi số
             badge.style.transform = 'scale(1.25)';
-            setTimeout(() => {
-                badge.style.transform = 'scale(1)';
-            }, 200);
+            setTimeout(() => { badge.style.transform = 'scale(1)'; }, 200);
+        });
+    });
+
+    // Lắng nghe cập nhật số lượng Hồ sơ Ứng tuyển mới
+    socket.on('updateJobApplicationTotal', function(newTotal) {
+        const badges = document.querySelectorAll('.job-badge-count');
+        badges.forEach(badge => {
+            badge.textContent = newTotal;
+            badge.style.transform = 'scale(1.25)';
+            setTimeout(() => { badge.style.transform = 'scale(1)'; }, 200);
         });
     });
 </script>

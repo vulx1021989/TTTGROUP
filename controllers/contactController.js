@@ -6,7 +6,7 @@ const db = require('../config/db'); // Đường dẫn kết nối database đ�
 const getContactPage = async (req, res) => {
     try {
         const services = await ServiceModel.getAllServices();
-        res.render('pages/contact', { services }); // Truyền biến services sang view contact.ejs
+        res.render('pages/lien-he', { services }); // Truyền biến services sang view contact.ejs
     } catch (err) {
         console.error("Lỗi tải trang contact:", err);
         res.status(500).send("Lỗi Server");

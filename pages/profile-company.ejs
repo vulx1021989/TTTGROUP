@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hồ Sơ Năng Lực - TTT Technology</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Cấu hình chuẩn in khổ A4 và ngắt trang */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        body {
+            background-color: #e2e8f0;
+            margin: 0;
+            padding: 0;
+        }
+        .page-container {
+            width: 210mm;
+            height: 297mm;
+            max-width: 210mm;
+            max-height: 297mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            page-break-after: always;
+            break-after: page;
+        }
+        @media print {
+            body {
+                background: transparent;
+            }
+            .page-container {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+        /* Ép font chữ hiển thị cực kỳ sắc nét, mịn màng */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500; /* Tăng độ đậm mặc định của toàn bộ văn bản */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Trang 1: Trang bìa (được import từ pdf-1.ejs) -->
+    <div class="page-container">
+        <%- include('./profile/pdf-1') %>
+    </div>
+
+    <!-- Trang 2: Nội dung tiếp theo (ví dụ: Lời ngỏ hoặc Giới thiệu công ty) -->
+    <div class="page-container">
+        <%- include('./profile/pdf-2') %>
+    </div>
+
+    <!-- Trang 4: Nội dung tiếp theo (ví dụ: Lời ngỏ hoặc Giới thiệu công ty) -->
+    <div class="page-container">
+        <%- include('./profile/pdf-4') %>
+    </div>
+
+    <!-- Trang 5: Nội dung tiếp theo (ví dụ: Lời ngỏ hoặc Giới thiệu công ty) -->
+    <div class="page-container">
+        <div class="relative w-[210mm] h-[297mm] bg-white overflow-hidden m-0 p-0">
+            <img src="/images/page4.png" alt="Hồ Sơ Năng Lực TTT Technology" class="w-full h-full object-cover">
+        </div>
+    </div>
+
+    <!-- Trang 6: Nội dung tiếp theo (ví dụ: Lời ngỏ hoặc Giới thiệu công ty) -->
+    <div class="page-container">
+        <%- include('./profile/pdf-6') %>
+    </div>
+
+    <!-- Trang 7: Nội dung tiếp theo (ví dụ: Lời ngỏ hoặc Giới thiệu công ty) -->
+    <div class="page-container">
+        <%- include('./profile/pdf-7') %>
+    </div>
+
+    <!-- Trang 8: Nội dung tiếp theo (ví dụ: Lời ngỏ hoặc Giới thiệu công ty) -->
+
+    <!-- Trang 9: Nội dung tiếp theo (ví dụ: Lời ngỏ hoặc Giới thiệu công ty) -->
+    <div class="page-container">
+        <%- include('./profile/pdf-9') %>
+    </div>
+
+    <!-- Trang 10: Nội dung tiếp theo (ví dụ: Lời ngỏ hoặc Giới thiệu công ty) -->
+    <div class="page-container">
+        <%- include('./profile/pdf-10') %>
+    </div>
+
+    <!-- Trang 11: Nội dung tiếp theo (ví dụ: Lời ngỏ hoặc Giới thiệu công ty) -->
+    <div class="page-container">
+        <%- include('./profile/pdf-11') %>
+    </div>
+
+    <!-- Trang 12: Nội dung tiếp theo (ví dụ: Lời ngỏ hoặc Giới thiệu công ty) --> 
+
+    <div class="page-container">
+        <%- include('./profile/pdf-12') %>
+    </div>
+
+    <!-- Trang 13: Nội dung tiếp theo (ví dụ: Lời ngỏ hoặc Giới thiệu công ty) -->
+    <div class="page-container">
+        <%- include('./profile/pdf-13') %>
+    </div>
+
+     <!-- Trang back cover: Nội dung tiếp theo (ví dụ: Lời ngỏ hoặc Giới thiệu công ty) -->
+    <div class="page-container">
+        <%- include('./profile/pdf-back-cover') %>
+    </div>
+
+</body>
+</html>

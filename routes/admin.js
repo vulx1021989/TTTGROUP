@@ -5,10 +5,10 @@ const userController = require('../controllers/userController'); // Import contr
 const settingController = require('../controllers/settingController');
 const contactController = require('../controllers/contactController');
 const serviceController = require('../controllers/serviceController');
+const careerController = require('../controllers/careerController'); // Import controller tuyển dụng (nếu có)
+const RequestController = require('../controllers/requestController');
 
 const verifyToken = require('../middlewares/authMiddleware');
-
-
 router.use(verifyToken);
 
 // Các route trang quản trị
@@ -34,5 +34,22 @@ router.get('/services/edit/:id', serviceController.getEditServicePage);
 router.post('/services/edit/:id', serviceController.updateService);
 router.get('/services/delete/:id', serviceController.deleteService);
 router.post('/services/add', serviceController.addService);
+
+// Careers (Quản lý Tuyển dụng & Hồ sơ ứng tuyển)
+router.get('/careers', careerController.getAllCareers);
+router.post('/careers/add', careerController.addCareer);
+router.get('/careers/edit/:id', careerController.getEditCareerPage);
+router.post('/careers/edit/:id', careerController.updateCareer);
+router.get('/careers/delete/:id', careerController.deleteCareer);
+router.get('/careers/applications', careerController.getApplications); // Xem danh sách CV ứng tuyển
+
+// Route xóa hồ sơ ứng tuyển
+router.get('/careers/applications/delete/:id', careerController.deleteApplication);
+// Hoặc nếu bạn dùng router.post:
+
+// Quản lý yêu cầu khảo sát & báo giá
+router.get('/requests', RequestController.renderRequestsList);
+router.post('/requests/:id/status', RequestController.updateStatus);
+router.delete('/requests/:id', RequestController.deleteRequest);
 
 module.exports = router;

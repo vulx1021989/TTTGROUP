@@ -1,4 +1,5 @@
 const db = require('../config/db'); // Đường dẫn đến cấu hình database của bạn
+const RequestModel = require('../models/requestModel');
 
 const loadGlobalData = async (req, res, next) => {
     try {
@@ -9,6 +10,8 @@ const loadGlobalData = async (req, res, next) => {
         // 2. Lấy tổng số lượng liên hệ cho sidebar admin
         const [contactRows] = await db.execute("SELECT COUNT(*) as total FROM contacts");
         res.locals.contactTotal = contactRows[0].total;
+
+        res.locals.requestTotal = await RequestModel.countTotal();
 
         // (Bạn có thể gom thêm các số liệu thống kê chung khác nếu cần tại đây)
 

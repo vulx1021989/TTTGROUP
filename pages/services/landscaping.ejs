@@ -1,113 +1,332 @@
-<%- include('../components/header', { title: 'Chăm Sóc & Duy Trì Cây Xanh - TTT' }) %>
+<%- include('../components/header', { title: 'Vận Hành Hệ Thống Xử Lý Nước Thải Bệnh Viện, Trường Học, Khu Dân Cư - TTT Group' }) %>
 
-<!-- MAIN CONTENT - CHĂM SÓC & DUY TRÌ CÂY XANH -->
-<main class="main-wrapper" style="padding: 50px 0; background-color: #f8fafc; min-height: 70vh;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
-        
-        <!-- HEADER SECTION -->
-        <div style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
-            <span style="color: #16a34a; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Dịch Vụ Cảnh Quan Chuyên Sâu</span>
-            <h1 style="font-size: 34px; color: #1e3d7b; font-weight: 800; margin: 10px 0 15px 0;">Chăm Sóc & Duy Trì Cây Xanh Cảnh Quan Trọn Gói</h1>
-            <p style="color: #475569; font-size: 16px; line-height: 1.6;">
-                Giải pháp bảo dưỡng cảnh quan toàn diện cho nhà máy, khu công nghiệp, tòa nhà văn phòng và khu đô thị. Giữ gìn không gian xanh luôn tươi tốt, thẩm mỹ và phát triển bền vững theo thời gian.
+<main class="main-wrapper" style="background-color: #f8fafc; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #334155; line-height: 1.6;">
+
+    <!-- 1. HERO BANNER CÓ BACKGROUND ẢNH THỰC TẾ -->
+    <section style="position: relative; background: linear-gradient(135deg, rgba(6, 78, 59, 0.9) 0%, rgba(15, 23, 42, 0.9) 100%), url('/images/banner-XLNT-PhuYen.png') center/cover no-repeat; color: #fff; padding: 90px 5% 80px 5%; text-align: center;">
+        <div style="max-width: 900px; margin: 0 auto; position: relative; z-index: 2;">
+            <span style="background: rgba(52, 211, 153, 0.25); color: #34d399; padding: 6px 18px; border-radius: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(52,211,153,0.4);">
+                Chuyên Gia Môi Trường TTT Group
+            </span>
+            <h1 style="font-size: 38px; font-weight: 800; margin: 20px 0 15px 0; line-height: 1.3; color: #ffffff; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+                Vận Hành Hệ Thống Xử Lý Nước Thải Bệnh Viện, Trường Học & Khu Dân Cư
+            </h1>
+            <p style="font-size: 16px; color: #e2e8f0; line-height: 1.7; margin: 0 auto 30px auto; max-width: 780px;">
+                Cung cấp dịch vụ vận hành trọn gói, bảo trì phục hồi vi sinh và kiểm soát chất lượng nước xả thải đạt chuẩn QCVN cho các cơ sở y tế, giáo dục và đô thị. Hoạt động ổn định 24/7, an toàn tuyệt đối.
             </p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="#bao-gia-form" style="background-color: #10b981; color: #fff; padding: 13px 28px; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                    <i class="fa-solid fa-calculator"></i> Nhận Báo Giá Vận Hành
+                </a>
+                <a href="tel:0946117878" style="background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.3); padding: 13px 28px; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; backdrop-filter: blur(4px);">
+                    <i class="fa-solid fa-phone-volume"></i> Hotline Tư Vấn: 0946 117 878
+                </a>
+            </div>
         </div>
+    </section>
 
-        <!-- 1. TỔNG QUAN GIẢI PHÁP -->
-        <div style="background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #e2e8f0; margin-bottom: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: center;">
+    <!-- 2. CAM KẾT CHẤT LƯỢNG -->
+    <section style="background: #fff; border-bottom: 1px solid #e2e8f0; padding: 35px 5%;">
+        <div style="max-width: 1150px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; text-align: center;">
             <div>
-                <div style="color: #16a34a; font-size: 40px; margin-bottom: 15px;"><i class="fa-solid fa-seedling"></i></div>
-                <h2 style="font-size: 22px; color: #1e3d7b; font-weight: 800; margin-bottom: 15px;">Duy Trì Vẻ Đẹp & Sức Sống Cho Cảnh Quan</h2>
-                <p style="color: #555; font-size: 15px; line-height: 1.7; margin-bottom: 15px;">
-                    Cây xanh và thảm cỏ sau khi hoàn thiện thiết kế nếu không được chăm sóc đúng kỹ thuật sẽ dễ bị sâu bệnh, héo úa hoặc mất dáng. Đội ngũ kỹ thuật viên nông - lâm nghiệp của TTT cung cấp dịch vụ duy trì định kỳ với quy trình khoa học.
+                <div style="font-size: 32px; font-weight: 800; color: #059669;">100%</div>
+                <div style="font-size: 13px; color: #64748b; font-weight: 600; margin-top: 5px;">Đạt Chuẩn Xả Thải QCVN</div>
+            </div>
+            <div>
+                <div style="font-size: 32px; font-weight: 800; color: #0284c7;">24/7</div>
+                <div style="font-size: 13px; color: #64748b; font-weight: 600; margin-top: 5px;">Túc Trực & Giám Sát Sự Cố</div>
+            </div>
+            <div>
+                <div style="font-size: 32px; font-weight: 800; color: #d97706;">0 Mùi Hôi</div>
+                <div style="font-size: 13px; color: #64748b; font-weight: 600; margin-top: 5px;">Kiểm Soát Môi Trường Xung Quanh</div>
+            </div>
+            <div>
+                <div style="font-size: 32px; font-weight: 800; color: #9333ea;">15+ Năm</div>
+                <div style="font-size: 13px; color: #64748b; font-weight: 600; margin-top: 5px;">Kinh Nghiệm Kỹ Sư Môi Trường</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CHUYÊN MÔN HÓA THEO 3 TRỌNG TÂM (BỆNH VIỆN - TRƯỜNG HỌC - KHU DÂN CƯ) -->
+    <section style="padding: 70px 5%; background-color: #f8fafc;">
+        <div style="max-width: 1150px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span style="color: #059669; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Phân Khúc Chuyên Sâu</span>
+                <h2 style="color: #0f172a; font-size: 30px; font-weight: 800; margin-top: 8px;">Giải Pháp Vận Hành Theo Từng Mô Hình</h2>
+                <p style="color: #64748b; font-size: 15px; max-width: 700px; margin: 10px auto 0 auto;">
+                    Mỗi loại hình công trình sở hữu đặc thù sinh hóa và yêu cầu vận hành riêng biệt, được tối ưu hóa bởi đội ngũ chuyên gia TTT Group.
                 </p>
-                <p style="color: #555; font-size: 15px; line-height: 1.7;">
-                    Chúng tôi đảm bảo hệ thống cây xanh luôn xanh mát, cắt tỉa gọn gàng, kiểm soát cỏ dại và phòng trừ sâu bệnh kịp thời, tạo ấn tượng chuyên nghiệp cho bộ mặt doanh nghiệp.
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px;">
+                
+                <!-- Bệnh viện & Y tế -->
+                <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);">
+                    <div style="width: 55px; height: 55px; background: #e0f2fe; color: #0284c7; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+                    <h3 style="font-size: 19px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Nước Thải Bệnh Viện & Y Tế</h3>
+                    <ul style="padding-left: 18px; color: #475569; font-size: 14px; margin: 0; line-height: 1.8;">
+                        <li>Kiểm soát nghiêm ngặt vi khuẩn gây bệnh, mầm bệnh truyền nhiễm và dược phẩm tồn dư.</li>
+                        <li>Vận hành hệ thống khử trùng tự động (Clo/UV) đạt chuẩn QCVN 28:2010/BTNMT (Cột A).</li>
+                        <li>Đảm bảo trạm vận hành 24/7, tuyệt đối chống tràn nước thô ra môi trường.</li>
+                    </ul>
+                </div>
+
+                <!-- Khu dân cư & Đô thị -->
+                <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);">
+                    <div style="width: 55px; height: 55px; background: #ecfdf5; color: #059669; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;">
+                        <i class="fa-solid fa-city"></i>
+                    </div>
+                    <h3 style="font-size: 19px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Khu Dân Cư & Đô Thị</h3>
+                    <ul style="padding-left: 18px; color: #475569; font-size: 14px; margin: 0; line-height: 1.8;">
+                        <li>Xử lý hiệu quả tải lượng hữu cơ sinh hoạt cao, tách mỡ triệt để tại nguồn.</li>
+                        <li>Kiểm soát mùi hôi triệt để bằng công nghệ sinh học và lọc khí hiện đại.</li>
+                        <li>Vận hành ổn định trước sự biến động lưu lượng lớn giữa giờ cao điểm và thấp điểm.</li>
+                    </ul>
+                </div>
+
+                <!-- Trường học & Viện nghiên cứu -->
+                <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);">
+                    <div style="width: 55px; height: 55px; background: #fef3c7; color: #d97706; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 style="font-size: 19px; font-weight: 700; color: #0f172a; margin-bottom: 12px;">Trường Học & Cơ Sở Đào Tạo</h3>
+                    <ul style="padding-left: 18px; color: #475569; font-size: 14px; margin: 0; line-height: 1.8;">
+                        <li>Phù hợp với lưu lượng nước thải thay đổi theo mùa học và lịch nghỉ hè.</li>
+                        <li>Xử lý nước thải kết hợp khu vực bếp ăn bán trú và phòng thí nghiệm.</li>
+                        <li>Tối ưu hóa chi phí điện năng, bảo dưỡng định kỳ không ảnh hưởng không gian học tập.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. NỘI DUNG CÔNG VIỆC VẬN HÀNH TRỌN GÓI -->
+    <section style="padding: 70px 5%; background: #fff;">
+        <div style="max-width: 1150px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span style="color: #0284c7; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Quy Trình Chuẩn Kỹ Thuật</span>
+                <h2 style="color: #0f172a; font-size: 30px; font-weight: 800; margin-top: 8px;">Phạm Vi Công Việc Hằng Ngày</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="background: #f8fafc; border-top: 4px solid #059669; padding: 25px; border-radius: 8px;">
+                    <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 10px;"><i class="fa-solid fa-vial" style="color: #059669; margin-right: 8px;"></i> Kiểm Soát Vi Sinh</h4>
+                    <p style="font-size: 13px; color: #64748b; margin: 0;">Đo chỉ số SV30, DO, pH, COD hằng ngày; nuôi cấy và phục hồi bùn vi sinh kịp thời.</p>
+                </div>
+
+                <div style="background: #f8fafc; border-top: 4px solid #0284c7; padding: 25px; border-radius: 8px;">
+                    <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 10px;"><i class="fa-solid fa-gears" style="color: #0284c7; margin-right: 8px;"></i> Bảo Dưỡng Thiết Bị</h4>
+                    <p style="font-size: 13px; color: #64748b; margin: 0;">Bảo trì máy thổi khí, máy bơm chìm, tủ điện PLC và hệ thống van tự động định kỳ.</p>
+                </div>
+
+                <div style="background: #f8fafc; border-top: 4px solid #d97706; padding: 25px; border-radius: 8px;">
+                    <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 10px;"><i class="fa-solid fa-flask" style="color: #d97706; margin-right: 8px;"></i> Định Lượng Hóa Chất</h4>
+                    <p style="font-size: 13px; color: #64748b; margin: 0;">Tối ưu hóa hóa chất keo tụ (PAC), Polymer và chất khử trùng, tiết kiệm chi phí tối đa.</p>
+                </div>
+
+                <div style="background: #f8fafc; border-top: 4px solid #9333ea; padding: 25px; border-radius: 8px;">
+                    <h4 style="font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 10px;"><i class="fa-solid fa-file-shield" style="color: #9333ea; margin-right: 8px;"></i> Báo Cáo Pháp Lý</h4>
+                    <p style="font-size: 13px; color: #64748b; margin: 0;">Lập nhật ký vận hành, quản lý trạm quan trắc tự động và tiếp đón các đoàn thanh tra.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. DỰ ÁN TIÊU BIỂU ĐÃ THỰC HIỆN -->
+    <section style="padding: 70px 5%; background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
+        <div style="max-width: 1150px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 50px;">
+                <span style="color: #059669; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Dấu Ấn Thực Tế</span>
+                <h2 style="color: #0f172a; font-size: 30px; font-weight: 800; margin-top: 8px;">Dự Án Tiêu Biểu TTT Group Đã Triển Khai</h2>
+                <p style="color: #64748b; font-size: 15px; max-width: 700px; margin: 10px auto 0 auto;">
+                    Minh chứng năng lực qua các công trình xử lý nước thải quy mô cho bệnh viện, khu dân cư và hạ tầng kỹ thuật trên toàn quốc.
                 </p>
             </div>
-            <div style="background: #f0fdf4; padding: 30px; border-radius: 10px; border: 1px solid #bbf7d0;">
-                <h3 style="font-size: 18px; color: #14532d; font-weight: 700; margin-bottom: 20px;"><i class="fa-solid fa-check-to-slot" style="color: #16a34a; margin-right: 8px;"></i> Cam Kết Dịch Vụ Từ TTT</h3>
-                <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 12px; color: #166534; font-size: 14px;">
-                    <li style="display: flex; gap: 10px;"><i class="fa-solid fa-check" style="color: #16a34a; margin-top: 3px;"></i> <span>Cây trồng phát triển khỏe mạnh, tỉ lệ sống cao, thay thế kịp thời cây sâu bệnh.</span></li>
-                    <li style="display: flex; gap: 10px;"><i class="fa-solid fa-check" style="color: #16a34a; margin-top: 3px;"></i> <span>Sử dụng phân bón và thuốc bảo vệ thực vật an toàn, đúng tiêu chuẩn kỹ thuật.</span></li>
-                    <li style="display: flex; gap: 10px;"><i class="fa-solid fa-check" style="color: #16a34a; margin-top: 3px;"></i> <span>Đội ngũ nhân công chuyên nghiệp, tác phong nhanh nhẹn, đúng giờ giấc.</span></li>
-                </ul>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px;">
+                
+                <!-- Dự án 1 -->
+                <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
+                    <div style="height: 200px; background: url('/images/banner-XLNT-PhuYen.png') center/cover no-repeat; position: relative;">
+                        <span style="position: absolute; bottom: 12px; left: 12px; background: rgba(15, 23, 42, 0.8); color: #34d399; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;">Phú Yên</span>
+                    </div>
+                    <div style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 10px;">Trạm Xử Lý Nước Thải Tập Trung KCN & Đô Thị</h3>
+                            <p style="font-size: 14px; color: #64748b; line-height: 1.6; margin-bottom: 20px;">
+                                Vận hành trọn gói hệ thống xử lý công suất lớn, kiểm soát nghiêm ngặt các chỉ tiêu vi sinh và chất hữu cơ đạt chuẩn QCVN trước khi xả thải.
+                            </p>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 15px; font-size: 13px; color: #475569;">
+                            <span><i class="fa-solid fa-droplet" style="color: #059669; margin-right: 5px;"></i> Công suất: 2,500 m³/ngày</span>
+                            <span style="font-weight: 700; color: #0284c7;">Đang vận hành</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dự án 2 -->
+                <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
+                    <div style="height: 200px; background: url('/images/xlnt-5.jpg') center/cover no-repeat; position: relative; display: flex; align-items: center; justify-content: center; color: #fff; position: relative;">
+                        <i class="fa-solid fa-hospital" style="font-size: 50px; opacity: 0.3; position: absolute;"></i>
+                        <span style="position: absolute; bottom: 12px; left: 12px; background: rgba(15, 23, 42, 0.8); color: #34d399; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;">TP. Hồ Chí Minh</span>
+                        <h4 style="font-size: 20px; font-weight: 700; z-index: 2; text-align: center; padding: 0 20px;">Hệ Thống XLNT Bệnh Viện Đa Khoa Khu Vực</h4>
+                    </div>
+                    <div style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 10px;">Xử Lý Nước Thải Y Tế Khử Trùng Chuyên Sâu</h3>
+                            <p style="font-size: 14px; color: #64748b; line-height: 1.6; margin-bottom: 20px;">
+                                Lắp đặt và vận hành hệ thống khử trùng tự động bằng UV kết hợp hóa học, loại bỏ hoàn toàn vi khuẩn kháng thuốc và dược phẩm tồn dư.
+                            </p>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 15px; font-size: 13px; color: #475569;">
+                            <span><i class="fa-solid fa-droplet" style="color: #059669; margin-right: 5px;"></i> Công suất: 800 m³/ngày</span>
+                            <span style="font-weight: 700; color: #0284c7;">Đang vận hành</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dự án 3 -->
+                <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); display: flex; flex-direction: column;">
+                    <div style="height: 200px; background: url('/images/xlnt-bau-cat.jpg') center/cover no-repeat; position: relative;">
+                        <i class="fa-solid fa-city" style="font-size: 50px; opacity: 0.3; position: absolute;"></i>
+                        <span style="position: absolute; bottom: 12px; left: 12px; background: rgba(15, 23, 42, 0.8); color: #34d399; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;">Khu vực Miền Nam</span>
+                        <h4 style="font-size: 20px; font-weight: 700; z-index: 2; text-align: center; padding: 0 20px;">Trạm Xử Lý Nước Thải Khu Dân Cư Cao Cấp</h4>
+                    </div>
+                    <div style="padding: 25px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <h3 style="font-size: 18px; font-weight: 700; color: #0f172a; margin-bottom: 10px;">Vận Hành Trạm Sinh Hoạt & Tách Mỡ Đô Thị</h3>
+                            <p style="font-size: 14px; color: #64748b; line-height: 1.6; margin-bottom: 20px;">
+                                Quản lý hệ thống xử lý sinh học kết hợp kiểm soát mùi hôi toàn diện, đảm bảo cảnh quan xanh sạch cho khu đô thị hiện đại.
+                            </p>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 15px; font-size: 13px; color: #475569;">
+                            <span><i class="fa-solid fa-droplet" style="color: #059669; margin-right: 5px;"></i> Công suất: 1,200 m³/ngày</span>
+                            <span style="font-weight: 700; color: #0284c7;">Đang vận hành</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+    </section>
 
-        <!-- 2. CÁC HẠNG MỤC CÔNG VIỆC CHĂM SÓC -->
-        <div style="margin-bottom: 50px;">
-            <div style="text-align: center; max-width: 700px; margin: 0 auto 35px auto;">
-                <span style="color: #16a34a; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Nội Dung Bảo Dưỡng</span>
-                <h2 style="font-size: 28px; color: #1e3d7b; font-weight: 800; margin-top: 5px;">Hạng Mục Chăm Sóc & Duy Trì Định Kỳ</h2>
+    <!-- 5. FORM ĐĂNG KÝ TƯ VẤN & BÁO GIÁ -->
+    <section id="bao-gia-form" style="padding: 70px 5%; background: linear-gradient(135deg, #064e3b 0%, #0f172a 100%); color: #fff;">
+        <div style="max-width: 800px; margin: 0 auto; background: #fff; padding: 45px; border-radius: 16px; color: #334155; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <span style="color: #059669; font-size: 13px; font-weight: 700; text-transform: uppercase;">Liên Hệ Kỹ Thuật Trực Tuyến</span>
+                <h2 style="color: #0f172a; font-size: 26px; font-weight: 800; margin-top: 5px; margin-bottom: 8px;">Yêu Cầu Khảo Sát & Báo Giá Vận Hành</h2>
+                <p style="color: #64748b; font-size: 14px;">Quý đơn vị vui lòng điền thông tin bên dưới, kỹ sư TTT Group sẽ liên hệ tư vấn trong 30 phút.</p>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px;">
-                <!-- Hạng mục 1 -->
-                <div style="background: #fff; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
-                    <div style="color: #16a34a; font-size: 28px; margin-bottom: 12px;"><i class="fa-solid fa-scissors"></i></div>
-                    <h3 style="font-size: 17px; color: #12264e; font-weight: 700; margin-bottom: 10px;">Cắt Tỉa & Tạo Dáng Cây</h3>
-                    <p style="color: #64748b; font-size: 14px; line-height: 1.6;">Cắt tỉa cành khô, tạo dáng cho cây bóng mát, cắt xén thảm cỏ định kỳ giữ độ phẳng và thẩm mỹ cao.</p>
+            <form action="/contact/send" method="POST" id="wastewater-form">
+                <input type="hidden" name="service_name" value="Vận Hành Hệ Thống Xử Lý Nước Thải (Bệnh Viện/Trường Học/Khu Dân Cư)">
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 15px;">
+                    <div>
+                        <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #1e293b;">Tên Đơn Vị / Cơ Sở *</label>
+                        <input type="text" name="company" required placeholder="Ví dụ: Bệnh viện Đa khoa / Chung cư XYZ" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #1e293b;">Họ và Tên Người Đại Diện *</label>
+                        <input type="text" name="name" required placeholder="Ví dụ: Nguyễn Văn A" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; box-sizing: border-box;">
+                    </div>
                 </div>
 
-                <!-- Hạng mục 2 -->
-                <div style="background: #fff; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
-                    <div style="color: #16a34a; font-size: 28px; margin-bottom: 12px;"><i class="fa-solid fa-droplet"></i></div>
-                    <h3 style="font-size: 17px; color: #12264e; font-weight: 700; margin-bottom: 10px;">Tưới Nước & Vận Hành Hệ Thống</h3>
-                    <p style="color: #64748b; font-size: 14px; line-height: 1.6;">Duy trì chế độ tưới nước phù hợp theo mùa, kiểm tra và bảo dưỡng hệ thống tưới tự động.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-bottom: 15px;">
+                    <div>
+                        <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #1e293b;">Số Điện Thoại Liên Hệ *</label>
+                        <input type="tel" name="phone" required placeholder="Ví dụ: 0946117878" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; box-sizing: border-box;">
+                    </div>
+                    <div>
+                        <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #1e293b;">Loại Hình Cơ Sở *</label>
+                        <select name="facility_type" required style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; box-sizing: border-box; background: #fff;">
+                            <option value="Benh vien / Y te">Bệnh viện / Phòng khám / Y tế</option>
+                            <option value="Khu dan cu / Do thi">Khu dân cư / Chung cư / Đô thị</option>
+                            <option value="Truong hoc">Trường học / Cơ sở đào tạo</option>
+                            <option value="Khac">Loại hình khác</option>
+                        </select>
+                    </div>
                 </div>
 
-                <!-- Hạng mục 3 -->
-                <div style="background: #fff; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
-                    <div style="color: #16a34a; font-size: 28px; margin-bottom: 12px;"><i class="fa-solid fa-flask"></i></div>
-                    <h3 style="font-size: 17px; color: #12264e; font-weight: 700; margin-bottom: 10px;">Bón Phân & Dinh Dưỡng</h3>
-                    <p style="color: #64748b; font-size: 14px; line-height: 1.6;">Bổ sung phân bón hữu cơ, phân hóa học định kỳ giúp đất tơi xốp và cây xanh hấp thụ dinh dưỡng tốt nhất.</p>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; color: #1e293b;">Mô Tả Nhu Cầu / Công Suất Trạm (m³/ngày)</label>
+                    <textarea name="message" rows="4" placeholder="Ví dụ: Công suất trạm 300m3/ngày, hiện đang gặp tình trạng nước đầu ra có mùi hoặc cần ký hợp đồng vận hành trọn gói..." style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; box-sizing: border-box; resize: vertical;"></textarea>
                 </div>
 
-                <!-- Hạng mục 4 -->
-                <div style="background: #fff; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 10px rgba(0,0,0,0.02);">
-                    <div style="color: #16a34a; font-size: 28px; margin-bottom: 12px;"><i class="fa-solid fa-bug-slash"></i></div>
-                    <h3 style="font-size: 17px; color: #12264e; font-weight: 700; margin-bottom: 10px;">Phòng Trừ Sâu Bệnh</h3>
-                    <p style="color: #64748b; font-size: 14px; line-height: 1.6;">Phun thuốc phòng trừ sâu bệnh, làm sạch cỏ dại gốc cây, vun xới đất giúp rễ cây hô hấp mạnh mẽ.</p>
-                </div>
-            </div>
+                <button type="submit" style="width: 100%; background: #10b981; color: #fff; border: none; padding: 14px; border-radius: 8px; font-weight: 700; font-size: 15px; cursor: pointer; transition: background 0.2s;">
+                    Gửi Yêu Cầu Khảo Sát & Nhận Báo Giá
+                </button>
+            </form>
         </div>
+    </section>
 
-        <!-- 3. QUY TRÌNH TRIỂN KHAI DỊCH VỤ -->
-        <div style="background: #1e3d7b; color: #fff; padding: 40px; border-radius: 12px; margin-bottom: 40px;">
-            <div style="text-align: center; max-width: 700px; margin: 0 auto 35px auto;">
-                <span style="color: #4ade80; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Quy Trình Làm Việc</span>
-                <h2 style="font-size: 26px; font-weight: 800; margin-top: 5px; color: #fff;">Các Bước Tiếp Nhận & Thực Hiện Chăm Sóc</h2>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
-                <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-                    <h3 style="font-size: 15px; font-weight: 700; color: #4ade80; margin-bottom: 8px;">1. Khảo Sát Hiện Trạng</h3>
-                    <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">Đánh giá chủng loại cây, diện tích thảm cỏ và tình trạng sâu bệnh thực tế.</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-                    <h3 style="font-size: 15px; font-weight: 700; color: #4ade80; margin-bottom: 8px;">2. Lập Kế Hoạch & Báo Giá</h3>
-                    <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">Đưa ra lịch trình chăm sóc cụ thể theo tuần/tháng và gửi báo giá tối ưu.</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-                    <h3 style="font-size: 15px; font-weight: 700; color: #4ade80; margin-bottom: 8px;">3. Triển Khai Định Kỳ</h3>
-                    <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">Đội ngũ nhân công ra quân thực hiện các hạng mục theo đúng cam kết hợp đồng.</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
-                    <h3 style="font-size: 15px; font-weight: 700; color: #4ade80; margin-bottom: 8px;">4. Nghiệm Thu & Báo Cáo</h3>
-                    <p style="color: #cbd5e1; font-size: 13px; line-height: 1.5;">Báo cáo tiến độ và chất lượng cảnh quan định kỳ hàng tháng với chủ đầu tư.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- CALL TO ACTION -->
-        <div style="text-align: center; background: #fff; padding: 40px; border-radius: 12px; border: 1px solid #e2e8f0;">
-            <h3 style="font-size: 22px; color: #1e3d7b; font-weight: 800; margin-bottom: 10px;">Bạn cần tìm đơn vị chăm sóc cảnh quan uy tín cho khuôn viên của mình?</h3>
-            <p style="color: #64748b; font-size: 15px; margin-bottom: 25px;">Hãy liên hệ ngay với TTT để được khảo sát miễn phí và nhận báo giá dịch vụ trọn gói tốt nhất.</p>
-            <a href="/contact" class="btn-primary" style="display: inline-block; background-color: #16a34a; color: #fff; padding: 14px 30px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 15px; transition: 0.3s;">Liên Hệ Tư Vấn Dịch Vụ Này</a>
-        </div>
-
-    </div>
 </main>
+
+<!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const wwForm = document.getElementById('wastewater-form');
+
+    if (wwForm instanceof HTMLFormElement) {
+        wwForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(wwForm);
+            const data = Object.fromEntries(formData.entries());
+
+            Swal.fire({
+                title: 'Đang gửi thông tin...',
+                text: 'Kỹ sư TTT Group đang tiếp nhận dữ liệu.',
+                allowOutsideClick: false,
+                didOpen: () => {
+                    Swal.showLoading();
+                }
+            });
+
+            try {
+                const response = await fetch('/contact/send', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Đã nhận yêu cầu!',
+                        text: 'Chuyên gia môi trường của TTT Group sẽ liên hệ lại với Quý đơn vị ngay lập tức.',
+                        confirmButtonText: 'Đã hiểu'
+                    }).then(() => {
+                        wwForm.reset();
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Thất bại',
+                        text: result.message || 'Có lỗi xảy ra, vui lòng thử lại.',
+                        confirmButtonText: 'Đóng'
+                    });
+                }
+            } catch (error) {
+                console.error('Lỗi gửi form:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Lỗi kết nối',
+                    text: 'Không thể kết nối máy chủ, vui lòng kiểm tra lại đường truyền.',
+                    confirmButtonText: 'Đóng'
+                });
+            }
+        });
+    }
+});
+</script>
 
 <%- include('../components/footer') %>

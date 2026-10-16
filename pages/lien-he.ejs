@@ -74,8 +74,8 @@
                         <label style="display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 5px;">Lựa chọn dịch vụ quan tâm (*)</label>
                         <select name="service_id" required style="width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; outline: none; background-color: #fff; cursor: pointer;">
                             <option value="" disabled selected>-- Chọn dịch vụ tư vấn --</option>
-                            <% if (services && services.length > 0) { %>
-                                <% services.forEach(item => { %>
+                            <% if (servicesMenu && servicesMenu.length > 0) { %>
+                                <% servicesMenu.forEach(item => { %>
                                     <option value="<%= item.id %>"><%= item.title %></option>
                                 <% }) %>
                             <% } %>

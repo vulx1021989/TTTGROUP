@@ -1,0 +1,109 @@
+<!-- Trang 2: Mục Lục (Table of Contents) - pdf-2.ejs -->
+<div class="relative w-[210mm] h-[297mm] bg-white overflow-hidden flex flex-col justify-between font-sans box-border select-none m-0 p-12 text-gray-800">
+    
+    <!-- PHẦN 1: TIÊU ĐỀ & NỘI DUNG MỤC LỤC (2 CỘT SONG NGỮ) -->
+    <div class="flex flex-col">
+        <div class="grid grid-cols-2 gap-12 mb-6">
+            <!-- Cột Tiếng Việt -->
+            <div>
+                <h2 class="text-2xl font-black text-[#1b5e20] tracking-wider mb-5 uppercase border-b-2 border-[#1b5e20] pb-1.5">
+                    MỤC LỤC
+                </h2>
+            </div>
+            <!-- Cột Tiếng Anh -->
+            <div>
+                <h2 class="text-2xl font-black text-[#1b5e20] tracking-wider mb-5 uppercase border-b-2 border-[#1b5e20] pb-1.5">
+                    TABLE OF CONTENTS
+                </h2>
+            </div>
+        </div>
+
+        <!-- Danh sách mục lục -->
+        <div class="grid grid-cols-2 gap-12 text-[11px] leading-relaxed font-semibold">
+            <!-- Cột Tiếng Việt (Nội dung) -->
+            <div class="space-y-2">
+                <div class="flex justify-between items-center border-b border-dotted border-gray-300 pb-1">
+                    <span class="uppercase tracking-tight text-gray-900">LỜI NGỎ</span>
+                    <span class="text-gray-600 font-bold ml-2">03</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-dotted border-gray-300 pb-1">
+                    <span class="uppercase tracking-tight text-gray-900">THÔNG ĐIỆP TỪ LÃNH ĐẠO</span>
+                    <span class="text-gray-600 font-bold ml-2">05</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-dotted border-gray-300 pb-1">
+                    <span class="uppercase tracking-tight text-gray-900">TẦM NHÌN</span>
+                    <span class="text-gray-600 font-bold ml-2">07</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-dotted border-gray-300 pb-1">
+                    <span class="uppercase tracking-tight text-gray-900">SỨ MỆNH</span>
+                    <span class="text-gray-600 font-bold ml-2">08</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-dotted border-gray-300 pb-1">
+                    <span class="uppercase tracking-tight text-gray-900">LĨNH VỰC HOẠT ĐỘNG</span>
+                    <span class="text-gray-600 font-bold ml-2">09</span>
+                </div>
+                <div class="pl-3 flex justify-between items-center border-b border-dotted border-gray-200 pb-0.5 text-gray-600">
+                    <span>DỰ ÁN HẠ TẦNG KỸ THUẬT</span>
+                    <span>10</span>
+                </div>
+                <div class="pl-3 flex justify-between items-center border-b border-dotted border-gray-200 pb-0.5 text-gray-600">
+                    <span>VẬN HÀNH HỆ THỐNG XỬ LÝ NƯỚC THẢI</span>
+                    <span>12</span>
+                </div>
+            </div>
+
+            <!-- Cột Tiếng Anh (English Content - Đã hiệu chỉnh chuẩn xác) -->
+            <div class="space-y-2">
+                <div class="flex justify-between items-center border-b border-dotted border-gray-300 pb-1">
+                    <span class="uppercase tracking-tight text-gray-900">INTRODUCTION / LETTER</span>
+                    <span class="text-gray-600 font-bold ml-2">04</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-dotted border-gray-300 pb-1">
+                    <span class="uppercase tracking-tight text-gray-900">LEADERSHIP MESSAGE</span>
+                    <span class="text-gray-600 font-bold ml-2">06</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-dotted border-gray-300 pb-1">
+                    <span class="uppercase tracking-tight text-gray-900">VISION</span>
+                    <span class="text-gray-600 font-bold ml-2">07</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-dotted border-gray-300 pb-1">
+                    <span class="uppercase tracking-tight text-gray-900">MISSION</span>
+                    <span class="text-gray-600 font-bold ml-2">08</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-dotted border-gray-300 pb-1">
+                    <span class="uppercase tracking-tight text-gray-900">CORE COMPETENCIES & SERVICES</span>
+                    <span class="text-gray-600 font-bold ml-2">09</span>
+                </div>
+                <div class="pl-3 flex justify-between items-center border-b border-dotted border-gray-200 pb-0.5 text-gray-600">
+                    <span>TECHNICAL INFRASTRUCTURE PROJECTS</span>
+                    <span>10</span>
+                </div>
+                <div class="pl-3 flex justify-between items-center border-b border-dotted border-gray-200 pb-0.5 text-gray-600">
+                    <span>WASTEWATER TREATMENT SYSTEM O&M</span>
+                    <span>12</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PHẦN 2: ẢNH BANNER SINH THÁI Ở GIỮA -->
+    <div class="w-full h-90 my-4 rounded overflow-hidden shadow-md border border-emerald-800">
+        <img src="/images/toc-banner.png" alt="Banner sinh thái TTT Technology" class="w-full h-full object-cover">
+    </div>
+
+    <!-- PHẦN 3: MÃ QR & SLOGAN CUỐI TRANG -->
+    <div class="flex justify-between items-end mb-2">
+        <!-- Slogan công ty bên phải -->
+        <div class="text-right ml-auto">
+            <p class="text-sm italic font-medium text-gray-700">"Smart and Simple"</p>
+            <h3 class="text-3xl font-extrabold text-[#1b5e20] tracking-tighter mt-1">TTT</h3>
+        </div>
+    </div>
+
+    <!-- PHẦN 4: CHÂN TRANG (ISO & SỐ TRANG) -->
+    <div class="w-full py-2.5 px-6 flex items-center justify-between bg-[#1b5e20] text-white">
+        <div class="text-xs font-extrabold tracking-wider">ISO 9001:2015</div>
+        <div class="text-xs font-black">02</div>
+    </div>
+
+</div>
