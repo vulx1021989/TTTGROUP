@@ -108,7 +108,7 @@ router.get('/:page', (req, res) => {
     let pageName = req.params.page.replace('.html', '');
     
     if (pageName === 'services' || pageName === 'assets' || pageName === 'components' || pageName === 'admin' 
-         || pageName === 'login' || pageName === 'ico' || pageName === 'careers') return;
+        || pageName === 'ico' || pageName === 'careers') return;
 
     // Cấu hình SEO mặc định hoặc phân tách theo từng trang cụ thể
     let seoData = {
@@ -134,7 +134,6 @@ router.get('/:page', (req, res) => {
             canonical: 'https://tttgroup.com/lien-he'
         };
     }
-
     res.render(`pages/${pageName}`, { 
         title: seoData.title,
         seo: seoData 

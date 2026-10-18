@@ -8,8 +8,13 @@ const JWT_SECRET = process.env.JWT_SECRET;
 // Hiển thị trang đăng nhập
 const getLoginPage = (req, res) => {
     res.render('pages/login', { 
-        title: 'Đăng Nhập - TTT Infrastructure',
-        error: null 
+        title: 'Đăng Nhập Quản Trị - TTT Group',
+        seo: {
+            title: 'Đăng Nhập Quản Trị | TTT Group',
+            description: 'Trang đăng nhập hệ thống quản trị nội bộ TTT Group.',
+            keywords: 'dang nhap ttt admin',
+            canonical: 'https://tttgroup.com/login'
+        }
     });
 };
 

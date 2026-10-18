@@ -52,7 +52,7 @@
                             <% applications.forEach((item, index) => { %>
                                 <tr style="border-bottom: 1px solid #f1f5f9; transition: background 0.15s;" onmouseover="this.style.backgroundColor='#fcfcfc'" onmouseout="this.style.backgroundColor='transparent'">
                                     <td style="padding: 16px 20px; font-weight: 600; color: #64748b;"><%= index + 1 %></td>
-                                    <td style="padding: 16px 20px; font-weight: 700; color: #0f172a;"><%= item.name %></td>
+                                    <td style="padding: 16px 20px; font-weight: 700; color: #0f172a;"><%= item.full_name %></td>
                                     <td style="padding: 16px 20px; color: #64748b;">
                                         <div style="margin-bottom: 3px;"><i class="fa-solid fa-phone" style="font-size: 11px; margin-right: 6px; color: #059669;"></i> <%= item.phone %></div>
                                         <div style="font-size: 12px; color: #94a3b8;"><i class="fa-solid fa-envelope" style="font-size: 11px; margin-right: 6px;"></i> <%= item.email %></div>
@@ -66,8 +66,8 @@
                                         </div>
                                     </td>
                                     <td style="padding: 16px 20px;">
-                                        <% if (item.cv_file) { %>
-                                            <a href="/uploads/<%= item.cv_file %>" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
+                                        <% if (item.cv_file_path) { %>
+                                            <a href="/<%= item.cv_file_path %>" target="_blank" style="display: inline-flex; align-items: center; gap: 6px; background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; padding: 6px 12px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; box-shadow: 0 1px 2px rgba(0,0,0,0.02);">
                                                 <i class="fa-solid fa-file-arrow-down"></i> Tải CV
                                             </a>
                                         <% } else { %>

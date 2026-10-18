@@ -263,13 +263,13 @@ html, body {
 
 .ww-project-img-1 {
     height: 200px;
-    background: url('/images/banner-XLNT-PhuYen.png') center/cover no-repeat;
+    background: url('/images/benh-vien-thu-duc.jpg') center/cover no-repeat;
     position: relative;
 }
 
 .ww-project-img-2 {
     height: 200px;
-    background: url('/images/xlnt-5.jpg') center/cover no-repeat;
+    background: url('/images/vien-tim.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;

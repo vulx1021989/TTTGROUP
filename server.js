@@ -31,6 +31,8 @@ app.set('views', path.join(__dirname));
 // 3. Cấu hình thư mục chứa file tĩnh (CSS, JS, hình ảnh)
 app.use(express.static(path.join(__dirname, 'public/assets')));
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 // 4. Middleware đọc dữ liệu gửi lên từ form (POST request) và dữ liệu dạng JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
