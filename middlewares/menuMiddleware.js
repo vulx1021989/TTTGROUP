@@ -41,7 +41,7 @@ const loadGlobalData = async (req, res, next) => {
                 jobAppsTotal = await careerModel.countTotal();
             } else {
                 // Truy vấn trực tiếp bảng lưu hồ sơ ứng tuyển (ví dụ: bảng 'careers' hoặc 'job_applications')
-                const [careerRows] = await db.execute("SELECT COUNT(*) as total FROM careers");
+                const [careerRows] = await db.execute("SELECT COUNT(*) as total FROM job_applications");
                 jobAppsTotal = careerRows[0].total || 0;
             }
         } catch (err) {
