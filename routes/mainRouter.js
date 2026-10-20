@@ -42,8 +42,8 @@ router.get(['/', '/trang-chu', '/index', '/home.html', '/index.html'], (req, res
             title: 'Trang Chủ | TTT Group - Tổng Thầu EPC & Hạ Tầng Môi Trường',
             description: 'Tập đoàn TTT (TTT Technology) - Đơn vị uy tín hàng đầu trong lĩnh vực Hạ Tầng Kỹ Thuật, Giao Thông, Hệ Thống Nước và Công Nghệ Môi Trường tại Việt Nam.',
             keywords: 'TTT Group, tổng thầu EPC, hạ tầng môi trường, xử lý nước thải, vận hành O&M',
-            canonical: 'https://tttgroup.com/',
-            ogImage: 'https://tttgroup.com/images/slide/banner-nhan-su-TTT.png'
+            canonical: 'https://3tgroup.tech/',
+            ogImage: 'https://3tgroup.tech/images/slide/banner-nhan-su-TTT.png'
         }
     });
 });
@@ -52,7 +52,7 @@ router.get(['/', '/trang-chu', '/index', '/home.html', '/index.html'], (req, res
 router.get('/login', authController.getLoginPage);
 router.post('/login', authController.postLogin);
 
-// 4. Gắn adminRouter vào tiền tố /admin
+// 4. Gắn adminRouter vào tiền tố /admin https://3tgroup.tech/
 router.use('/admin', adminRouter);
 
 // Chặn/bỏ qua yêu cầu lấy favicon.ico
@@ -88,8 +88,8 @@ router.get('/dich-vu/:slug', async (req, res) => {
                 title: service.seo_title || `${service.title} | TTT Group`,
                 description: service.seo_desc || service.description || 'Dịch vụ hạ tầng kỹ thuật và môi trường chuyên nghiệp từ TTT Group.',
                 keywords: service.seo_keywords || 'TTT Group, dịch vụ hạ tầng, xử lý nước thải, O&M',
-                canonical: `https://tttgroup.com/dich-vu/${serviceSlug}`,
-                ogImage: service.image || 'https://tttgroup.com/images/logo-ttt.png',
+                canonical: `https://3tgroup.tech/dich-vu/${serviceSlug}`,
+                ogImage: service.image || 'https://3tgroup.tech/images/logo-ttt.png',
                 customCss: service.css_file || ''
             }
         });
@@ -115,7 +115,7 @@ router.get('/:page', (req, res) => {
         title: 'Tập Đoàn TTT - Hạ Tầng & Môi Trường',
         description: 'Đơn vị tổng thầu EPC, hạ tầng kỹ thuật và xử lý nước thải uy tín tại Việt Nam.',
         keywords: 'TTT Group, hạ tầng môi trường, EPC',
-        canonical: `https://tttgroup.com/${pageName}`
+        canonical: `https://3tgroup.tech/${pageName}`
     };
 
     if (pageName === 've-chung-toi') {
@@ -123,7 +123,7 @@ router.get('/:page', (req, res) => {
             title: 'Về Chúng Tôi | TTT Group - Tổng Thầu EPC & Hạ Tầng Môi Trường',
             description: 'Tìm hiểu về TTT Group - Tầm nhìn, sứ mệnh, giá trị cốt lõi và đội ngũ lãnh đạo giàu kinh nghiệm trong lĩnh vực hạ tầng & môi trường.',
             keywords: 'về chúng tôi ttt group, lịch sử phát triển ttt, ban lãnh đạo ttt technology',
-            canonical: 'https://tttgroup.com/ve-chung-toi',
+            canonical: 'https://3tgroup.tech/ve-chung-toi',
             customCss: 'about-us.css'
         };
     } else if (pageName === 'lien-he') {
@@ -131,7 +131,7 @@ router.get('/:page', (req, res) => {
             title: 'Liên Hệ | TTT Group - Tư Vấn Dự Án Hạ Tầng & Môi Trường',
             description: 'Liên hệ ngay với TTT Group để được tư vấn các giải pháp kỹ thuật, tổng thầu EPC và dịch vụ vận hành bảo trì (O&M) chuyên nghiệp.',
             keywords: 'liên hệ ttt group, địa chỉ ttt technology, tư vấn dự án hạ tầng',
-            canonical: 'https://tttgroup.com/lien-he'
+            canonical: 'https://3tgroup.tech/lien-he'
         };
     }
     res.render(`pages/${pageName}`, { 
